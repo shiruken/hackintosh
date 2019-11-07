@@ -1,6 +1,10 @@
 # Hackintosh v3
 Installation guide for my dual-boot Hackintosh v3 build running macOS Catalina and Windows 10.
 
+* `EFI`: Copy of EFI folder from EFI partition on boot drive
+
+## The Build
+
 * **CPU:** Intel Core i7-9700K
 * **CPU Cooler:** Corsair H100i PRO
 * **Motherboard:** Gigabyte Z390 AORUS PRO WIFI
@@ -26,8 +30,7 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
 
 ## Install Clover
 
-* Download [Clover Install Package](https://github.com/Dids/clover-builder/releases) (v2.5k_r5097)
-* Download [Clover Configurator Global Edition](http://mackie100projects.altervista.org/download-clover-configurator/) (v5.7.0.0)
+* Download [Clover Install Package](https://github.com/Dids/clover-builder/releases) (v2.5k_r5097) and [Clover Configurator Global Edition](http://mackie100projects.altervista.org/download-clover-configurator/) (v5.7.0.0)
 * Install Clover to the USB device and customize with the following options:
   * Clover for UEFI booting only
   * Install Clover in the ESP
@@ -58,25 +61,43 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
   * SMCSuperIO.kext
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases) (v1.3.4)
 
-Unzip the archives and copy the .kexts to `EFI/CLOVER/kexts/Other/` the EFI partition of the USB device.
-
-Copy VirtualSmc.efi to `EFI/Clover/Drivers/`.
+Unzip the archives and copy the .kexts to [`EFI/CLOVER/kexts/Other/`](EFI/CLOVER/kexts/Other/) on the EFI partition of the USB device. Copy `VirtualSmc.efi` to [`EFI/Clover/Drivers/`](EFI/Clover/Drivers/).
 
 ## BIOS Settings
 
-* Load Optimized Defaults
-* Disable VT-d
-* Disable CFG-Lock
-* Disable Secure Boot Mode
-* Set OS Type to `Windows 8/10`
-* Set XHCI Handoff to Enabled
-* Disable Serial Port (if available)
+* Save & Exit
+  * **Load Optimized Defaults**
+* M.I.T.
+  * Extreme Memory Profile (X.M.P.) → **Profile 1**
+* BIOS
+  * Windows 8/10 Features → **Other OS**
+  * CSM Support → **Disabled**
+* Peripherals
+  * Initial Display Output → **PCIe Slot 1**
+  * Intel Platform Trust Technology (PTT) → **Disabled**
+  * USB Configuration
+    * Legacy USB Support → **Enabled**
+    * XHCI Hand-off → **Enabled**
+  * Network Stack Configuration
+    * Network Stack → **Disabled**
+* Chipset
+  * Vt-d → **Disabled**
+  * Internal Graphics → **Enabled**
+  * DVMT Pre-Alloc → **64M**
+  * DVMT Total Gfx Mem → **256M**
+  * Audio Controller → **Enabled**
+  * Above 4G Decoding → **Enabled**
+* Power
+  * ErP → **Disabled**
+  * RC6 (Render Standby) → **Enabled**
+* Save & Exit
+  * Choose **Save and Exit** to save BIOS settings and reboot
 
 ## Install macOS Catalina
 
 1. Restart computer and select USB drive as boot drive
 2. Install macOS to desired internal drive
-3. As system restarts, keep selecting `Boot macOS Install from﻿ Macintosh` from Clover menu
+3. As system restarts, keep selecting `Boot macOS Install from Install macOS Catalina` from Clover menu
 4. Once installation has completed, boot again from the USB drive and install Clover to the internal system drive and copy the EFI folder from the USB drive.
 
 ## References
