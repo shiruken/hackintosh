@@ -48,8 +48,6 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
     * Additional drivers
       * EmuVariableUefi
  
- _Note: Clover should install to `EFI/CLOVER/drivers/UEFI/`_
-
 ## Gather Kexts
 
 * [AppleALC.kext](https://github.com/acidanthera/AppleALC/releases) (v1.4.3)
