@@ -1,16 +1,20 @@
 # Hackintosh v3
-Installation guide for my dual-boot Hackintosh v3 build running macOS Catalina and Windows 10. View [the build on PCPartPicker](https://pcpartpicker.com/list/kBK7TC).
+Installation guide for my dual-boot Hackintosh v3 build running macOS Catalina and Windows 10.
 
-* Intel Core i7-9700K
-* Corsair H100i PRO
-* Samsung 970 Evo 1 TB M.2 NVME SSD (macOS)
-* Intel 660p Series 1 TB M.2 NVME SSD (Windows)
-* Gigabyte Z390 AORUS PRO WIFI
-* Corsair Vengeance RGB Pro 16 GB
-* AMD Radeon RX 5700 XT
-* Corsair RM (2019) 650 W 80+ Gold
-* NZXT H510
-* Dell S2719DGF 27" LED QHD FreeSync Monitor
+* **CPU:** Intel Core i7-9700K
+* **CPU Cooler:** Corsair H100i PRO
+* **Motherboard:** Gigabyte Z390 AORUS PRO WIFI
+* **Memory:** Corsair Vengeance RGB Pro 16 GB DDR4-3600
+* **Storage (macOS):** Samsung 970 Evo 1 TB M.2 NVME SSD
+* **Storage (Windows):** Intel 660p Series 1 TB M.2 NVME SSD
+* **Video Card:** Gigabyte Radeon RX 5700 XT 8 GB GAMING OC
+* **Power Supply:** Corsair RM650 80+ Gold
+* **Case:** NZXT H510
+* **Monitor:** Dell S2719DGF 27" LED QHD FreeSync Monitor
+* **Keyboard:** Das Keyboard Model S Professional
+* **Mouse:** Logitech G603
+
+View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
 
 ## Prepare Install Media
 
