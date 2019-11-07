@@ -1,7 +1,7 @@
 # Hackintosh v3
 Installation guide for my dual-boot Hackintosh v3 build running macOS Catalina and Windows 10.
 
-* `EFI`: Copy of EFI folder from EFI partition on boot drive
+* `EFI`: Copy of EFI directory from the EFI partition of boot drive
 
 ## The Build
 
@@ -63,7 +63,7 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
 
 Unzip the archives and copy the .kexts to [`EFI/CLOVER/kexts/Other/`](EFI/CLOVER/kexts/Other/) on the EFI partition of the USB device. Copy `VirtualSmc.efi` to [`EFI/Clover/Drivers/`](EFI/Clover/Drivers/).
 
-## BIOS Settings
+## BIOS Settings (Version F10)
 
 * Save & Exit
   * **Load Optimized Defaults**
