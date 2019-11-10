@@ -23,10 +23,13 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
 ## Prepare Install Media
 
 1. Download the [macOS Catalina installer](https://apps.apple.com/us/app/macos-catalina/id1466841314?mt=12) (v10.15.1) from the Mac App Store
-2. Format target USB drive [using Disk Utility](https://support.apple.com/en-us/HT208496) as `Mac OS Extended (Journaled)`
+2. Format target USB drive [using Disk Utility](https://support.apple.com/en-us/HT208496) as 'Mac OS Extended (Journaled)':
+
+    `diskutil partitionDisk /dev/disk# GPT JHFS+ "USB" 100%`
+    
 3. [Create the bootable macOS installer](https://support.apple.com/sl-si/HT201372): 
 
-    `sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/{Drive}`
+    `sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/USB`
 
 ## Install Clover
 
@@ -108,3 +111,4 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
 
 https://www.reddit.com/r/hackintosh/comments/djh98y/hackintosh_gigabyte_z390_pro_i99900k_rx_590/
 https://www.reddit.com/r/hackintosh/comments/bb3hy5/build_i9_9900k_gigabyte_z390_aorus_pro_wifi/
+https://www.reddit.com/r/hackintosh/comments/dpu4by/general_z390_catalina_guide_or_why_you_should/
