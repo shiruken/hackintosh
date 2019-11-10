@@ -59,7 +59,9 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
   * SMCSuperIO.kext
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases) (v1.3.4)
 
-Unzip the archives and copy the .kexts to [`EFI/CLOVER/kexts/Other/`](EFI/CLOVER/kexts/Other/) on the EFI partition of the USB device. Copy `VirtualSmc.efi` to [`EFI/Clover/Drivers/`](EFI/Clover/Drivers/).
+Unzip the archives and copy the .kexts to [`EFI/CLOVER/kexts/Other/`](EFI/CLOVER/kexts/Other/) on the EFI partition of the USB device.
+
+Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
 
 ## BIOS Settings (Version F10)
 
