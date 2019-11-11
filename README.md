@@ -40,8 +40,9 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
   * UEFI Drivers
     * Recommended drivers
       * ApfsDriverLoader
-      * AptioMemoryFix
       * HFSPlus
+    * Memory fix drivers
+      * OsxAptioFix3Drv
     * FileVault 2 UEFI Drivers
       * AppleImageCodec
       * AppleKeyAggregator
