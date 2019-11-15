@@ -78,10 +78,10 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
 * M.I.T.
   * Extreme Memory Profile (X.M.P.) → **Profile 1**
 * BIOS
-  * Windows 8/10 Features → **Other OS**
+  * Windows 8/10 Features → **Windows 8/10**
   * CSM Support → **Disabled**
 * Peripherals
-  * Initial Display Output → **PCIe Slot 1**
+  * Initial Display Output → **IGFX**
   * Intel Platform Trust Technology (PTT) → **Disabled**
   * USB Configuration
     * Legacy USB Support → **Enabled**
@@ -97,14 +97,15 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
   * Above 4G Decoding → **Enabled**
 * Power
   * ErP → **Disabled**
+  * Soft-Off by PWR-BTTN → **Delay 4 Sec.**
   * RC6 (Render Standby) → **Enabled**
 * Save & Exit
   * Choose **Save and Exit** to save BIOS settings and reboot
 
 ## Prepare for macOS Installation
 
-1. Disconnect PCIe power cables from the graphics card (or remove completely)
-2. Connect HDMI cable to motherboard integrated graphics output
+1. Disconnect PCIe power cables from the graphics card (or completely remove the card)
+2. Connect HDMI cable to integrated graphics output on motherboard
 3. Insert macOS Installer USB drive into the USB 3.0 port adjacent to Ethernet connector
 4. Connect keyboard and mouse to USB 2.0 ports
 
@@ -112,11 +113,17 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
 
 ## Install macOS Catalina
 
-1. Restart computer and select USB drive as boot drive
-2. Install macOS to desired internal drive
-3. As system restarts, keep selecting `Boot macOS Install from Install macOS Catalina` from Clover menu
-4. Once installation has completed, boot again from the USB drive and install Clover to the internal system drive and copy the EFI folder from the USB drive.
-
+1. Restart computer and select the USB drive as the default BIOS boot device 
+2. Select `Install macOS Catalina` as the Clover boot volume 
+3. Launch Disk Utility and format the destination drive to `Mac OS Extended (Journaled)`
+    * Required for the installer to see an uninitialized drive (will be reformatted as APFS during installation)
+2. Launch Install macOS and select the drive as the destination
+    * As the system restarts, keep selecting `Boot macOS Install from {Drive}` from the Clover menu
+    * If the system freezes, use the power button to shut down the computer and turn off the power supply. Wait a few minutes before restarting to continue the installation process.
+4. Once the installation is complete, select `Boot macOS from {Drive}` from the Clover menu and proceed through the normal macOS setup.
+    * **Do not sign into iCloud**
+    
+    
 ## References
 
 * [u/corpnewt's Vanilla Guide for Intel](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/)
