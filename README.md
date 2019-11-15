@@ -79,7 +79,9 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
   * Advanced Frequency Settings
     * Extreme Memory Profile (X.M.P.) → **Profile 1**
   * Smart Fan 5 Settings
-    * Set AIO fan control to 'Full Speed' in 'Voltage' mode
+    * CPU_FAN (Or whichever header was used for the AIO)
+      * Fan Speed Control → **Full Speed**
+      * Fan Control Mode → **Voltage**
 * BIOS
   * Windows 8/10 Features → **Windows 8/10**
   * CSM Support → **Disabled**
