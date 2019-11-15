@@ -76,12 +76,7 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
 * Save & Exit
   * **Load Optimized Defaults**
 * M.I.T.
-  * Advanced Frequency Settings
-    * Extreme Memory Profile (X.M.P.) → **Profile 1**
-  * Smart Fan 5 Settings
-    * CPU_FAN (Or whichever header was used for the AIO)
-      * Fan Speed Control → **Full Speed**
-      * Fan Control Mode → **Voltage**
+  * Extreme Memory Profile (X.M.P.) → **Profile 1**
 * BIOS
   * Windows 8/10 Features → **Windows 8/10**
   * CSM Support → **Disabled**
@@ -102,7 +97,6 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
   * Above 4G Decoding → **Enabled**
 * Power
   * ErP → **Disabled**
-  * Soft-Off by PWR-BTTN → **Delay 4 Sec.**
   * RC6 (Render Standby) → **Enabled**
 * Save & Exit
   * Choose **Save and Exit** to save BIOS settings and reboot
@@ -127,7 +121,10 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
     * If the system freezes, use the power button to shut down the computer and turn off the power supply. Wait a few minutes before restarting to continue the installation process.
 4. Once the installation is complete, select `Boot macOS from {Drive}` from the Clover menu
     * Proceed through the normal macOS setup but do not sign into iCloud
-5. Copy the EFI folder from the EFI partition of the USB device to the EFI partition of the macOS drive
+    
+## Post Installation
+
+1. Copy the EFI folder from the EFI partition of the USB device to the EFI partition of the macOS drive
     
 ## References
 
