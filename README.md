@@ -67,6 +67,10 @@ Unzip the archives and copy the .kexts to [`EFI/CLOVER/kexts/Other/`](EFI/CLOVER
 
 Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
 
+## Configure Clover
+
+
+
 ## BIOS Settings (Version F10)
 
 * Save & Exit
@@ -96,6 +100,15 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
   * RC6 (Render Standby) → **Enabled**
 * Save & Exit
   * Choose **Save and Exit** to save BIOS settings and reboot
+
+## Prepare for macOS Installation
+
+1. Disconnect PCIe power cables from the graphics card (or remove completely)
+2. Connect HDMI cable to motherboard integrated graphics output
+3. Insert macOS Installer USB drive into the USB 3.0 port adjacent to Ethernet connector
+4. Connect keyboard and mouse to USB 2.0 ports
+
+![Installation Connections](https://i.imgur.com/fODnRKV.png)
 
 ## Install macOS Catalina
 
