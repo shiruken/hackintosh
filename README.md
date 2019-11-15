@@ -126,9 +126,8 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
     * As the system restarts, keep selecting `Boot macOS Install from {Drive}` from the Clover menu
     * If the system freezes, use the power button to shut down the computer and turn off the power supply. Wait a few minutes before restarting to continue the installation process.
 4. Once the installation is complete, select `Boot macOS from {Drive}` from the Clover menu
-    * Proceed through the normal macOS setup
-    * If prompted, **do not sign into iCloud**
-    
+    * Proceed through the normal macOS setup but do not sign into iCloud
+5. Copy the EFI folder from the EFI partition of the USB device to the EFI partition of the macOS drive
     
 ## References
 
