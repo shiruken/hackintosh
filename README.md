@@ -1,5 +1,5 @@
 # Hackintosh v3
-Installation guide for my dual-boot Hackintosh v3 build running macOS Catalina and Windows 10.
+Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Windows 10.
 
 * [`EFI_install`](EFI_install/): Copy of EFI directory from the EFI partition of USB installer
 * `EFI`: Copy of EFI directory from the EFI partition of macOS boot drive
@@ -38,13 +38,15 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
 ## Prepare Install Media
 
 1. Download the [macOS Catalina installer](https://apps.apple.com/us/app/macos-catalina/id1466841314?mt=12) (v10.15.1) from the Mac App Store
-2. Format target USB drive [using Disk Utility](https://support.apple.com/en-us/HT208496) as 'Mac OS Extended (Journaled)':
+2. Open Terminal and format the target USB drive as `Mac OS Extended (Journaled)` with the following command:
 
     `diskutil partitionDisk /dev/disk# GPT JHFS+ "USB" 100%`
     
 3. [Create the bootable macOS installer](https://support.apple.com/sl-si/HT201372): 
 
     `sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/USB`
+
+4. Once the program finishes, your USB drive should now be called `Install macOS Catalina`
 
 ## Install Clover
 
@@ -78,9 +80,7 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
   * SMCSuperIO.kext
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases) (v1.3.4)
 
-Unzip the archives and copy the .kexts to `EFI/CLOVER/kexts/Other/` on the EFI partition of the USB device.
-
-Copy `VirtualSmc.efi` to `EFI/CLOVER/drivers/UEFI/`.
+Use Clover Configurator to mount the EFI partition of the USB drive. Copy the downloaded .kexts to `EFI/CLOVER/kexts/Other/` on the USB drive EFI parition. Copy `VirtualSmc.efi` to `EFI/CLOVER/drivers/UEFI/`.
 
 ## Configure Clover
 
