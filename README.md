@@ -38,7 +38,7 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
 ## Prepare Install Media
 
 1. Download the [macOS Catalina installer](https://apps.apple.com/us/app/macos-catalina/id1466841314?mt=12) (v10.15.1) from the Mac App Store
-2. Open Terminal and format the target USB drive as `Mac OS Extended (Journaled)` with the following command:
+2. Open Terminal and format the target USB drive as with the following command:
 
     `diskutil partitionDisk /dev/disk# GPT JHFS+ "USB" 100%`
     
