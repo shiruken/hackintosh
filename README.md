@@ -184,8 +184,24 @@ The Clover configuration for the installation is heavily based upon u/corpnewt's
 3. Select `Boot macOS from Macintosh SSD` from the Clover menu
 4. You should now have a bootable macOS installation!
 
+### Enable the Graphics Card
 
-
+1. Use Clover Configurator to modify the `config.plist` on the EFI partition of `Macintosh SSD`
+    * Boot
+      * Remove the `-wegnoegpu` boot argument
+      * Add the `agdpmod=pikera` boot argument
+    * Devices
+      * Clear value of `IntelGFX` field
+    * Graphics
+      * Uncheck `Inject Intel`
+2. Reboot the computer and modify the BIOS Settings
+    * Peripherals
+      * Initial Display Output → **PCIe Slot 1**
+    * Chipset
+      * Internal Graphics → **Disabled**
+3. Save the changes and reboot the computer
+4. Disconnect the HDMI cable from the motherboard and connect a DisplayPort cable to the graphics card
+5. You should now be using the natively-supported discrete graphics card (as of macOS 10.15.1) 
 
 ## References
 
