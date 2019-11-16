@@ -1,7 +1,8 @@
 # Hackintosh v3
 Installation guide for my dual-boot Hackintosh v3 build running macOS Catalina and Windows 10.
 
-* `EFI`: Copy of EFI directory from the EFI partition of boot drive
+* `EFI_install`: Copy of EFI directory from the EFI partition of USB installer
+* `EFI`: Copy of EFI directory from the EFI partition of macOS boot drive
 
 ## The Build
 
@@ -63,20 +64,50 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
   * SMCSuperIO.kext
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases) (v1.3.4)
 
-Unzip the archives and copy the .kexts to [`EFI/CLOVER/kexts/Other/`](EFI/CLOVER/kexts/Other/) on the EFI partition of the USB device.
+Unzip the archives and copy the .kexts to `EFI/CLOVER/kexts/Other/` on the EFI partition of the USB device.
 
-Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
+Copy `VirtualSmc.efi` to `EFI/CLOVER/drivers/UEFI/`.
 
 ## Configure Clover
 
+The Clover configuration for the installation is heavily based upon [u/corpnewt's r/Hackintosh Vanilla Desktop Guide for the Coffee Lake microarchitecture](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake). Each section of the configuration is documented below:
 
+* ACPI
+  ![ACPI Page 1](https://i.imgur.com/b9emBDy.png)
+  ![ACPI Page 2](https://i.imgur.com/7bX6Et6.png)
+* Boot
+  ![Boot](https://i.imgur.com/9G90zXG.png)
+* Boot Graphics
+  ![Boot Graphics](https://i.imgur.com/bjwfhwP.png)
+* CPU
+  ![CPU](https://i.imgur.com/u8UMpwR.png)
+* Devices
+  ![Devices Page 1](https://i.imgur.com/vQLQnXq.png)
+  ![Devices Page 2](https://i.imgur.com/JpbOjH6.png)
+* Disable Drivers
+  ![Disable Drivers](https://i.imgur.com/tZr2pE5.png)
+* GUI
+  ![GUI](https://i.imgur.com/xx4sxbw.png)
+* Graphics
+  ![Graphics](https://i.imgur.com/acVP1Hu.png)
+* Kernel and Kext Patches
+  ![Kernel and Kext Patches](https://i.imgur.com/mN151li.png)
+* Rt Varibles
+  ![Rt Varibles](https://i.imgur.com/PCIRC9i.png)
+* SMBIOS
+  ![SMBIOS](https://i.imgur.com/4repGYM.png)
+* System Parameters
+  ![System Parameters](https://i.imgur.com/8TxqzfK.png)
+
+**Alternative:** Download the sanitized installation [`config.plist`](EFI_install/CLOVER/config.plist) and replace the file in `EFI/Clover/` on the USB drive. You will need to use Clover Configurator or [`macserial`](https://github.com/acidanthera/MacInfoPkg/releases) to generate a serial number and board serial number for the `iMac19,1`  SMBIOS.
 
 ## BIOS Settings (Version F10)
 
 * Save & Exit
   * **Load Optimized Defaults**
 * M.I.T.
-  * Extreme Memory Profile (X.M.P.) → **Profile 1**
+  * Advanced Frequency Settings
+    * Extreme Memory Profile (X.M.P.) → **Profile 1**
 * BIOS
   * Windows 8/10 Features → **Windows 8/10**
   * CSM Support → **Disabled**
@@ -103,10 +134,9 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
 
 ## Prepare for macOS Installation
 
-1. Disconnect PCIe power cables from the graphics card (or completely remove the card)
-2. Connect HDMI cable to integrated graphics output on motherboard
-3. Insert macOS Installer USB drive into the USB 3.0 port adjacent to Ethernet connector
-4. Connect keyboard and mouse to USB 2.0 ports
+1. Connect HDMI cable to integrated graphics output on motherboard
+2. Insert macOS Installer USB drive into the USB 3.0 port adjacent to Ethernet connector
+3. Connect keyboard and mouse to USB 2.0 ports
 
 ![Installation Connections](https://i.imgur.com/fODnRKV.png)
 
@@ -118,7 +148,7 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
     * Required for the installer to see an uninitialized drive (will be reformatted as APFS during installation)
 2. Launch Install macOS and select the drive as the destination
     * As the system restarts, keep selecting `Boot macOS Install from {Drive}` from the Clover menu
-    * If the system freezes, use the power button to shut down the computer and turn off the power supply. Wait a few minutes before restarting to continue the installation process.
+    * If the system freezes, use the power button to shut down the computer and turn off the power supply. Wait a few minutes before restarting to continue the installation process (keep selecting `Boot macOS Install from {Drive}`).
 4. Once the installation is complete, select `Boot macOS from {Drive}` from the Clover menu
     * Proceed through the normal macOS setup but do not sign into iCloud
     
@@ -128,7 +158,7 @@ Copy `VirtualSmc.efi` to [`EFI/CLOVER/drivers/UEFI/`](EFI/CLOVER/drivers/UEFI/).
     
 ## References
 
-* [u/corpnewt's Vanilla Guide for Intel](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/)
+* [u/corpnewt's r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/)
 * [Glasgood's macOS Mojave [SUCCESS][GUIDE] for Aorus Z390 Pro](https://www.insanelymac.com/forum/topic/337837-glasgoods-macos-mojave-successguide-for-aorus-z390-pro/)
 * [[SUCCESS] Gigabyte Designare Z390 (Thunderbolt 3) + i7-9700K + AMD RX 580](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/)
 
@@ -136,3 +166,4 @@ https://www.reddit.com/r/hackintosh/comments/djh98y/hackintosh_gigabyte_z390_pro
 https://www.reddit.com/r/hackintosh/comments/bb3hy5/build_i9_9900k_gigabyte_z390_aorus_pro_wifi/
 https://www.reddit.com/r/hackintosh/comments/dpu4by/general_z390_catalina_guide_or_why_you_should/
 https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.260063/
+https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/
