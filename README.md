@@ -83,36 +83,35 @@ Copy `VirtualSmc.efi` to `EFI/CLOVER/drivers/UEFI/`.
 
 ## Configure Clover
 
-The Clover configuration for the installation is heavily based upon [u/corpnewt's r/Hackintosh Vanilla Desktop Guide for the Coffee Lake microarchitecture](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake). Each section of the configuration is documented below:
+The Clover configuration for the installation is heavily based upon u/corpnewt's [r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) for the [Coffee Lake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake) microarchitecture. Each section of the configuration is documented below. A sanitized version of the config file I used can be found in [`EFI_install/CLOVER/`](EFI_install/CLOVER/). You will need to use Clover Configurator or [`macserial`](https://github.com/acidanthera/MacInfoPkg/releases) to generate a valid serial number and board serial number for the `iMac19,1`  SMBIOS.
 
 * ACPI
-  ![ACPI Page 1](https://i.imgur.com/b9emBDy.png)
-  ![ACPI Page 2](https://i.imgur.com/7bX6Et6.png)
+  ![ACPI Page 1](Screenshots/Install_Clover_ACPI_1.png)
+  ![ACPI Page 2](Screenshots/Install_Clover_ACPI_2.png)
 * Boot
-  ![Boot](https://i.imgur.com/9G90zXG.png)
+  ![Boot](Screenshots/Install_Clover_Boot.png)
 * Boot Graphics
-  ![Boot Graphics](https://i.imgur.com/bjwfhwP.png)
+  ![Boot Graphics](Screenshots/Install_Clover_BootGraphics.png)
 * CPU
-  ![CPU](https://i.imgur.com/u8UMpwR.png)
+  ![CPU](Screenshots/Install_Clover_CPU.png)
 * Devices
-  ![Devices Page 1](https://i.imgur.com/vQLQnXq.png)
-  ![Devices Page 2](https://i.imgur.com/JpbOjH6.png)
+  ![Devices Page 1](Screenshots/Install_Clover_Devices_1.png)
+  ![Devices Page 2](Screenshots/Install_Clover_Devices_2.png)
 * Disable Drivers
-  ![Disable Drivers](https://i.imgur.com/tZr2pE5.png)
+  ![Disable Drivers](Screenshots/Install_Clover_DisableDrivers.png)
 * GUI
-  ![GUI](https://i.imgur.com/xx4sxbw.png)
+  ![GUI](Screenshots/Install_Clover_GUI.png)
 * Graphics
-  ![Graphics](https://i.imgur.com/acVP1Hu.png)
+  ![Graphics](Screenshots/Install_Clover_Graphics.png)
 * Kernel and Kext Patches
-  ![Kernel and Kext Patches](https://i.imgur.com/mN151li.png)
+  ![Kernel and Kext Patches](Screenshots/Install_Clover_KernalKextPatches.png)
 * Rt Varibles
-  ![Rt Varibles](https://i.imgur.com/PCIRC9i.png)
+  ![Rt Varibles](Screenshots/Install_Clover_RtVariables.png)
 * SMBIOS
-  ![SMBIOS](https://i.imgur.com/4repGYM.png)
+  ![SMBIOS](Screenshots/Install_Clover_SMBIOS.png)
 * System Parameters
-  ![System Parameters](https://i.imgur.com/8TxqzfK.png)
+  ![System Parameters](Screenshots/Install_Clover_SystemParameters.png)
 
-**Alternative:** Download the sanitized installation [`config.plist`](EFI_install/CLOVER/config.plist) and replace the file in `EFI/Clover/` on the USB drive. You will need to use Clover Configurator or [`macserial`](https://github.com/acidanthera/MacInfoPkg/releases) to generate a serial number and board serial number for the `iMac19,1`  SMBIOS.
 
 ## BIOS Settings (Version F10)
 
@@ -121,6 +120,10 @@ The Clover configuration for the installation is heavily based upon [u/corpnewt'
 * M.I.T.
   * Advanced Frequency Settings
     * Extreme Memory Profile (X.M.P.) → **Profile 1**
+  * Smart Fan 5 Settings
+    * CPU_FAN (or whichever header was used for the AIO)
+      * Speed Control → **Full Speed**
+      * Control Mode → **Voltage**
 * BIOS
   * Windows 8/10 Features → **Windows 8/10**
   * CSM Support → **Disabled**
@@ -147,17 +150,17 @@ The Clover configuration for the installation is heavily based upon [u/corpnewt'
 
 ## Prepare for macOS Installation
 
-1. Connect HDMI cable to integrated graphics output on motherboard
+1. Connect HDMI cable to the integrated graphics output on the motherboard
 2. Insert macOS Installer USB drive into the USB 3.0 port adjacent to Ethernet connector
 3. Connect keyboard and mouse to USB 2.0 ports
 
-![Installation Connections](https://i.imgur.com/fODnRKV.png)
+![Installation Connections](Screenshots/Install_Ports.png)
 
 ## Install macOS Catalina
 
 1. Restart computer and select the USB drive as the default BIOS boot device 
 2. Select `Install macOS Catalina` as the Clover boot volume 
-3. Launch Disk Utility and format the destination drive to `Mac OS Extended (Journaled)`
+3. Launch Disk Utility and format the destination drive as `Mac OS Extended (Journaled)`
     * Required for the installer to see an uninitialized drive (will be reformatted as APFS during installation)
 2. Launch Install macOS and select the drive as the destination
     * As the system restarts, keep selecting `Boot macOS Install from {Drive}` from the Clover menu
