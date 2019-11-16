@@ -4,6 +4,19 @@ Installation guide for my dual-boot Hackintosh v3 build running macOS Catalina a
 * `EFI_install`: Copy of EFI directory from the EFI partition of USB installer
 * `EFI`: Copy of EFI directory from the EFI partition of macOS boot drive
 
+## Table of Contents
+
+* [The Build](#the-build)
+* [Prepare Install Media](#prepare-install-media)
+* [Install Clover](#install-clover)
+* [Gather Kexts](#gather-kexts)
+* [BIOS Settings](#bios-settings-version-f10)
+* [Prepare for macOS Installation](#prepare-for-macos-installation)
+* [Prepare for macOS Installation](#prepare-for-macos-installation)
+* [Install macOS Catalina](#install-macos-catalina)
+* [Post Installation](#post-installation)
+* [References](#references)
+
 ## The Build
 
 * **CPU:** Intel Core i7-9700K
