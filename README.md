@@ -15,6 +15,7 @@ Installation guide for my dual-boot Hackintosh v3 build running macOS Catalina a
 * [Prepare for macOS Installation](#prepare-for-macos-installation)
 * [Install macOS Catalina](#install-macos-catalina)
 * [Post Installation](#post-installation)
+  * [Make macOS Drive Bootable](#make-macos-drive-bootable)
 * [References](#references)
 
 ## The Build
@@ -83,7 +84,7 @@ Copy `VirtualSmc.efi` to `EFI/CLOVER/drivers/UEFI/`.
 
 ## Configure Clover
 
-The Clover configuration for the installation is heavily based upon u/corpnewt's [r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) for the [Coffee Lake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake) microarchitecture. Each section of the configuration is documented below. A sanitized version of the config file I used can be found in [`EFI_install/CLOVER/`](EFI_install/CLOVER/). You will need to use Clover Configurator or [`macserial`](https://github.com/acidanthera/MacInfoPkg/releases) to generate a valid serial number and board serial number for the `iMac19,1`  SMBIOS.
+The Clover configuration for the installation is heavily based upon u/corpnewt's [r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) for the [Coffee Lake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake) microarchitecture. Each section of the configuration in Clover Configurator is documented below. A sanitized version of the config file I used can be found in [`EFI_install/CLOVER/`](EFI_install/CLOVER/). You will need to use Clover Configurator or [`macserial`](https://github.com/acidanthera/MacInfoPkg/releases) to generate a valid serial number and board serial number for the `iMac19,1`  SMBIOS.
 
 * ACPI
   ![ACPI Page 1](Screenshots/Install_Clover_ACPI_1.png)
@@ -160,18 +161,28 @@ The Clover configuration for the installation is heavily based upon u/corpnewt's
 
 1. Restart computer and select the USB drive as the default BIOS boot device 
 2. Select `Install macOS Catalina` as the Clover boot volume 
-3. Launch Disk Utility and format the destination drive as `Mac OS Extended (Journaled)`
-    * Required for the installer to see an uninitialized drive (will be reformatted as APFS during installation)
-2. Launch Install macOS and select the drive as the destination
-    * As the system restarts, keep selecting `Boot macOS Install from {Drive}` from the Clover menu
+3. Launch Disk Utility and format the destination drive (required for the installer to see an uninitialized drive)
+    * Name: `Macintosh SSD`
+    * Format: `Mac OS Extended (Journaled)` or `APFS` (will be reformatted as `APFS` during installation))
+    * Scheme: `GUID Partition Map`
+2. Launch Install macOS and select the `Macintosh SSD` drive as the destination 
+    * As the system restarts, keep selecting `Boot macOS Install from Macintosh SSD` from the Clover menu
     * If the system freezes, use the power button to shut down the computer and turn off the power supply. Wait a few minutes before restarting to continue the installation process.
-4. Once the installation is complete, select `Boot macOS from {Drive}` from the Clover menu
+4. Once the installation is complete, select `Boot macOS from Macintosh SSD` from the Clover menu
     * Proceed through the normal macOS setup but do not sign into iCloud
     
 ## Post Installation
 
-1. Copy the EFI folder from the EFI partition of the USB device to the EFI partition of the macOS drive
-    
+### Make macOS Drive Bootable
+
+1. Mount the EFI partition of `Macintosh SSD` and copy over the entire EFI directory from the USB drive
+2. Restart the computer and select the internal drive (Samsung 970 Evo) as the default BIOS boot device
+3. Select `Boot macOS from Macintosh SSD` from the Clover menu
+4. You should now have a bootable macOS installation!
+
+
+
+
 ## References
 
 * [u/corpnewt's r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/)
