@@ -10,8 +10,8 @@ Installation guide for my dual-boot Hackintosh v3 build running macOS Catalina a
 * [Prepare Install Media](#prepare-install-media)
 * [Install Clover](#install-clover)
 * [Gather Kexts](#gather-kexts)
+* [Configure Clover](#configure-clover)
 * [BIOS Settings](#bios-settings-version-f10)
-* [Prepare for macOS Installation](#prepare-for-macos-installation)
 * [Prepare for macOS Installation](#prepare-for-macos-installation)
 * [Install macOS Catalina](#install-macos-catalina)
 * [Post Installation](#post-installation)
@@ -164,7 +164,7 @@ The Clover configuration for the installation is heavily based upon u/corpnewt's
     * Required for the installer to see an uninitialized drive (will be reformatted as APFS during installation)
 2. Launch Install macOS and select the drive as the destination
     * As the system restarts, keep selecting `Boot macOS Install from {Drive}` from the Clover menu
-    * If the system freezes, use the power button to shut down the computer and turn off the power supply. Wait a few minutes before restarting to continue the installation process (keep selecting `Boot macOS Install from {Drive}`).
+    * If the system freezes, use the power button to shut down the computer and turn off the power supply. Wait a few minutes before restarting to continue the installation process.
 4. Once the installation is complete, select `Boot macOS from {Drive}` from the Clover menu
     * Proceed through the normal macOS setup but do not sign into iCloud
     
