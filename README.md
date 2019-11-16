@@ -24,8 +24,8 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
 * **CPU Cooler:** Corsair H100i PRO
 * **Motherboard:** Gigabyte Z390 AORUS PRO WIFI
 * **Memory:** Corsair Vengeance RGB Pro 16 GB DDR4-3600
-* **Storage (macOS):** Samsung 970 Evo 1 TB M.2 NVME SSD
-* **Storage (Windows):** Intel 660p Series 1 TB M.2 NVME SSD
+* **Storage (macOS):** Samsung 970 Evo 1 TB M.2 NVME SSD (M2A Slot)
+* **Storage (Windows):** Intel 660p Series 1 TB M.2 NVME SSD (M2M Slot)
 * **Video Card:** Gigabyte Radeon RX 5700 XT 8 GB GAMING OC
 * **Power Supply:** Corsair RM650 80+ Gold
 * **Case:** NZXT H510
