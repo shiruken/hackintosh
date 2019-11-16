@@ -165,9 +165,9 @@ The Clover configuration for the installation is heavily based upon u/corpnewt's
 
 1. Restart computer and select the USB drive as the default BIOS boot device 
 2. Select `Install macOS Catalina` as the Clover boot volume 
-3. Launch Disk Utility and format the destination drive (required for the installer to see an uninitialized drive)
+3. Launch Disk Utility and format the destination drive (Samsung 970 Evo)
     * Name: `Macintosh SSD`
-    * Format: `Mac OS Extended (Journaled)` or `APFS` (will be reformatted as `APFS` during installation))
+    * Format: `Mac OS Extended (Journaled)` or `APFS` (will be reformatted as `APFS` during installation)
     * Scheme: `GUID Partition Map`
 2. Launch Install macOS and select the `Macintosh SSD` drive as the destination 
     * As the system restarts, keep selecting `Boot macOS Install from Macintosh SSD` from the Clover menu
