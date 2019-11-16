@@ -80,7 +80,11 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
   * SMCSuperIO.kext
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases) (v1.3.4)
 
-Use Clover Configurator to mount the EFI partition of the USB drive. Copy the downloaded .kexts to `EFI/CLOVER/kexts/Other/` on the USB drive EFI parition. Copy `VirtualSmc.efi` to `EFI/CLOVER/drivers/UEFI/`.
+1. Use Clover Configurator to mount the EFI partition of the USB drive
+2. Copy the downloaded .kexts to `EFI/CLOVER/kexts/Other/` on the USB drive EFI partition
+3. Copy `VirtualSmc.efi` to `EFI/CLOVER/drivers/UEFI/` on the USB drive EFI partition
+
+The exact kexts and drivers I used during my installation can be found in [`EFI_install/`](EFI_install/).
 
 ## Configure Clover
 
