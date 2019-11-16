@@ -86,31 +86,31 @@ Copy `VirtualSmc.efi` to `EFI/CLOVER/drivers/UEFI/`.
 The Clover configuration for the installation is heavily based upon u/corpnewt's [r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) for the [Coffee Lake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake) microarchitecture. Each section of the configuration is documented below. A sanitized version of the config file I used can be found in [`EFI_install/CLOVER/`](EFI_install/CLOVER/). You will need to use Clover Configurator or [`macserial`](https://github.com/acidanthera/MacInfoPkg/releases) to generate a valid serial number and board serial number for the `iMac19,1`  SMBIOS.
 
 * ACPI
-  [![ACPI Page 1](Screenshots/Install_Clover_ACPI_1.png)](#)
-  [![ACPI Page 2](Screenshots/Install_Clover_ACPI_2.png)](#)
+  ![ACPI Page 1](Screenshots/Install_Clover_ACPI_1.png)
+  ![ACPI Page 2](Screenshots/Install_Clover_ACPI_2.png)
 * Boot
-  [![Boot](Screenshots/Install_Clover_Boot.png)](#)
+  ![Boot](Screenshots/Install_Clover_Boot.png)
 * Boot Graphics
-  [![Boot Graphics](Screenshots/Install_Clover_BootGraphics.png)](#)
+  ![Boot Graphics](Screenshots/Install_Clover_BootGraphics.png)
 * CPU
-  [![CPU](Screenshots/Install_Clover_CPU.png)](#)
+  ![CPU](Screenshots/Install_Clover_CPU.png)
 * Devices
-  [![Devices Page 1](Screenshots/Install_Clover_Devices_1.png)](#)
-  [![Devices Page 2](Screenshots/Install_Clover_Devices_2.png)](#)
+  ![Devices Page 1](Screenshots/Install_Clover_Devices_1.png)
+  ![Devices Page 2](Screenshots/Install_Clover_Devices_2.png)
 * Disable Drivers
-  [![Disable Drivers](Screenshots/Install_Clover_DisableDrivers.png)](#)
+  ![Disable Drivers](Screenshots/Install_Clover_DisableDrivers.png)
 * GUI
-  [![GUI](Screenshots/Install_Clover_GUI.png)](#)
+  ![GUI](Screenshots/Install_Clover_GUI.png)
 * Graphics
-  [![Graphics](Screenshots/Install_Clover_Graphics.png)](#)
+  ![Graphics](Screenshots/Install_Clover_Graphics.png)
 * Kernel and Kext Patches
-  [![Kernel and Kext Patches](Screenshots/Install_Clover_KernalKextPatches.png)](#)
+  ![Kernel and Kext Patches](Screenshots/Install_Clover_KernalKextPatches.png)
 * Rt Varibles
-  [![Rt Varibles](Screenshots/Install_Clover_RtVariables.png)](#)
+  ![Rt Varibles](Screenshots/Install_Clover_RtVariables.png)
 * SMBIOS
-  [![SMBIOS](Screenshots/Install_Clover_SMBIOS.png)](#)
+  ![SMBIOS](Screenshots/Install_Clover_SMBIOS.png)
 * System Parameters
-  [![System Parameters](Screenshots/Install_Clover_SystemParameters.png)](#)
+  ![System Parameters](Screenshots/Install_Clover_SystemParameters.png)
 
 
 ## BIOS Settings (Version F10)
@@ -154,7 +154,7 @@ The Clover configuration for the installation is heavily based upon u/corpnewt's
 2. Insert macOS Installer USB drive into the USB 3.0 port adjacent to Ethernet connector
 3. Connect keyboard and mouse to USB 2.0 ports
 
-[![Installation Connections](Screenshots/Install_Ports.png)](#)
+![Installation Connections](Screenshots/Install_Ports.png)
 
 ## Install macOS Catalina
 
