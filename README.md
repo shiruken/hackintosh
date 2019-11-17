@@ -19,6 +19,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
   * [Map USB Ports](#map-usb-ports)
   * [Enable the Graphics Card](#enable-the-graphics-card)
   * [Enable TRIM for Solid State Drives](#enable-trim-for-solid-state-drives)
+  * [Final Clover Configuration](#final-clover-configuration)
 * [References](#references)
 
 ## The Build
@@ -221,6 +222,11 @@ _Note: You should also make these changes to your USB drive Clover configuration
 2. Verify TRIM was enabled in System Report:
 
     ![NVMExpress TRIM Support](Screenshots/Post_TRIM.png)
+
+### Final Clover Configuration
+
+A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/CLOVER/). Each section of the configuration in Clover Configurator is also documented below.
+
 
 ## References
 
