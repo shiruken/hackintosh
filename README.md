@@ -224,7 +224,7 @@ _Note: You should also make these changes to your USB drive Clover configuration
 
     ![NVMExpress TRIM Support](Screenshots/Post_TRIM.png)
 
-## Fix CPU Type in About This Mac
+### Fix CPU Type in About This Mac
 
 For some reason, About This Mac and System Report do not properly identify the processor and list it as an 'Intel Core i9' instead of an 'Intel Core i7.' This can easily be fixed by using Clover Configurator to set the CPU Type to `0x0705` and rebooting.
 
