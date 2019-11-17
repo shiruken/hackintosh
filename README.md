@@ -177,7 +177,7 @@ The Clover configuration for the installation is heavily based upon u/corpnewt's
     * As the system restarts, keep selecting `Boot macOS Install from Macintosh SSD` from the Clover menu
     * If the system freezes, use the power button to shut down the computer and turn off the power supply. Wait a few minutes before restarting to continue the installation process.
 4. Once the installation is complete, select `Boot macOS from Macintosh SSD` from the Clover menu
-    * Proceed through the normal macOS setup but do not sign into iCloud
+    * Proceed through the normal macOS setup but delay signing into iCloud until post installation is complete
     
 ## Post Installation
 
