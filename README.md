@@ -143,7 +143,7 @@ The Clover configuration for the installation is heavily based upon u/corpnewt's
 * Chipset
   * Vt-d → **Disabled**
   * Internal Graphics → **Enabled**
-  * DVMT Pre-Alloc → **64M**
+  * DVMT Pre-Alloc → **32M**
   * DVMT Total Gfx Mem → **256M**
   * Audio Controller → **Enabled**
   * Above 4G Decoding → **Enabled**
