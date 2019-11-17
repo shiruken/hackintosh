@@ -228,6 +228,8 @@ _Note: You should also make these changes to your USB drive Clover configuration
 
 For some reason, About This Mac and System Report do not properly identify the processor and list it as an 'Intel Core i9' instead of an 'Intel Core i7.' This can easily be fixed by using Clover Configurator to set the CPU Type to `0x0705` and rebooting.
 
+![Before/After About This Mac](Screenshots/Post_CPUType.png)
+
 ### Final Clover Configuration
 
 A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/CLOVER/). Each section of the configuration in Clover Configurator is also documented below.
