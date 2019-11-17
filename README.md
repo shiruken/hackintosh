@@ -18,6 +18,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
   * [Make macOS Drive Bootable](#make-macos-drive-bootable)
   * [Map USB Ports](#map-usb-ports)
   * [Enable the Graphics Card](#enable-the-graphics-card)
+  * [Enable TRIM for Solid State Drives](#enable-trim-for-solid-state-drives)
 * [References](#references)
 
 ## The Build
