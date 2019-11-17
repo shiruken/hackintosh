@@ -19,6 +19,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
   * [Map USB Ports](#map-usb-ports)
   * [Enable the Graphics Card](#enable-the-graphics-card)
   * [Enable TRIM for Solid State Drives](#enable-trim-for-solid-state-drives)
+  * [Fix CPU Type in About This Mac](#fix-cpu-type-in-about-this-mac)
   * [Final Clover Configuration](#final-clover-configuration)
 * [References](#references)
 
@@ -194,7 +195,7 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
 
 ### Enable the Graphics Card
 
-1. Use Clover Configurator to modify the `config.plist` on the EFI partition of `Macintosh SSD`
+1. Modify the Clover configuration on the EFI partition of `Macintosh SSD`
     * Boot
       * Remove the `-wegnoegpu` boot argument
       * Add the `agdpmod=pikera` boot argument
@@ -223,6 +224,10 @@ _Note: You should also make these changes to your USB drive Clover configuration
 
     ![NVMExpress TRIM Support](Screenshots/Post_TRIM.png)
 
+## Fix CPU Type in About This Mac
+
+For some reason, About This Mac and System Report do not properly identify the processor and list it as an 'Intel Core i9' instead of an 'Intel Core i7.' This can easily be fixed by using Clover Configurator to set the CPU Type to `0x0705` and rebooting.
+
 ### Final Clover Configuration
 
 A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/CLOVER/). Each section of the configuration in Clover Configurator is also documented below.
@@ -236,3 +241,10 @@ A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/
 * [Glasgood's macOS Mojave [SUCCESS][GUIDE] for Aorus Z390 Pro](https://www.insanelymac.com/forum/topic/337837-glasgoods-macos-mojave-successguide-for-aorus-z390-pro/)
 * [[SUCCESS] Gigabyte Designare Z390 (Thunderbolt 3) + i7-9700K + AMD RX 580](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/)
 * [General Z390 Catalina Guide, or why you should take the time to set things from scratch (bonus 5700 XT guide)](https://www.reddit.com/r/hackintosh/comments/dpu4by/general_z390_catalina_guide_or_why_you_should/)
+
+## Resources
+
+* [Clover Configurator Global Edition](http://mackie100projects.altervista.org/download-clover-configurator/)
+* [Clover Theme Manager](https://www.insanelymac.com/forum/topic/302674-clover-theme-manager/)
+* [Hackintool](https://www.insanelymac.com/forum/topic/335018-hackintool-v286/)
+* [MacInfoPkg (macserial)](https://github.com/acidanthera/MacInfoPkg)
