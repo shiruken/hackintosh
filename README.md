@@ -16,6 +16,8 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
 * [Install macOS Catalina](#install-macos-catalina)
 * [Post Installation](#post-installation)
   * [Make macOS Drive Bootable](#make-macos-drive-bootable)
+  * [Map USB Ports](#map-usb-ports)
+  * [Enable the Graphics Card](#enable-the-graphics-card)
 * [References](#references)
 
 ## The Build
@@ -186,6 +188,8 @@ The Clover configuration for the installation is heavily based upon u/corpnewt's
 
 _Note: You can now remove the USB drive but keep it handy for debugging issues with your Hackintosh._
 
+### Map USB Ports
+
 ### Enable the Graphics Card
 
 1. Use Clover Configurator to modify the `config.plist` on the EFI partition of `Macintosh SSD`
@@ -206,6 +210,16 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
 5. You should now be using the natively-supported discrete graphics card (as of macOS 10.15.1) 
 
 _Note: You should also make these changes to your USB drive Clover configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, you'll have to swap back to using the integrated graphics instead of the discrete graphics card._
+
+### Enable TRIM for Solid State Drives
+
+1. Open Terminal and enter the following command:
+
+    `sudo trimforce enable`
+    
+2. Verify TRIM was enabled in System Report:
+
+    ![NVMExpress TRIM Support](Screenshots/Post_TRIM.png)
 
 ## References
 
