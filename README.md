@@ -20,6 +20,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
   * [Map USB Ports](#map-usb-ports)
   * [Enable TRIM for Solid State Drives](#enable-trim-for-solid-state-drives)
   * [Fix CPU Type in About This Mac](#fix-cpu-type-in-about-this-mac)
+  * [Install Clover Theme](#install-clover-theme)
   * [Final Clover Configuration](#final-clover-configuration)
 * [References](#references)
 
@@ -269,6 +270,8 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
 For some reason, About This Mac and System Report do not properly identify the processor and list it as an 'Intel Core i9' instead of an 'Intel Core i7.' This can easily be fixed by using Clover Configurator to set the CPU Type to `0x0705` and rebooting.
 
 ![Before/After About This Mac](Screenshots/Post_CPUType.png)
+
+### Install Clover Theme
 
 ### Final Clover Configuration
 
