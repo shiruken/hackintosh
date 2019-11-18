@@ -217,7 +217,7 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
     2. Using the list of identified ports, enter the numbers of the ports you want to **disable**
         * No more than 15 XHC ports can be enabled
         * `2,3,4,9,11,12,14,15,16,18,25` → `HS02,HS03,HS04,HS09,HS11,HS12,HS14,USR1,USR2,SS02,SS09`
-          * Disables onboard Bluetooth, AIO control, and USB 2.0 support for the two ports immediately beneath the HDMI port
+          * Disables Bluetooth, AIO control, and USB 2.0 for the two ports immediately beneath the HDMI port
         * The enabled ports are red and the disabled ports are gray in the image above
     3. Press `k` then `[enter]` to build the custom USBMap.kext file
     4. Allow the program to move the files to your EFI partition or copy them manually:
