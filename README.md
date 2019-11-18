@@ -224,7 +224,6 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
         * `USBMap.kext` → [`EFI/CLOVER/kexts/Other/`](EFI/CLOVER/kexts/Other/)
         * `SSDT-USBX.aml` → [`EFI/CLOVER/ACPI/patched/`](EFI/CLOVER/ACPI/patched/)
         * `SSDT-USBX.dsl` → [`EFI/CLOVER/ACPI/patched/`](EFI/CLOVER/ACPI/patched/)
-        
 5. Modify the Clover configuration on the EFI partition of `Macintosh SSD`
     * ACPI
       * Remove the `change EHC2 to EH02` patch (not present on this system)
