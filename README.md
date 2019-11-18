@@ -26,7 +26,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
 ## The Build
 
 * **CPU:** Intel Core i7-9700K
-* **CPU Cooler:** Corsair H100i PRO
+* **CPU Cooler:** Corsair H100i PRO (Connected to CPU_FAN and F_USB2)
 * **Motherboard:** Gigabyte Z390 AORUS PRO WIFI
 * **Memory:** Corsair Vengeance RGB Pro 16 GB DDR4-3600
 * **Storage (macOS):** Samsung 970 Evo 1 TB M.2 NVME SSD (M2A Slot)
@@ -93,7 +93,7 @@ The exact kexts and drivers I used during my installation can be found in [`EFI_
 
 ## Configure Clover
 
-The Clover configuration for the installation is heavily based upon u/corpnewt's [r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) for the [Coffee Lake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake) microarchitecture. The major difference is with how the iGPU is enabled because I encountered difficulties when using device property injections. Each section of the configuration in Clover Configurator is documented below. A sanitized version of the config file I used can be found in [`EFI_install/CLOVER/`](EFI_install/CLOVER/). You will need to use Clover Configurator or [`macserial`](https://github.com/acidanthera/MacInfoPkg/releases) to generate a valid serial number and board serial number for the `iMac19,1`  SMBIOS.
+The Clover configuration for the installation is heavily based upon corpnewt's [r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) for the [Coffee Lake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake) microarchitecture. The major difference is with how the iGPU is enabled because I encountered difficulties when using device property injections. Each section of the configuration in Clover Configurator is documented below. A sanitized version of the config file I used can be found in [`EFI_install/CLOVER/`](EFI_install/CLOVER/). You will need to use Clover Configurator or [`macserial`](https://github.com/acidanthera/MacInfoPkg/releases) to generate a valid serial number and board serial number for the `iMac19,1`  SMBIOS.
 
 * ACPI
   ![ACPI Page 1](Screenshots/Install_Clover_ACPI_1.png)
@@ -193,6 +193,37 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
 
 ### Map USB Ports
 
+Apple's USB driver implementation restricts macOS to only 15 HS/SS ports. During the installation process, we utilized RehabMan's [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All) kext and USB port limit kext patches to `com.apple.iokit.IOUSBHostFamily` and `com.apple.driver.usb.AppleUSBXHCI` to circumvent this restriction. While useful during installation, it is generally recommended that these workarounds be removed in favor of a custom SSDT and injector kext for the final system configuration to avoid buffer overruns and sleep/wake issues. In order to map out the custom port injection for system, we will be using corpnewt's [USBMap](https://github.com/corpnewt/USBMap) Python script and following along with the process described in [Carl Mercier's YouTube video](https://www.youtube.com/watch?v=j3V7szXZZTc). If you have the same motherboard (Gigabyte Z390 AORUS PRO WIFI) and want the same USB port mapping I utilize, you can download my SSDT and injector kext and skip to Step X.
+
+1. Add the following two patches to the ACPI Clover configuration on the EFI partition of `Macintosh SSD` and reboot
+
+    ![EHC1 and EHC2 patches](Screenshots/Post_USBMap_ACPI.png)
+    
+2. Open Terminal and run the following commands to clone the USBMap repository and run the script:
+    ```
+    git clone https://github.com/corpnewt/USBMap
+    cd USBMap
+    chmod +x USBMap.command
+    ./USBMap.command
+    ```
+3. Press `d` then `[enter]` to begin discovering ports
+4. Using a USB flash drive, systematically test each external USB port to identify the ID. The images below summarize the port mapping for my system:
+
+    ![USB Port Mapping](Screenshots/Post_USBMap_Schematic.png)
+
+
+1. Modify the Clover configuration on the EFI partition of `Macintosh SSD`
+    * ACPI
+      * Remove the `change EHC1 to EH01` patch
+      * Remove the `change EHC2 to EH02` patch
+    * Kernel and Kext Patches
+      * Remove the `com.apple.iokit.IOUSBHostFamily` patch
+      * Remove the `com.apple.driver.usb.AppleUSBXHCI` patch
+2. Delete the `USBInjectAll.kext` from `EFI/CLOVER/kexts/Other/` on the EFI partition of `Macintosh SSD`
+
+
+
+
 ### Enable the Graphics Card
 
 1. Modify the Clover configuration on the EFI partition of `Macintosh SSD`
@@ -243,6 +274,7 @@ A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/
 * [Glasgood's macOS Mojave [SUCCESS][GUIDE] for Aorus Z390 Pro](https://www.insanelymac.com/forum/topic/337837-glasgoods-macos-mojave-successguide-for-aorus-z390-pro/)
 * [[SUCCESS] Gigabyte Designare Z390 (Thunderbolt 3) + i7-9700K + AMD RX 580](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/)
 * [General Z390 Catalina Guide, or why you should take the time to set things from scratch (bonus 5700 XT guide)](https://www.reddit.com/r/hackintosh/comments/dpu4by/general_z390_catalina_guide_or_why_you_should/)
+* [How to fix USB 3 ports on a Hackintosh by generating your own SSDT or USBMap.kext](https://www.youtube.com/watch?v=j3V7szXZZTc)
 
 ## Resources
 
@@ -250,3 +282,4 @@ A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/
 * [Clover Theme Manager](https://www.insanelymac.com/forum/topic/302674-clover-theme-manager/)
 * [Hackintool](https://www.insanelymac.com/forum/topic/335018-hackintool-v286/)
 * [MacInfoPkg (macserial)](https://github.com/acidanthera/MacInfoPkg)
+* [USBMap](https://github.com/corpnewt/USBMap)
