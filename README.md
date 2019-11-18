@@ -16,8 +16,8 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
 * [Install macOS Catalina](#install-macos-catalina)
 * [Post Installation](#post-installation)
   * [Make macOS Drive Bootable](#make-macos-drive-bootable)
-  * [Map USB Ports](#map-usb-ports)
   * [Enable the Graphics Card](#enable-the-graphics-card)
+  * [Map USB Ports](#map-usb-ports)
   * [Enable TRIM for Solid State Drives](#enable-trim-for-solid-state-drives)
   * [Fix CPU Type in About This Mac](#fix-cpu-type-in-about-this-mac)
   * [Final Clover Configuration](#final-clover-configuration)
@@ -191,6 +191,27 @@ The Clover configuration for the installation is heavily based upon corpnewt's [
 
 _Note: You can now remove the USB drive but keep it handy for debugging issues with your Hackintosh._
 
+### Enable the Graphics Card
+
+1. Modify the Clover configuration on the EFI partition of `Macintosh SSD`
+    * Boot
+      * Remove the `-wegnoegpu` boot argument
+      * Add the `agdpmod=pikera` boot argument
+    * Devices
+      * Clear value of `IntelGFX` field
+    * Graphics
+      * Uncheck `Inject Intel`
+2. Reboot the computer and modify the BIOS Settings
+    * Peripherals
+      * Initial Display Output → **PCIe Slot 1**
+    * Chipset
+      * Internal Graphics → **Disabled**
+3. Save the changes and reboot the computer
+4. Disconnect the HDMI cable from the motherboard and connect a DisplayPort cable to the graphics card
+5. You should now be using the natively-supported discrete graphics card (as of macOS 10.15.1) 
+
+_Note: You should also make these changes to your USB drive Clover configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, you'll have to swap back to using the integrated graphics instead of the discrete graphics card._
+
 ### Map USB Ports
 
 Apple's USB driver implementation restricts macOS to only 15 HS/SS ports. During the installation process, we utilized RehabMan's [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All) kext and USB port limit kext patches to `com.apple.iokit.IOUSBHostFamily` and `com.apple.driver.usb.AppleUSBXHCI` to circumvent this restriction. While useful during installation, it is generally recommended that these workarounds be removed in favor of a custom SSDT or port injector kext for the final system configuration to avoid buffer overruns and sleep/wake issues. In order to map out the custom port injection for system, we will be using corpnewt's [USBMap](https://github.com/corpnewt/USBMap) Python script and following along with the process described in [Carl Mercier's YouTube video](https://www.youtube.com/watch?v=j3V7szXZZTc).
@@ -232,28 +253,6 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
       * Remove the `com.apple.driver.usb.AppleUSBXHCI` kext patch
 6. Delete the `USBInjectAll.kext` from `EFI/CLOVER/kexts/Other/` on the EFI partition of `Macintosh SSD`
 7. You should now have fully custom-mapped USB ports on your system! Use the USBMap script after a reboot to verify the correct ports are enabled.
-
-
-### Enable the Graphics Card
-
-1. Modify the Clover configuration on the EFI partition of `Macintosh SSD`
-    * Boot
-      * Remove the `-wegnoegpu` boot argument
-      * Add the `agdpmod=pikera` boot argument
-    * Devices
-      * Clear value of `IntelGFX` field
-    * Graphics
-      * Uncheck `Inject Intel`
-2. Reboot the computer and modify the BIOS Settings
-    * Peripherals
-      * Initial Display Output → **PCIe Slot 1**
-    * Chipset
-      * Internal Graphics → **Disabled**
-3. Save the changes and reboot the computer
-4. Disconnect the HDMI cable from the motherboard and connect a DisplayPort cable to the graphics card
-5. You should now be using the natively-supported discrete graphics card (as of macOS 10.15.1) 
-
-_Note: You should also make these changes to your USB drive Clover configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, you'll have to swap back to using the integrated graphics instead of the discrete graphics card._
 
 ### Enable TRIM for Solid State Drives
 
