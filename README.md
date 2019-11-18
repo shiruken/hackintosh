@@ -193,7 +193,7 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
 
 ### Map USB Ports
 
-Apple's USB driver implementation restricts macOS to only 15 HS/SS ports. During the installation process, we utilized RehabMan's [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All) kext and USB port limit kext patches to `com.apple.iokit.IOUSBHostFamily` and `com.apple.driver.usb.AppleUSBXHCI` to circumvent this restriction. While useful during installation, it is generally recommended that these workarounds be removed in favor of a custom SSDT or injector kext for the final system configuration to avoid buffer overruns and sleep/wake issues. In order to map out the custom port injection for system, we will be using corpnewt's [USBMap](https://github.com/corpnewt/USBMap) Python script and following along with the process described in [Carl Mercier's YouTube video](https://www.youtube.com/watch?v=j3V7szXZZTc).
+Apple's USB driver implementation restricts macOS to only 15 HS/SS ports. During the installation process, we utilized RehabMan's [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All) kext and USB port limit kext patches to `com.apple.iokit.IOUSBHostFamily` and `com.apple.driver.usb.AppleUSBXHCI` to circumvent this restriction. While useful during installation, it is generally recommended that these workarounds be removed in favor of a custom SSDT or port injector kext for the final system configuration to avoid buffer overruns and sleep/wake issues. In order to map out the custom port injection for system, we will be using corpnewt's [USBMap](https://github.com/corpnewt/USBMap) Python script and following along with the process described in [Carl Mercier's YouTube video](https://www.youtube.com/watch?v=j3V7szXZZTc).
 
 _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB port mapping I utilize, you can download my [`USBMap.kext`](EFI/CLOVER/kexts/Other/USBMap.kext), [`SSDT-USBX.aml`](EFI/CLOVER/ACPI/patched/SSDT-USBX.aml), and [`SSDT-USBX.dsl`](EFI/CLOVER/ACPI/patched/SSDT-USBX.dsl) and skip to Step 5._
 
@@ -220,16 +220,16 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
         * The enabled ports are red and the disabled ports are gray in the image above
     3. Press `k` then `[enter]` to build the custom USBMap.kext file
     4. Allow the program to move the files to your EFI partition or copy them manually:
-        * `USBMap.kext` → `EFI/CLOVER/kexts/Other/`
-        * `SSDT-USBX.aml` → `EFI/CLOVER/ACPI/patched/`
-        * `SSDT-USBX.dsl` → `EFI/CLOVER/ACPI/patched/`
+        * `USBMap.kext` → [`EFI/CLOVER/kexts/Other/`](EFI/CLOVER/kexts/Other/)
+        * `SSDT-USBX.aml` → [`EFI/CLOVER/ACPI/patched/`](EFI/CLOVER/ACPI/patched/)
+        * `SSDT-USBX.dsl` → [`EFI/CLOVER/ACPI/patched/`](EFI/CLOVER/ACPI/patched/)
         
 5. Modify the Clover configuration on the EFI partition of `Macintosh SSD`
     * ACPI
       * Remove the `change EHC2 to EH02` patch (not present on this system)
     * Kernel and Kext Patches
-      * Remove the `com.apple.iokit.IOUSBHostFamily` patch
-      * Remove the `com.apple.driver.usb.AppleUSBXHCI` patch
+      * Remove the `com.apple.iokit.IOUSBHostFamily` kext patch
+      * Remove the `com.apple.driver.usb.AppleUSBXHCI` kext patch
 6. Delete the `USBInjectAll.kext` from `EFI/CLOVER/kexts/Other/` on the EFI partition of `Macintosh SSD`
 7. You should now have fully custom-mapped USB ports on your system! Use the USBMap script after a reboot to verify the correct ports are enabled.
 
