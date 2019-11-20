@@ -16,7 +16,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
 * [Install macOS Catalina](#install-macos-catalina)
 * [Post Installation](#post-installation)
   * [Make macOS Drive Bootable](#make-macos-drive-bootable)
-  * [Enable the Graphics Card](#enable-the-discrete-graphics-card-with-headless-igpu)
+  * [Enable the Discrete Graphics Card with Headless iGPU](#enable-the-discrete-graphics-card-with-headless-igpu)
   * [Map USB Ports](#map-usb-ports)
   * [Enable TRIM for Solid State Drives](#enable-trim-for-solid-state-drives)
   * [Fix CPU Type in About This Mac](#fix-cpu-type-in-about-this-mac)
