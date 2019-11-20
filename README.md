@@ -192,7 +192,7 @@ The Clover configuration for the installation is heavily based upon corpnewt's [
 
 _Note: You can now remove the USB drive but keep it handy for debugging issues with your Hackintosh._
 
-### Enable the Graphics Card
+### Enable the Discrete Graphics Card with Headless iGPU
 
 1. Modify the Clover configuration on the EFI partition of `Macintosh SSD`
     * Boot
@@ -200,16 +200,26 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
       * Add the `agdpmod=pikera` boot argument
     * Devices
       * Clear value of `IntelGFX` field
+      * Add new device: `PciRoot(0x0)/Pci(0x2,0x0)`
+          * Add property: `AAPL,ig-platform-id` - `0300983E` - `DATA`
+          
+          ![WhateverGreen Property](Screenshots/Post_WEG_Property.png)
+          
     * Graphics
       * Uncheck `Inject Intel`
 2. Reboot the computer and modify the BIOS Settings
     * Peripherals
       * Initial Display Output → **PCIe Slot 1**
     * Chipset
-      * Internal Graphics → **Disabled**
+       * Internal Graphics → **Enabled**
+       * DVMT Pre-Alloc → **32M**
+       * DVMT Total Gfx Mem → **256M**
 3. Save the changes and reboot the computer
 4. Disconnect the HDMI cable from the motherboard and connect a DisplayPort cable to the graphics card
-5. You should now be using the natively-supported discrete graphics card (as of macOS 10.15.1) 
+5. You should now be using the natively-supported discrete graphics card (as of macOS 10.15.1) to power your display(s) in conjunction with the headless iGPU for compute tasks.
+    * [Hackintool](https://www.insanelymac.com/forum/topic/335018-hackintool-v286/) can be used to verify the availability of the iGPU for hardware decoding under the `VDA Decoder` system parameter. 
+
+![Hackintool Graphics](Screenshots/Post_HackintoolGraphics.png)
 
 _Note: You should also make these changes to your USB drive Clover configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, you'll have to swap back to using the integrated graphics instead of the discrete graphics card._
 
