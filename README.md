@@ -219,7 +219,7 @@ Apple's USB driver implementation restricts macOS to only 15 HS/SS ports. During
 
 _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB port mapping I utilize, you can download my [`USBMap.kext`](EFI/CLOVER/kexts/Other/USBMap.kext), [`SSDT-USBX.aml`](EFI/CLOVER/ACPI/patched/SSDT-USBX.aml), and [`SSDT-USBX.dsl`](EFI/CLOVER/ACPI/patched/SSDT-USBX.dsl) and skip to Step 5._
 
-1. Add the following two patches to the ACPI Clover configuration on the EFI partition of `Macintosh SSD` and reboot
+1. Add the `change EHC1 to EH01` and `change EHC2 to EH02` patches to the ACPI Clover configuration on the EFI partition of `Macintosh SSD` and reboot
 
     ![EHC1 and EHC2 patches](Screenshots/Post_USBMap_ACPI.png)
     
