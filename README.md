@@ -23,7 +23,8 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
   * [Enable TRIM for Solid State Drives](#enable-trim-for-solid-state-drives)
   * [Fix CPU Type in About This Mac](#fix-cpu-type-in-about-this-mac)
   * [Install Clover Theme](#install-clover-theme)
-  * [Final Clover Configuration](#final-clover-configuration)
+* [Install Windows 10](#install-windows-10)
+* [Final Clover Configuration](#final-clover-configuration)
 * [References](#references)
 
 ## The Build
@@ -290,7 +291,18 @@ The easiest way to download and install third-party Clover themes is using [Clov
 
 ![Clover Theme Manager](Screenshots/Post_Theme.png)
 
-### Final Clover Configuration
+## Install Windows 10
+
+Windows 10 will be installed on the Intel 660p Series NVMe drive in the M2M slot of the motherboard. This is necessary [to avoid issues](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/page-496#post-1971606) with Windows updates interferring with the Clover EFI partition because of drive enumeration ordering. The installation requires at least an 8 GB USB flash drive for creating the bootable Windows installer.
+
+1. Download the [Windows 10 ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
+2. Create the bootable Windows installer:
+    * If using macOS, launch Boot Camp Assistant and follow the process to create the `Windows 7 or later version install disk`
+    * If using Windows, use the [Media Creation Tool](https://www.microsoft.com/software-download/windows10) or [Rufus](https://rufus.ie/) to flash the ISO
+3. ???
+4. Profit
+
+## Final Clover Configuration
 
 A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/CLOVER/). Each section of the configuration in Clover Configurator is also documented below.
 
