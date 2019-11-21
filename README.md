@@ -294,6 +294,33 @@ The easiest way to download and install third-party Clover themes is using [Clov
 
 A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/CLOVER/). Each section of the configuration in Clover Configurator is also documented below.
 
+* ACPI
+  ![ACPI Page 1](Screenshots/Post_Clover_ACPI_1.png)
+  ![ACPI Page 2](Screenshots/Post_Clover_ACPI_2.png)
+* Boot
+  ![Boot](Screenshots/Post_Clover_Boot.png)
+* Boot Graphics
+  ![Boot Graphics](Screenshots/Post_Clover_BootGraphics.png)
+* CPU
+  ![CPU](Screenshots/Post_Clover_CPU.png)
+* Devices
+  ![Devices Page 1](Screenshots/Post_Clover_Devices_1.png)
+  ![Devices Page 2](Screenshots/Post_Clover_Devices_2.png)
+* Disable Drivers
+  ![Disable Drivers](Screenshots/Post_Clover_DisableDrivers.png)
+* GUI
+  ![GUI](Screenshots/Post_Clover_GUI.png)
+* Graphics
+  ![Graphics](Screenshots/Post_Clover_Graphics.png)
+* Kernel and Kext Patches
+  ![Kernel and Kext Patches](Screenshots/Post_Clover_KernalKextPatches.png)
+* Rt Varibles
+  ![Rt Varibles](Screenshots/Post_Clover_RtVariables.png)
+* SMBIOS
+  ![SMBIOS](Screenshots/Post_Clover_SMBIOS.png)
+* System Parameters
+  ![System Parameters](Screenshots/Post_Clover_SystemParameters.png)
+
 
 ## References
 
