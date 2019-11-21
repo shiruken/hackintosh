@@ -293,7 +293,7 @@ The easiest way to download and install third-party Clover themes is using [Clov
 
 ## Install Windows 10
 
-Windows 10 will be installed on the Intel 660p Series NVMe drive in the M2M slot of the motherboard. This is necessary [to avoid issues](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/page-496#post-1971606) with Windows updates interferring with the Clover EFI partition because of drive enumeration ordering. The installation requires at least an 8 GB USB flash drive for creating the bootable Windows installer.
+Windows 10 will be installed on the Intel 660p Series NVMe drive located in the M2M slot of the motherboard. This is necessary [to avoid issues](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/page-496#post-1971606) with Windows updates interferring with the Clover EFI partition because of drive enumeration ordering. The installation requires at least an 8 GB USB flash drive for creating the bootable Windows installer.
 
 1. Download the [Windows 10 ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
 2. Create the bootable Windows installer:
