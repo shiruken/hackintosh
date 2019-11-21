@@ -2,7 +2,7 @@
 Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Windows 10.
 
 * [`EFI_install`](EFI_install/): Copy of EFI directory from the USB drive used during macOS installation
-* `EFI`: Copy of EFI directory from the macOS boot drive
+* [`EFI`](EFI/): Copy of EFI directory from the macOS boot drive
 
 ![System Overview](Screenshots/System.png)
 
