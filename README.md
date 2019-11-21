@@ -281,6 +281,8 @@ For some reason, About This Mac and System Report do not properly identify the p
 
 ### Install Clover Theme
 
+The easiest way to download and install third-party Clover themes is using [Clover Theme Manager](https://www.insanelymac.com/forum/topic/302674-clover-theme-manager/). Launch the application and enter your password when prompted to mount the EFI partition of `Macintosh SSD`. Click the `Install` button on the list of available themes to download the theme to your `EFI/CLOVER/themes/` directory. Select the theme to use during boot via the drop-down menu or manually entering the name in the `Theme` field on the `GUI` section of Clover Configurator. 
+
 ### Final Clover Configuration
 
 A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/CLOVER/). Each section of the configuration in Clover Configurator is also documented below.
