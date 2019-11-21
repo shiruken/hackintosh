@@ -4,6 +4,8 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
 * [`EFI_install`](EFI_install/): Copy of EFI directory from the USB drive used during macOS installation
 * `EFI`: Copy of EFI directory from the macOS boot drive
 
+![System Overview](Screenshots/System.png)
+
 ## Table of Contents
 
 * [The Build](#the-build)
