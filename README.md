@@ -208,7 +208,7 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
       * Initial Display Output → **PCIe Slot 1**
     * Chipset
        * Internal Graphics → **Enabled**
-       * DVMT Pre-Allocated → **32M**
+       * DVMT Pre-Allocated → **64M**
        * DVMT Total Gfx Mem → **256M**
 3. Save the changes and reboot the computer
 4. Disconnect the HDMI cable from the motherboard and connect a DisplayPort cable to the graphics card
