@@ -110,7 +110,7 @@
 		<key>Arguments</key>
 		<string>keepsyms=1 dart=0 debug=0x100 slide=0 agdpmod=pikera</string>
 		<key>DefaultVolume</key>
-		<string>Macintosh SSD</string>
+		<string>Preboot</string>
 		<key>Timeout</key>
 		<integer>5</integer>
 		<key>XMPDetection</key>
@@ -151,7 +151,6 @@
 		<key>Hide</key>
 		<array>
 			<string>Recovery</string>
-			<string>Preboot</string>
 		</array>
 		<key>Scan</key>
 		<dict>
