@@ -20,6 +20,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
   * [Make macOS Drive Bootable](#make-macos-drive-bootable)
   * [Enable the Discrete Graphics Card with Headless iGPU](#enable-the-discrete-graphics-card-with-headless-igpu)
   * [Map USB Ports](#map-usb-ports)
+  * [Enable FileVault](#enable-filevault)
   * [Enable TRIM for Solid State Drives](#enable-trim-for-solid-state-drives)
   * [Fix CPU Type in About This Mac](#fix-cpu-type-in-about-this-mac)
   * [Install Clover Theme](#install-clover-theme)
@@ -69,12 +70,6 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
       * HFSPlus
     * Memory fix drivers
       * OsxAptioFix3Drv
-    * FileVault 2 UEFI Drivers
-      * AppleImageCodec
-      * AppleKeyAggregator
-      * AppleKeyFeeder
-      * AppleUITheme
-      * FirmwareVolume
     * Additional drivers
       * EmuVariableUefi
  
@@ -266,6 +261,35 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
 6. Delete the `USBInjectAll.kext` from `EFI/CLOVER/kexts/Other/` on the EFI partition of `Macintosh SSD`
 7. You should now have fully custom-mapped USB ports on your system! Use the USBMap script after a reboot to verify the correct ports are enabled.
 
+### Enable FileVault
+
+[FileVault](https://support.apple.com/en-us/HT204837) is used to encrypt the startup disk on your Hackintosh. Enabling it is entirely optional but probably a good idea for the security conscious, especially if you are building a portable system. Before turning on the feature, you will need to make sure you have several drivers installed to allow Clover to interact with the encrypted drive. These instructions are based on the advice from [this tonymacx86 comment](https://www.tonymacx86.com/threads/filevault2-boot-issues-with-clover-under-macos-catalina.285697/#post-2021159) and [this vanilla laptop guide](https://fewtarius.gitbook.io/laptopguide/extras/enabling-filevault).
+
+1. If present, **remove** any of the following outdated Clover-installed FileVault 2 UEFI drivers:
+    * `AppleImageCodec.efi`
+    * `AppleKeyAggregator.efi`
+    * `AppleKeyFeeder.efi`
+    * `AppleUITheme.efi`
+    * `FirmwareVolume.efi`
+    * `HashServiceFix.efi`
+2. Download [AppleSupportPkg v2.0.9](https://github.com/acidanthera/AppleSupportPkg/releases/tag/2.0.9) and copy the following two drivers to `EFI/CLOVER/drivers/UEFI/`:
+    * `AppleGenericInput.efi`
+    * `AppleUiSupport.efi`
+3. Modify the Clover configuration on the EFI partition of `Macintosh SSD`
+    * Boot
+      * Default Boot Volume  →  `Preboot`
+    * GUI
+      * Remove `Preboot` from hidden volumes
+4. Open System Preferences > Security & Privacy and navigate to the FileVault tab
+    * Click `Turn On FileVault` and select an option for setting the recovery key
+    * Wait for encrypting to complete
+    
+    ![FileVault](Screenshots/Post_FileVault.png)
+    
+5. Restart your system, which should now default to the `FileVault Preboot from Preboot` option, and enter your password at login to decrypt the system drive.
+
+_Note: You should also make these changes to your USB drive Clover configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, the the Clover bootloader will not be able to properly handle the FileVault-encrypted drive._
+
 ### Enable TRIM for Solid State Drives
 
 1. Open Terminal and enter the following command:
@@ -343,6 +367,8 @@ A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/
 * [[SUCCESS] Gigabyte Designare Z390 (Thunderbolt 3) + i7-9700K + AMD RX 580](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/)
 * [General Z390 Catalina Guide, or why you should take the time to set things from scratch (bonus 5700 XT guide)](https://www.reddit.com/r/hackintosh/comments/dpu4by/general_z390_catalina_guide_or_why_you_should/)
 * [How to fix USB 3 ports on a Hackintosh by generating your own SSDT or USBMap.kext](https://www.youtube.com/watch?v=j3V7szXZZTc)
+* [FileVault2 boot issues with Clover under macOS Catalina](https://www.tonymacx86.com/threads/filevault2-boot-issues-with-clover-under-macos-catalina.285697/#post-2021159)
+* [Enabling FileVault - The Vanilla Laptop Guide](https://fewtarius.gitbook.io/laptopguide/extras/enabling-filevault)
 
 ## Resources
 
