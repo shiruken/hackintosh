@@ -288,7 +288,7 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
     
 5. Restart your system, which should now default to the `FileVault Preboot from Preboot` option, and enter your password at login to decrypt the system drive.
 
-_Note: You should also make these changes to your USB drive Clover configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, the the Clover bootloader will not be able to properly handle the FileVault-encrypted drive._
+_Note: You should also make these changes to your USB drive Clover configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, then the Clover bootloader will not be able to properly handle the FileVault-encrypted drive._
 
 ### Enable TRIM for Solid State Drives
 
