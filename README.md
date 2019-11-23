@@ -27,6 +27,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
 * [Install Windows 10](#install-windows-10)
 * [Final Clover Configuration](#final-clover-configuration)
 * [References](#references)
+* [Resources](#resources)
 
 ## The Build
 
