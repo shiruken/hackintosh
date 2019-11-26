@@ -51,7 +51,7 @@ View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
 1. Download the [macOS Catalina installer](https://apps.apple.com/us/app/macos-catalina/id1466841314?mt=12) (v10.15.1) from the Mac App Store
 2. Open Terminal and format the target USB drive as with the following command:
 
-    `diskutil partitionDisk /dev/disk# GPT JHFS+ "USB" 100%`
+    `diskutil partitionDisk /dev/{YOUR_DISK_ID} GPT JHFS+ "USB" 100%`
     
 3. [Create the bootable macOS installer](https://support.apple.com/sl-si/HT201372): 
 
@@ -201,7 +201,7 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
       * Clear value of `IntelGFX` field
       * Add new device: `PciRoot(0x0)/Pci(0x2,0x0)`
           * Add property: `AAPL,ig-platform-id` - `0300983E` - `DATA`
-          ![WhateverGreen Property](Screenshots/Post_WEG_Property.png)
+      ![WhateverGreen Property](Screenshots/Post_WEG_Property.png)
     * Graphics
       * Uncheck `Inject Intel`
 2. Reboot the computer and modify the BIOS Settings
@@ -222,7 +222,7 @@ _Note: You should also make these changes to your USB drive Clover configuration
 
 ### Map USB Ports
 
-Apple's USB driver implementation restricts macOS to only 15 HS/SS ports. During the installation process, we utilized RehabMan's [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All) kext and USB port limit kext patches to `com.apple.iokit.IOUSBHostFamily` and `com.apple.driver.usb.AppleUSBXHCI` to circumvent this restriction. While useful during installation, it is generally recommended that these workarounds be removed in favor of a custom SSDT or port injector kext for the final system configuration to avoid buffer overruns and sleep/wake issues. In order to map out the custom port injection for system, we will be using corpnewt's [USBMap](https://github.com/corpnewt/USBMap) Python script and following along with the process described in [Carl Mercier's YouTube video](https://www.youtube.com/watch?v=j3V7szXZZTc).
+Apple's USB driver implementation restricts macOS to only 15 HS/SS ports. During the installation process, we utilized RehabMan's [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All) kext and USB port limit kext patches to `com.apple.iokit.IOUSBHostFamily` and `com.apple.driver.usb.AppleUSBXHCI` to circumvent this restriction. While useful during installation, it is generally recommended that these workarounds be removed in favor of a custom SSDT or port injector kext for the final system configuration to avoid buffer overruns and sleep/wake issues. In order to map out the custom port injection for the system, we will be using corpnewt's [USBMap](https://github.com/corpnewt/USBMap) Python script and following along with the process described in [Carl Mercier's YouTube video](https://www.youtube.com/watch?v=j3V7szXZZTc).
 
 _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB port mapping I utilize, you can download my [`USBMap.kext`](EFI/CLOVER/kexts/Other/USBMap.kext), [`SSDT-USBX.aml`](EFI/CLOVER/ACPI/patched/SSDT-USBX.aml), and [`SSDT-USBX.dsl`](EFI/CLOVER/ACPI/patched/SSDT-USBX.dsl) and skip to Step 5._
 
@@ -280,7 +280,7 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
     * Boot
       * Default Boot Volume  →  `Preboot`
     * GUI
-      * Remove `Preboot` from hidden volumes
+      * Remove `Preboot` from hidden volumes (if present)
 4. Open System Preferences > Security & Privacy and navigate to the FileVault tab
     * Click `Turn On FileVault` and select an option for setting the recovery key
     * Wait for encrypting to complete
