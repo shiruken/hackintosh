@@ -201,9 +201,7 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
       * Clear value of `IntelGFX` field
       * Add new device: `PciRoot(0x0)/Pci(0x2,0x0)`
           * Add property: `AAPL,ig-platform-id` - `0300983E` - `DATA`
-          
       ![WhateverGreen Property](Screenshots/Post_WEG_Property.png)
-      
     * Graphics
       * Uncheck `Inject Intel`
 2. Reboot the computer and modify the BIOS Settings
