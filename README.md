@@ -343,6 +343,8 @@ Windows 10 will be installed on the Intel 660p Series NVMe drive located in the 
       
       3. Restart your system and the Windows partition will no longer automatically mount.
 
+![Clover Bootloader](Screenshots/Post_Windows.png)
+
 ## Final Clover Configuration
 
 A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/CLOVER/). Each section of the configuration in Clover Configurator is also documented below.
