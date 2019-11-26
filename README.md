@@ -282,7 +282,7 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
     * Boot
       * Default Boot Volume  →  `Preboot`
     * GUI
-      * Remove `Preboot` from hidden volumes
+      * Remove `Preboot` from hidden volumes (if present)
 4. Open System Preferences > Security & Privacy and navigate to the FileVault tab
     * Click `Turn On FileVault` and select an option for setting the recovery key
     * Wait for encrypting to complete
