@@ -324,8 +324,24 @@ Windows 10 will be installed on the Intel 660p Series NVMe drive located in the 
 2. Create the bootable Windows installer:
     * If using macOS, launch Boot Camp Assistant and follow the process to create the `Windows 7 or later version install disk`
     * If using Windows, use the [Media Creation Tool](https://www.microsoft.com/software-download/windows10) or [Rufus](https://rufus.ie/) to flash the ISO
-3. ???
-4. Profit
+3. Shut down the system and temporarily remove all other storage devices to avoid issues during installation.
+4. Restart the computer and select the installer USB drive as the default BIOS boot device.
+5. Follow the instructions to install Windows
+    * You may need to format the destination drive (Intel 660p Series) prior to installation
+6. Once installation is complete, shut down the computer, replace all the removed drives, and select the Clover EFI drive (Samsung 970 Evo) as the default BIOS boot device.
+7. You should now have a Hackintosh dual-booting macOS and Windows! Just select the desired operating system from the Clover bootloader.
+    * My [configuration](EFI/CLOVER/config.plist) defaults to booting macOS after a short five-second delay
+    * If there is an extraneous `Boot Windows from EFI` option on the bootloader, [check and uncheck the Legacy Scan option](https://www.tonymacx86.com/threads/solved-clover-shows-two-boot-options-for-windows-efi.243457/) on the GUI section of Clover Configurator. 
+    * Follow [these instructions](https://discussions.apple.com/docs/DOC-7942) to prevent the Windows drive from automatically mounting in macOS:
+      1. Open Terminal and enter the following command to get the `Volume UUID`:
+      
+          `diskutil info /Volumes/{YOUR_WINDOWS_DRIVE_NAME}`
+          
+      2. Enter `sudo vifs` to add the following line to `/etc/fstab`:
+      
+          `UUID={YOUR_UUID} none ntfs rw,noauto`
+      
+      3. Restart your system and the Windows partition will no longer automatically mount.
 
 ## Final Clover Configuration
 
@@ -370,6 +386,8 @@ A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/
 * [How to fix USB 3 ports on a Hackintosh by generating your own SSDT or USBMap.kext](https://www.youtube.com/watch?v=j3V7szXZZTc)
 * [FileVault2 boot issues with Clover under macOS Catalina](https://www.tonymacx86.com/threads/filevault2-boot-issues-with-clover-under-macos-catalina.285697/#post-2021159)
 * [Enabling FileVault - The Vanilla Laptop Guide](https://fewtarius.gitbook.io/laptopguide/extras/enabling-filevault)
+* [[Solved] Clover shows two boot options for Windows EFI](https://www.tonymacx86.com/threads/solved-clover-shows-two-boot-options-for-windows-efi.243457/)
+* [Prevent a volume from mounting at startup](https://discussions.apple.com/docs/DOC-7942)
 
 ## Resources
 
