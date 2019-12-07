@@ -26,6 +26,7 @@ Installation guide for my vanilla Hackintosh v3 build dual-booting macOS Catalin
   * [Install Clover Theme](#install-clover-theme)
 * [Install Windows 10](#install-windows-10)
 * [Final Clover Configuration](#final-clover-configuration)
+* [Benchmarks](#benchmarks)
 * [Issues](#issues)
 * [Upgrade Log](#upgrade-log)
 * [References](#references)
@@ -382,6 +383,22 @@ A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/
   ![SMBIOS](Screenshots/Post_Clover_SMBIOS.png)
 * System Parameters
   ![System Parameters](Screenshots/Post_Clover_SystemParameters.png)
+
+## Benchmarks
+
+_All values are the average of three runs_
+
+* [Geekbench 5](https://www.geekbench.com/)
+  * Single Core: 1313.7
+  * Multicore: 8055.3
+  * OpenCL: 43650.3
+  * Metal: 38985.0
+* [LuxMark LuxBall](http://www.luxmark.info/): 27424.3
+* [BruceX](https://blog.alex4d.com/2013/10/30/brucex-a-new-fcpx-benchmark/): 6.64 seconds
+* [Cinebench R20](https://www.maxon.net/en-us/products/cinebench-r20-overview/): 3934
+* [Blackmagic Disk Speed Test](https://apps.apple.com/us/app/blackmagic-disk-speed-test/id425264550) (Samsung 970 Evo)
+  * Read: 2990.4 MB/s
+  * Write: 2484.2 MB/s
 
 ## Issues
 
