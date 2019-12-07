@@ -379,7 +379,7 @@ A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/
 
 ## Upgrade Log
 
-* 2019-12-06: Upgraded kexts to [AppleALC v1.4.4](https://github.com/acidanthera/AppleALC/releases/tag/1.4.4), [Lilu 1.4.0](https://github.com/acidanthera/Lilu/releases/tag/1.4.0), WhateverGreen [1.3.5](https://github.com/acidanthera/WhateverGreen/releases/tag/1.3.5)
+* 2019-12-06: Upgraded kexts to [AppleALC v1.4.4](https://github.com/acidanthera/AppleALC/releases/tag/1.4.4), [Lilu 1.4.0](https://github.com/acidanthera/Lilu/releases/tag/1.4.0), [WhateverGreen 1.3.5](https://github.com/acidanthera/WhateverGreen/releases/tag/1.3.5)
 * 2019-11-21: Upgraded to [Clover v2.5k_r5099](https://github.com/Dids/clover-builder/releases/tag/v2.5k_r5099)
 
 ## References
