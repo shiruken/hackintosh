@@ -1,5 +1,5 @@
 # Hackintosh v3
-Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Windows 10. The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
+Installation guide for my vanilla Hackintosh v3 build dual-booting macOS Catalina and Windows 10. The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
 
 * [`EFI`](EFI/): Copy of current EFI directory from the macOS boot drive
 * [`EFI_install`](EFI_install/): Copy of EFI directory from the USB drive used during macOS installation
