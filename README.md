@@ -334,18 +334,23 @@ Windows 10 will be installed on the Intel 660p Series NVMe drive located in the 
 7. You should now have a Hackintosh dual-booting macOS and Windows! Just select the desired operating system from the Clover bootloader.
     * My [configuration](EFI/CLOVER/config.plist) defaults to booting macOS after a short five-second delay
     * If there is an extraneous `Boot Windows from EFI` option on the bootloader, [check and uncheck the Legacy Scan option](https://www.tonymacx86.com/threads/solved-clover-shows-two-boot-options-for-windows-efi.243457/) on the GUI section of Clover Configurator. 
-    * Follow [these instructions](https://discussions.apple.com/docs/DOC-7942) to prevent the Windows drive from automatically mounting in macOS:
-      1. Open Terminal and enter the following command to get the `Volume UUID`:
-      
-          `diskutil info /Volumes/{YOUR_WINDOWS_DRIVE_NAME}`
-          
-      2. Enter `sudo vifs` to add the following line to `/etc/fstab`:
-      
-          `UUID={YOUR_UUID} none ntfs rw,noauto`
-      
-      3. Restart your system and the Windows partition will no longer automatically mount.
-
+    
 ![Clover Bootloader](Screenshots/Post_Windows.png)
+
+### Hide Windows Drive in macOS
+    
+Follow [these instructions](https://discussions.apple.com/docs/DOC-7942) to prevent the Windows drive from automatically mounting in macOS:
+
+1. Open Terminal and enter the following command to get the `Volume UUID`:
+      
+    `diskutil info /Volumes/{YOUR_WINDOWS_DRIVE_NAME}`
+          
+2. Enter `sudo vifs` to add the following line to `/etc/fstab`:
+      
+    `UUID={YOUR_UUID} none ntfs rw,noauto`
+      
+3. Restart your system and the Windows partition will no longer automatically mount.
+
 
 ## Final Clover Configuration
 
