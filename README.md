@@ -26,6 +26,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Catalina and Wi
   * [Install Clover Theme](#install-clover-theme)
 * [Install Windows 10](#install-windows-10)
 * [Final Clover Configuration](#final-clover-configuration)
+* [Issues](#issues)
 * [Upgrade Log](#upgrade-log)
 * [References](#references)
 * [Resources](#resources)
@@ -376,6 +377,10 @@ A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/
   ![SMBIOS](Screenshots/Post_Clover_SMBIOS.png)
 * System Parameters
   ![System Parameters](Screenshots/Post_Clover_SystemParameters.png)
+
+## Issues
+
+* Attempts to enable System Integrity Protection (SIP) by setting `CsrActiveConfig=0x00` have been unsuccessful. The system encounters memory allocation errors whenever the parameter is changed from `0x67`.
 
 ## Upgrade Log
 
