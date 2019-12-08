@@ -402,7 +402,7 @@ _All values are the average of three runs_
 
 ## Issues
 
-* Attempts to enable System Integrity Protection (SIP) by setting `CsrActiveConfig=0x00` have been unsuccessful. The system encounters memory allocation errors whenever the parameter is changed from `0x67`.
+[See the GitHub repository issues tracker](https://github.com/shiruken/hackintosh/issues)
 
 ## Upgrade Log
 
