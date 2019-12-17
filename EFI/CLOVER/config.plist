@@ -148,10 +148,6 @@
 	</dict>
 	<key>GUI</key>
 	<dict>
-		<key>Hide</key>
-		<array>
-			<string>Recovery</string>
-		</array>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
