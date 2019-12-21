@@ -98,33 +98,55 @@ The exact kexts and drivers I used during my installation can be found in [`EFI_
 
 The Clover configuration for the installation is heavily based upon corpnewt's [r/Hackintosh Vanilla Desktop Guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) for the [Coffee Lake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake) microarchitecture. The major difference is with how the iGPU is enabled because I encountered difficulties when using device property injections. Each section of the configuration used during installation is documented below. A sanitized version of the config file can be found in [`EFI_install/CLOVER/`](EFI_install/CLOVER/). You will need to use Clover Configurator or [`macserial`](https://github.com/acidanthera/MacInfoPkg/releases) to generate a valid serial number and board serial number for the `iMac19,1`  SMBIOS.
 
-* ACPI
-  ![ACPI Page 1](Screenshots/Install_Clover_ACPI_1.png)
-  ![ACPI Page 2](Screenshots/Install_Clover_ACPI_2.png)
-* Boot
-  ![Boot](Screenshots/Install_Clover_Boot.png)
-* Boot Graphics
-  ![Boot Graphics](Screenshots/Install_Clover_BootGraphics.png)
-* CPU
-  ![CPU](Screenshots/Install_Clover_CPU.png)
-* Devices
-  ![Devices Page 1](Screenshots/Install_Clover_Devices_1.png)
-  ![Devices Page 2](Screenshots/Install_Clover_Devices_2.png)
-* Disable Drivers
-  ![Disable Drivers](Screenshots/Install_Clover_DisableDrivers.png)
-* GUI
-  ![GUI](Screenshots/Install_Clover_GUI.png)
-* Graphics
-  ![Graphics](Screenshots/Install_Clover_Graphics.png)
-* Kernel and Kext Patches
-  ![Kernel and Kext Patches](Screenshots/Install_Clover_KernalKextPatches.png)
-* Rt Varibles
-  ![Rt Varibles](Screenshots/Install_Clover_RtVariables.png)
-* SMBIOS
-  ![SMBIOS](Screenshots/Install_Clover_SMBIOS.png)
-* System Parameters
-  ![System Parameters](Screenshots/Install_Clover_SystemParameters.png)
+<details><summary>ACPI</summary>
+  <img src="Screenshots/Install_Clover_ACPI_1.png">
+  <img src="Screenshots/Install_Clover_ACPI_2.png">
+</details>
+ 
+<details><summary>Boot</summary>
+  <img src="Screenshots/Install_Clover_Boot.png">
+</details>
 
+<details><summary>Boot Graphics</summary>
+  <img src="Screenshots/Install_Clover_BootGraphics.png">
+</details>
+
+<details><summary>CPU</summary>
+  <img src="Screenshots/Install_Clover_CPU.png">
+</details>
+
+<details><summary>Devices</summary>
+  <img src="Screenshots/Install_Clover_Devices_1.png">
+  <img src="Screenshots/Install_Clover_Devices_2.png">
+</details>
+
+<details><summary>Disable Drivers</summary>
+  <img src="Screenshots/Install_Clover_DisableDrivers.png">
+</details>
+
+<details><summary>GUI</summary>
+  <img src="Screenshots/Install_Clover_GUI.png">
+</details>
+
+<details><summary>Graphics</summary>
+  <img src="Screenshots/Install_Clover_Graphics.png">
+</details>
+
+<details><summary>Kernel and Kext Patches</summary>
+  <img src="Screenshots/Install_Clover_KernalKextPatches.png">
+</details>
+
+<details><summary>Rt Varibles</summary>
+  <img src="Screenshots/Install_Clover_RtVariables.png">
+</details>
+
+<details><summary>SMBIOS</summary>
+  <img src="Screenshots/Install_Clover_SMBIOS.png">
+</details>
+
+<details><summary>System Parameters</summary>
+  <img src="Screenshots/Install_Clover_SystemParameters.png">
+</details>
 
 ## BIOS Settings (Version F10)
 
@@ -357,32 +379,55 @@ Follow [these instructions](https://discussions.apple.com/docs/DOC-7942) to prev
 
 A sanitized version of my final config file can be found in [`EFI/CLOVER/`](EFI/CLOVER/). Each section of the configuration in Clover Configurator is also documented below.
 
-* ACPI
-  ![ACPI Page 1](Screenshots/Post_Clover_ACPI_1.png)
-  ![ACPI Page 2](Screenshots/Post_Clover_ACPI_2.png)
-* Boot
-  ![Boot](Screenshots/Post_Clover_Boot.png)
-* Boot Graphics
-  ![Boot Graphics](Screenshots/Post_Clover_BootGraphics.png)
-* CPU
-  ![CPU](Screenshots/Post_Clover_CPU.png)
-* Devices
-  ![Devices Page 1](Screenshots/Post_Clover_Devices_1.png)
-  ![Devices Page 2](Screenshots/Post_Clover_Devices_2.png)
-* Disable Drivers
-  ![Disable Drivers](Screenshots/Post_Clover_DisableDrivers.png)
-* GUI
-  ![GUI](Screenshots/Post_Clover_GUI.png)
-* Graphics
-  ![Graphics](Screenshots/Post_Clover_Graphics.png)
-* Kernel and Kext Patches
-  ![Kernel and Kext Patches](Screenshots/Post_Clover_KernalKextPatches.png)
-* Rt Varibles
-  ![Rt Varibles](Screenshots/Post_Clover_RtVariables.png)
-* SMBIOS
-  ![SMBIOS](Screenshots/Post_Clover_SMBIOS.png)
-* System Parameters
-  ![System Parameters](Screenshots/Post_Clover_SystemParameters.png)
+<details><summary>ACPI</summary>
+  <img src="Screenshots/Post_Clover_ACPI_1.png">
+  <img src="Screenshots/Post_Clover_ACPI_2.png">
+</details>
+ 
+<details><summary>Boot</summary>
+  <img src="Screenshots/Post_Clover_Boot.png">
+</details>
+
+<details><summary>Boot Graphics</summary>
+  <img src="Screenshots/Post_Clover_BootGraphics.png">
+</details>
+
+<details><summary>CPU</summary>
+  <img src="Screenshots/Post_Clover_CPU.png">
+</details>
+
+<details><summary>Devices</summary>
+  <img src="Screenshots/Post_Clover_Devices_1.png">
+  <img src="Screenshots/Post_Clover_Devices_2.png">
+</details>
+
+<details><summary>Disable Drivers</summary>
+  <img src="Screenshots/Post_Clover_DisableDrivers.png">
+</details>
+
+<details><summary>GUI</summary>
+  <img src="Screenshots/Post_Clover_GUI.png">
+</details>
+
+<details><summary>Graphics</summary>
+  <img src="Screenshots/Post_Clover_Graphics.png">
+</details>
+
+<details><summary>Kernel and Kext Patches</summary>
+  <img src="Screenshots/Post_Clover_KernalKextPatches.png">
+</details>
+
+<details><summary>Rt Varibles</summary>
+  <img src="Screenshots/Post_Clover_RtVariables.png">
+</details>
+
+<details><summary>SMBIOS</summary>
+  <img src="Screenshots/Post_Clover_SMBIOS.png">
+</details>
+
+<details><summary>System Parameters</summary>
+  <img src="Screenshots/Post_Clover_SystemParameters.png">
+</details>
 
 ## Benchmarks
 
