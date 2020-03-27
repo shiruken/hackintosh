@@ -244,7 +244,7 @@
 		<key>Mobile</key>
 		<false/>
 		<key>PlatformFeature</key>
-		<string>0x22</string>
+		<string>0x20</string>
 		<key>ProductName</key>
 		<string>iMac19,1</string>
 		<key>Trust</key>

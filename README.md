@@ -23,6 +23,7 @@ Installation guide for my vanilla Hackintosh v3 build dual-booting macOS Catalin
   * [Enable FileVault](#enable-filevault)
   * [Enable TRIM for Solid State Drives](#enable-trim-for-solid-state-drives)
   * [Fix CPU Type in About This Mac](#fix-cpu-type-in-about-this-mac)
+  * [Fix Memory Tab in About This Mac](#fix-memory-tab-in-about-this-mac)
   * [Install Clover Theme](#install-clover-theme)
 * [Install Windows 10](#install-windows-10)
 * [Final Clover Configuration](#final-clover-configuration)
@@ -330,7 +331,13 @@ _Note: You should also make these changes to your USB drive Clover configuration
 
 For some reason, About This Mac and System Report do not properly identify the processor and list it as an 'Intel Core i9' instead of an 'Intel Core i7.' This can easily be fixed by using Clover Configurator to set the CPU Type to `0x0705` and rebooting.
 
-![Before/After About This Mac](Screenshots/Post_CPUType.png)
+![Before/After About This Mac - CPU](Screenshots/Post_CPUType.png)
+
+### Fix Memory Tab in About This Mac
+
+The default `iMac19,1` SMBIOS configuration used in this build sets `PlatformFeature=0x22`, which indicates that the system lacks user-upgradable memory and therefore hides the Memory tab on About This Mac (as seen above) and any empty memory slots in the System Report. This can easily be fixed by using Clover Configurator to set `PlatformFeature=0x20` in the `SMBIOS` section and rebooting.
+
+![Before/After About This Mac - Memory](Screenshots/Post_PlatformFeature.png)
 
 ### Install Clover Theme
 
