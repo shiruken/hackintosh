@@ -29,13 +29,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					WEhDSQ==
-					</data>
+					<data>WEhDSQ==</data>
 					<key>Replace</key>
-					<data>
-					WEhDXw==
-					</data>
+					<data>WEhDXw==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -43,13 +39,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					WEhDMQ==
-					</data>
+					<data>WEhDMQ==</data>
 					<key>Replace</key>
-					<data>
-					WEhDXw==
-					</data>
+					<data>WEhDXw==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -57,13 +49,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					U0FUMA==
-					</data>
+					<data>U0FUMA==</data>
 					<key>Replace</key>
-					<data>
-					U0FUQQ==
-					</data>
+					<data>U0FUQQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -71,13 +59,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					RUhDMQ==
-					</data>
+					<data>RUhDMQ==</data>
 					<key>Replace</key>
-					<data>
-					RUgwMQ==
-					</data>
+					<data>RUgwMQ==</data>
 				</dict>
 			</array>
 		</dict>
@@ -135,9 +119,7 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>
-				AwCYPg==
-				</data>
+				<data>AwCYPg==</data>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -188,17 +170,13 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>
-				RXh0ZXJuYWw=
-				</data>
+				<data>RXh0ZXJuYWw=</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>Name</key>
 				<string>AppleAHCIPort</string>
 				<key>Replace</key>
-				<data>
-				SW50ZXJuYWw=
-				</data>
+				<data>SW50ZXJuYWw=</data>
 			</dict>
 		</array>
 	</dict>
