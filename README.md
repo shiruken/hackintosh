@@ -20,6 +20,7 @@ Installation guide for my vanilla Hackintosh v3 build dual-booting macOS Catalin
   * [Make macOS Drive Bootable](#make-macos-drive-bootable)
   * [Enable the Discrete Graphics Card with Headless iGPU](#enable-the-discrete-graphics-card-with-headless-igpu)
   * [Map USB Ports](#map-usb-ports)
+  * [Enable Bluetooth](#enable-bluetooth)
   * [Enable FileVault](#enable-filevault)
   * [Enable TRIM for Solid State Drives](#enable-trim-for-solid-state-drives)
   * [Fix CPU Type in About This Mac](#fix-cpu-type-in-about-this-mac)
@@ -271,9 +272,10 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
     1. Press `a` then `[enter]` to enable all ports
     2. Using the list of identified ports, enter the numbers of the ports you want to **disable**
         * No more than 15 XHC ports can be enabled
-        * `2,3,4,9,11,12,14,15,16,18,25` → `HS02,HS03,HS04,HS09,HS11,HS12,HS14,USR1,USR2,SS02,SS09`
-          * Disables Bluetooth, AIO control, and USB 2.0 for the two ports immediately beneath the HDMI port
-        * The enabled ports are red and the disabled ports are gray in the image above
+        * `2,3,4,5,9,11,12,15,16,18,25` → `HS02,HS03,HS04,HS05,HS09,HS11,HS12,USR1,USR2,SS02,SS09`
+          * Disables AIO control via the internal header and USB 2.0 for three rear Type-A ports
+          * If you don't need Bluetooth, you can disable `HS14` and enable one of the disabled USB 2.0 ports
+        * The **enabled ports are red** and the **disabled ports are gray** in the image above
     3. Press `k` then `[enter]` to build the custom USBMap.kext file
     4. Allow the program to move the files to your EFI partition or copy them manually:
         * `USBMap.kext` → [`EFI/CLOVER/kexts/Other/`](EFI/CLOVER/kexts/Other/)
@@ -287,6 +289,15 @@ _If you have the Gigabyte Z390 AORUS PRO WIFI motherboard and want the same USB 
       * Remove the `com.apple.driver.usb.AppleUSBXHCI` kext patch
 6. Delete the `USBInjectAll.kext` from `EFI/CLOVER/kexts/Other/` on the EFI partition of `Macintosh SSD`
 7. You should now have fully custom-mapped USB ports on your system! Use the USBMap script after a reboot to verify the correct ports are enabled.
+
+### Enable Bluetooth
+
+The Intel CNVi modules that provide integrated Wi-Fi and Bluetooth functionality on motherboards are not natively supported by macOS but can be enabled using the [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware) kext on supported devices. The Gigabyte Z390 AORUS PRO WIFI contains a compatible [Intel Wireless-AC 9560](https://www.intel.com/content/www/us/en/products/wireless/wireless-products/dual-band-wireless-ac-9560.html) CNVi (Vendor ID: `0x8087`, Device ID: `0x0AAA`). [Hackintool](https://www.insanelymac.com/forum/topic/335018-hackintool-v286/) can be used to determine the specific model on your motherboard (`System > Peripherals > Bluetooth`).
+  * _Note: You must enable the internal USB port used by the CNVi module during the [USB mapping process](#map-usb-ports)._
+
+Download the [latest release](https://github.com/zxystd/IntelBluetoothFirmware/releases) and place the two kexts in [`EFI/CLOVER/kexts/Other/`](EFI/CLOVER/kexts/Other/). Reboot and you should be able to use Bluetooth on your Hackintosh.
+
+![Bluetooth System Report and Preferences](Screenshots/Post_Bluetooth.png)
 
 ### Enable FileVault
 
@@ -458,6 +469,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2020-04-18: Enabled integrated Bluetooth functionality using [IntelBluetoothFirmware v1.0.3](https://github.com/zxystd/IntelBluetoothFirmware). See the [Enable Bluetooth](#enable-bluetooth) section.
 * 2020-04-17: Upgraded to [Clover Configurator v5.10.0.0](http://mackie100projects.altervista.org/download-clover-configurator/), [Clover v5.0 r5112](https://github.com/CloverHackyColor/CloverBootloader/releases/tag/5112), [AppleALC 1.4.8](https://github.com/acidanthera/AppleALC/releases/tag/1.4.8), [Lilu 1.4.3](https://github.com/acidanthera/Lilu/releases/tag/1.4.3), [WhateverGreen 1.3.8](https://github.com/acidanthera/WhateverGreen/releases/tag/1.3.8), and [Virtual SMC 1.1.2](https://github.com/acidanthera/VirtualSMC/releases/tag/1.1.2). Upgraded to [macOS 10.15.4]() via Software Update (Note: Requires at minimum [Clover v2.5k-5104](https://github.com/CloverHackyColor/CloverBootloader/releases/tag/5104)).
 * 2020-02-01: Upgraded to [Clover Configurator v5.9.2.1](http://mackie100projects.altervista.org/download-clover-configurator/), [Clover v2.5k_r5103](https://github.com/Dids/clover-builder/releases/tag/v2.5k_r5103), [AppleALC 1.4.5](https://github.com/acidanthera/AppleALC/releases/tag/1.4.5), [Lilu 1.4.1](https://github.com/acidanthera/Lilu/releases/tag/1.4.1), [WhateverGreen 1.3.6](https://github.com/acidanthera/WhateverGreen/releases/tag/1.3.6), and [Virtual SMC 1.1.0](https://github.com/acidanthera/VirtualSMC/releases/tag/1.1.0). Upgraded to [macOS 10.15.3](https://support.apple.com/kb/DL2029) via Software Update.
 * 2019-12-18: Upgraded to [macOS 10.15.2](https://support.apple.com/kb/DL2025) via Software Update
