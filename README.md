@@ -13,7 +13,7 @@ Installation guide for my vanilla Hackintosh v3 build dual-booting macOS Catalin
 * [Install Clover](#install-clover)
 * [Gather Kexts](#gather-kexts)
 * [Configure Clover](#configure-clover)
-* [BIOS Settings](#bios-settings-version-f10)
+* [BIOS Settings](#bios-settings-version-f12c)
 * [Prepare for macOS Installation](#prepare-for-macos-installation)
 * [Install macOS Catalina](#install-macos-catalina)
 * [Post Installation](#post-installation)
@@ -150,38 +150,40 @@ The Clover configuration for the installation is heavily based upon corpnewt's [
   <img src="Screenshots/Install_Clover_SystemParameters.png">
 </details>
 
-## BIOS Settings (Version F10)
+## BIOS Settings (Version F12c)
 
-* Save & Exit
-  * **Load Optimized Defaults**
-* M.I.T.
-  * Advanced Frequency Settings
-    * Extreme Memory Profile (X.M.P.) → **Profile 1**
-  * Smart Fan 5 Settings
-    * CPU_FAN (or whichever header was used for the AIO CPU cooler)
-      * Speed Control → **Full Speed**
-      * Control Mode → **Voltage**
-* BIOS
+Enter **Advanced Mode** and **Load Optimized Defaults** to reset the default BIOS settings. Modify the following settings:
+  
+* Tweaker
+  * Advanced CPU Settings
+    * Vt-d → **Disabled**
+  * Extreme Memory Profile (X.M.P.) → **Profile 1**
+* Settings
+  * Platform Power
+    * ErP → **Disabled**
+    * Soft-Off by PWR_BTTN → **Delay 4 Sec.**
+    * RC6 (Render Standby) → **Enabled**
+  * IO Ports
+    * Initial Display Output → **IGFX**
+    * Internal Graphics → **Enabled**
+    * DVMT Pre-Allocated → **32M**
+    * DVMT Total Gfx Mem → **256M**
+    * Aperture Size → **512MB**
+    * Audio Controller → **Enabled**
+    * Above 4G Decoding → **Enabled**
+    * USB Configuration
+      * Legacy USB Support → **Enabled**
+      * XHCI Hand-off → **Enabled**
+    * Network Stack Configuration
+      * Network Stack → **Disabled**
+  * Miscellaneous
+    * Intel Platform Trust Technology (PTT) → **Disabled**
+* Boot
   * Windows 8/10 Features → **Windows 8/10**
   * CSM Support → **Disabled**
-* Peripherals
-  * Initial Display Output → **IGFX**
-  * Intel Platform Trust Technology (PTT) → **Disabled**
-  * USB Configuration
-    * Legacy USB Support → **Enabled**
-    * XHCI Hand-off → **Enabled**
-  * Network Stack Configuration
-    * Network Stack → **Disabled**
-* Chipset
-  * Vt-d → **Disabled**
-  * Internal Graphics → **Enabled**
-  * DVMT Pre-Allocated → **32M**
-  * DVMT Total Gfx Mem → **256M**
-  * Audio Controller → **Enabled**
-  * Above 4G Decoding → **Enabled**
-* Power
-  * ErP → **Disabled**
-  * RC6 (Render Standby) → **Enabled**
+* Smart Fan 5 Settings (F6)
+  * CPU_FAN (or whichever header was used for the AIO CPU cooler)
+    * Speed Control → **Full Speed**
 * Save & Exit
   * Choose **Save and Exit** to save BIOS settings and reboot
 
@@ -231,13 +233,13 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
       ![WhateverGreen Property](Screenshots/Post_WEG_Property.png)
     * Graphics
       * Uncheck `Inject Intel`
-2. Reboot the computer and modify the BIOS Settings
-    * Peripherals
-      * Initial Display Output → **PCIe Slot 1**
-    * Chipset
-       * Internal Graphics → **Enabled**
-       * DVMT Pre-Allocated → **64M**
-       * DVMT Total Gfx Mem → **256M**
+2. Reboot the computer and modify the following BIOS settings:
+    * Settings
+      * IO Ports
+        * Initial Display Output → **PCIe 1 Slot**
+        * Internal Graphics → **Enabled**
+        * DVMT Pre-Allocated → **64M**
+        * DVMT Total Gfx Mem → **256M**
 3. Save the changes and reboot the computer
 4. Disconnect the HDMI cable from the motherboard and connect a DisplayPort cable to the graphics card
 5. You should now be using the natively-supported discrete graphics card (as of macOS 10.15.1) to power your display(s) in conjunction with the headless iGPU for compute tasks.
@@ -469,6 +471,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2020-04-20: Upgraded BIOS to version [F12c](https://www.gigabyte.com/us/Motherboard/Z390-AORUS-PRO-WIFI-rev-10/support#support-dl-bios). See updated [BIOS Settings](#bios-settings-version-f12c) section.
 * 2020-04-19: Enabled integrated Bluetooth functionality using [IntelBluetoothFirmware 1.0.3](https://github.com/zxystd/IntelBluetoothFirmware/releases/tag/1.0.3). See the [Enable Bluetooth](#enable-bluetooth) section.
 * 2020-04-17: Upgraded to [Clover Configurator v5.10.0.0](http://mackie100projects.altervista.org/download-clover-configurator/), [Clover v5.0 r5112](https://github.com/CloverHackyColor/CloverBootloader/releases/tag/5112), [AppleALC 1.4.8](https://github.com/acidanthera/AppleALC/releases/tag/1.4.8), [Lilu 1.4.3](https://github.com/acidanthera/Lilu/releases/tag/1.4.3), [WhateverGreen 1.3.8](https://github.com/acidanthera/WhateverGreen/releases/tag/1.3.8), and [Virtual SMC 1.1.2](https://github.com/acidanthera/VirtualSMC/releases/tag/1.1.2). Upgraded to [macOS 10.15.4]() via Software Update (Note: Requires at minimum [Clover v2.5k-5104](https://github.com/CloverHackyColor/CloverBootloader/releases/tag/5104)).
 * 2020-02-01: Upgraded to [Clover Configurator v5.9.2.1](http://mackie100projects.altervista.org/download-clover-configurator/), [Clover v2.5k_r5103](https://github.com/Dids/clover-builder/releases/tag/v2.5k_r5103), [AppleALC 1.4.5](https://github.com/acidanthera/AppleALC/releases/tag/1.4.5), [Lilu 1.4.1](https://github.com/acidanthera/Lilu/releases/tag/1.4.1), [WhateverGreen 1.3.6](https://github.com/acidanthera/WhateverGreen/releases/tag/1.3.6), and [Virtual SMC 1.1.0](https://github.com/acidanthera/VirtualSMC/releases/tag/1.1.0). Upgraded to [macOS 10.15.3](https://support.apple.com/kb/DL2029) via Software Update.
