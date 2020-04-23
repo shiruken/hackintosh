@@ -27,6 +27,7 @@ Installation guide for my vanilla Hackintosh v3 build dual-booting macOS Catalin
   * [Fix Memory Tab in About This Mac](#fix-memory-tab-in-about-this-mac)
   * [Install Clover Theme](#install-clover-theme)
 * [Install Windows 10](#install-windows-10)
+* [Final BIOS Settings](#final-bios-settings)
 * [Final Clover Configuration](#final-clover-configuration)
 * [Benchmarks](#benchmarks)
 * [Issues](#issues)
@@ -393,6 +394,49 @@ Follow [these instructions](https://discussions.apple.com/docs/DOC-7942) to prev
     `UUID={YOUR_UUID} none ntfs rw,noauto`
       
 3. Restart your system and the Windows partition will no longer automatically mount.
+
+
+## Final BIOS Settings
+
+Screenshots of my current BIOS settings on my working (i.e. stable) system. 
+
+<details><summary>Tweaker</summary>
+  <img src="Screenshots/Post_BIOS_Tweaker.png">
+
+  Advanced CPU Settings
+  <img src="Screenshots/Post_BIOS_Tweaker_CPU.png">
+
+  Advanced Memory Settings
+  <img src="Screenshots/Post_BIOS_Tweaker_Memory.png">
+
+</details>
+  
+<details><summary>Settings</summary>
+
+  Platform Power
+  <img src="Screenshots/Post_BIOS_Settings_Power.png">
+
+  IO Ports
+  <img src="Screenshots/Post_BIOS_Settings_IOPorts.png">
+
+  USB Configuration
+  <img src="Screenshots/Post_BIOS_Settings_IOPorts_USB.png">
+
+  SATA and RST Configuration
+  <img src="Screenshots/Post_BIOS_Settings_IOPorts_SATA.png">
+
+  Miscellaneous
+  <img src="Screenshots/Post_BIOS_Settings_Misc.png">
+
+</details>
+
+<details><summary>Boot</summary>
+  <img src="Screenshots/Post_BIOS_Boot.png">
+</details>
+
+<details><summary>Smart Fan 5 Settings</summary>
+  <img src="Screenshots/Post_BIOS_SmartFan.png">
+</details>
 
 
 ## Final Clover Configuration
