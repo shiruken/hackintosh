@@ -195,6 +195,8 @@
 		<string>10/09/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>IM191.88Z.F000.B00.1910090230</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardType</key>
