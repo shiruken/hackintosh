@@ -4,67 +4,77 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
+		<key>SSDT</key>
+		<dict>
+			<key>Generate</key>
+			<dict>
+				<key>PluginType</key>
+				<true/>
+			</dict>
+		</dict>
 		<key>DSDT</key>
 		<dict>
+			<key>Patches</key>
+			<array>
+				<dict>
+					<key>Find</key>
+					<data>WEhDSQ==</data>
+					<key>Replace</key>
+					<data>WEhDXw==</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change XHCI to XHC</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>WEhDMQ==</data>
+					<key>Replace</key>
+					<data>WEhDXw==</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change XHC1 to XHC</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>U0FUMA==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change SAT0 to SATA</string>
+				</dict>
+				<dict>
+					<key>Find</key>
+					<data>RUhDMQ==</data>
+					<key>Replace</key>
+					<data>RUgwMQ==</data>
+					<key>Disabled</key>
+					<false/>
+					<key>Comment</key>
+					<string>change EHC1 to EH01</string>
+				</dict>
+			</array>
 			<key>Fixes</key>
 			<dict>
 				<key>AddMCHC</key>
 				<true/>
 				<key>FixHPET</key>
 				<true/>
-				<key>FixIPIC</key>
-				<true/>
 				<key>FixRTC</key>
-				<true/>
-				<key>FixShutdown</key>
 				<true/>
 				<key>FixTMR</key>
 				<true/>
+				<key>FixShutdown</key>
+				<true/>
+				<key>FixIPIC</key>
+				<true/>
 			</dict>
-			<key>Patches</key>
-			<array>
-				<dict>
-					<key>Comment</key>
-					<string>change XHCI to XHC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>WEhDSQ==</data>
-					<key>Replace</key>
-					<data>WEhDXw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change XHC1 to XHC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>WEhDMQ==</data>
-					<key>Replace</key>
-					<data>WEhDXw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change SAT0 to SATA</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>U0FUMA==</data>
-					<key>Replace</key>
-					<data>U0FUQQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC1 to EH01</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUhDMQ==</data>
-					<key>Replace</key>
-					<data>RUgwMQ==</data>
-				</dict>
-			</array>
 		</dict>
+		<key>HaltEnabler</key>
+		<false/>
 		<key>DropTables</key>
 		<array>
 			<dict>
@@ -78,27 +88,33 @@
 		</array>
 		<key>FixHeaders</key>
 		<true/>
-		<key>HaltEnabler</key>
-		<false/>
-		<key>SSDT</key>
-		<dict>
-			<key>Generate</key>
-			<dict>
-				<key>PluginType</key>
-				<true/>
-			</dict>
-		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>Arguments</key>
-		<string>keepsyms=1 dart=0 debug=0x100 slide=0 agdpmod=pikera</string>
-		<key>DefaultVolume</key>
-		<string>Preboot</string>
 		<key>Timeout</key>
 		<integer>5</integer>
+		<key>DefaultVolume</key>
+		<string>Preboot</string>
+		<key>Arguments</key>
+		<string>keepsyms=1 dart=0 debug=0x100 slide=0 agdpmod=pikera</string>
 		<key>XMPDetection</key>
 		<string>Yes</string>
+	</dict>
+	<key>GUI</key>
+	<dict>
+		<key>Theme</key>
+		<string>Minimalism2</string>
+		<key>Scan</key>
+		<dict>
+			<key>Tool</key>
+			<true/>
+			<key>Entries</key>
+			<true/>
+			<key>Legacy</key>
+			<false/>
+			<key>Linux</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>CPU</key>
 	<dict>
@@ -107,12 +123,17 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>USB</key>
+		<dict>
+			<key>FixOwnership</key>
+			<true/>
+		</dict>
 		<key>Audio</key>
 		<dict>
-			<key>Inject</key>
-			<integer>1</integer>
 			<key>ResetHDA</key>
 			<true/>
+			<key>Inject</key>
+			<integer>1</integer>
 		</dict>
 		<key>Properties</key>
 		<dict>
@@ -122,27 +143,6 @@
 				<data>AwCYPg==</data>
 			</dict>
 		</dict>
-		<key>USB</key>
-		<dict>
-			<key>FixOwnership</key>
-			<true/>
-		</dict>
-	</dict>
-	<key>GUI</key>
-	<dict>
-		<key>Scan</key>
-		<dict>
-			<key>Entries</key>
-			<true/>
-			<key>Legacy</key>
-			<false/>
-			<key>Linux</key>
-			<false/>
-			<key>Tool</key>
-			<true/>
-		</dict>
-		<key>Theme</key>
-		<string>Minimalism</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -158,77 +158,80 @@
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
-		<key>AppleIntelCPUPM</key>
-		<false/>
 		<key>KernelPm</key>
 		<true/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
-				<key>Comment</key>
-				<string>External icons patch</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
 				<data>RXh0ZXJuYWw=</data>
-				<key>InfoPlistPatch</key>
-				<false/>
 				<key>Name</key>
 				<string>AppleAHCIPort</string>
 				<key>Replace</key>
 				<data>SW50ZXJuYWw=</data>
+				<key>Disabled</key>
+				<false/>
+				<key>Comment</key>
+				<string>External icons patch</string>
+				<key>InfoPlistPatch</key>
+				<false/>
 			</dict>
 		</array>
+		<key>AppleIntelCPUPM</key>
+		<false/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>BooterConfig</key>
-		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
 		<key>ROM</key>
 		<string>UseMacAddr0</string>
+		<key>BooterConfig</key>
+		<string>0x28</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
 		<string>10/09/2019</string>
 		<key>BiosVendor</key>
+		<key>FirmwareFeatures</key>
+		<string>0xFD8FF576</string>
+		<key>Trust</key>
+		<true/>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFFDFFF7F</string>
+		<key>BoardVersion</key>
+		<string>1.0</string>
+		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0x09</string>
 		<key>BiosVersion</key>
 		<string>IM191.88Z.F000.B00.1910090230</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>BoardType</key>
-		<integer>10</integer>
-		<key>BoardVersion</key>
-		<string>1.0</string>
 		<key>ChassisAssetTag</key>
 		<string>iMac-Aluminum</string>
-		<key>ChassisManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>ChassisType</key>
-		<string>0x09</string>
-		<key>EfiVersion</key>
-		<string>1037.40.118.0.0</string>
-		<key>Family</key>
-		<string>iMac</string>
-		<key>FirmwareFeatures</key>
-		<string>0xFD8FF576</string>
-		<key>FirmwareFeaturesMask</key>
-		<string>0xFFDFFF7F</string>
-		<key>LocationInChassis</key>
-		<string>Part Component</string>
-		<key>Manufacturer</key>
-		<string>Apple Inc.</string>
-		<key>Mobile</key>
-		<false/>
 		<key>PlatformFeature</key>
 		<string>0x20</string>
+		<key>Family</key>
+		<string>iMac</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
 		<key>ProductName</key>
 		<string>iMac19,1</string>
-		<key>Trust</key>
-		<true/>
+		<key>Mobile</key>
+		<false/>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>EfiVersion</key>
+		<string>1037.40.118.0.0</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>BiosReleaseDate</key>
+		<string>10/09/2019</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>

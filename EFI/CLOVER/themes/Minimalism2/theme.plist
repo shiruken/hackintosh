@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Pit256</string>
+	<string>dodvip123 (fixed by Pit256)</string>
 	<key>Description</key>
 	<string>Black and white minimalistic theme</string>
 	<key>Theme</key>
@@ -17,7 +17,7 @@
 			<key>Sharp</key>
 			<string>0xFF</string>
 			<key>Type</key>
-			<string>Scale</string>
+			<string>Tile</string>
 		</dict>
 		<key>Badges</key>
 		<dict>
