@@ -191,9 +191,6 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosReleaseDate</key>
-		<string>10/09/2019</string>
-		<key>BiosVendor</key>
 		<key>FirmwareFeatures</key>
 		<string>0xFD8FF576</string>
 		<key>Trust</key>
