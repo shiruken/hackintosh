@@ -117,3 +117,15 @@ The following changes were necessary:
 You can now enable FileVault under System Preferences > Security & Privacy > FileVault like on a real Mac. Once the encryption process is complete, your account password will be required to decrypt the startup disk every time your Hackintosh starts up.
 
 _Note: You should also make these changes to your USB drive OpenCore configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, then the OpenCore bootloader may not be able to properly handle the FileVault-encrypted drive._
+
+
+## Map USB Ports
+
+Follow the OpenCore Post-Install Guide to [map USB on your system](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). The complete USB port layout for the Gigabyte Z390 AORUS PRO WIFI motherboard is detailed in the image below with the ports I enabled indicated in red. If you have the same motherboard and want to use this _exact_ USB port mapping, you can download my [`USBMap.kext`](EFI/OC/Kexts/USBMap.kext).
+
+* No ACPI patches were necessary to rename mappings
+* Disabling the internal USB 2.0 headers can prevent sleep issues caused by the AIO
+* If you don't need Bluetooth, you can disable `HS14` and enable one of the disabled ports
+* You can disable the `XhciPortLimit` quirk in your OpenCore configuration once complete
+
+![USB Port Mapping](USBMap.png)
