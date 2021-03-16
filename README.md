@@ -1,6 +1,6 @@
 # Hackintosh v3
 
-Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Windows 10. This build is based on [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). The previous version of this guide using the Clover bootloader can be found [here](). The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
+Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Windows 10. This build is based on [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). The previous version of this guide using the Clover bootloader can be found [here](https://github.com/shiruken/hackintosh/tree/clover-final). The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
 
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
@@ -106,7 +106,7 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
 
 [FileVault](https://support.apple.com/en-us/HT204837) is used to encrypt the startup disk on your Hackintosh. Enabling it is entirely optional, but probably a good idea for the security conscious. Before turning on the feature, you will need to make sure that OpenCore is properly configured to interact with the encrypted drive. Follow the OpenCore Post-Install Guide to [prepare your config.plist file for use with FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security/filevault.html).
 
-The following changes were necessary:
+The following changes were made:
 
 * Misc
   * Boot
@@ -127,5 +127,3 @@ Follow the OpenCore Post-Install Guide to [map USB on your system](https://dorta
 * Disabling the internal USB 2.0 headers can prevent sleep issues caused by the AIO
 * If you don't need Bluetooth, you can disable `HS14` and enable one of the disabled ports
 * You can disable the `XhciPortLimit` quirk in your OpenCore configuration once complete
-
-![USB Port Mapping](USBMap.png)
