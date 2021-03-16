@@ -127,3 +127,5 @@ Follow the OpenCore Post-Install Guide to [map USB on your system](https://dorta
 * Disabling the internal USB 2.0 headers can prevent sleep issues caused by the AIO
 * If you don't need Bluetooth, you can disable `HS14` and enable one of the disabled ports
 * You can disable the `XhciPortLimit` quirk in your OpenCore configuration once complete
+
+![Gigabyte Z390 AORUS PRO WIFI USB Port Map](https://user-images.githubusercontent.com/867617/111387000-719ec380-8683-11eb-8111-cb082c3cc5df.png)
