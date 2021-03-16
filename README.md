@@ -125,7 +125,17 @@ Follow the OpenCore Post-Install Guide to [map USB on your system](https://dorta
 
 * No ACPI patches were necessary to rename mappings
 * Disabling the internal USB 2.0 headers can prevent sleep issues caused by the AIO
-* If you don't need Bluetooth, you can disable `HS14` and enable one of the disabled ports
+* If you don't need Bluetooth/Wi-Fi, you can disable `HS14` and enable one of the disabled ports
 * You can disable the `XhciPortLimit` quirk in your OpenCore configuration once complete
 
 ![Gigabyte Z390 AORUS PRO WIFI USB Port Map](https://user-images.githubusercontent.com/867617/111387000-719ec380-8683-11eb-8111-cb082c3cc5df.png)
+
+
+## Enable Bluetooth and Wi-Fi
+
+The Intel CNVi modules that provide integrated Bluetooth and Wi-Fi functionality on motherboards are not natively supported by macOS but can be enabled using [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) and [itlwm](https://github.com/OpenIntelWireless/itlwm) on supported devices. The Gigabyte Z390 AORUS PRO WIFI contains a compatible [Intel Wireless-AC 9560](https://www.intel.com/content/www/us/en/products/wireless/wireless-products/dual-band-wireless-ac-9560.html) CNVi (Vendor ID: `0x8087`, Device ID: `0x0AAA`). Hackintool can be used to determine the specific model on your motherboard (System > Peripherals > Bluetooth).
+
+In order to use these kexts, you _must_ must enable the internal USB port used by the CNVi module during [USB mapping](#map-usb-ports). Download the latest [`IntelBluetoothFirmware.kext`](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) and [`itlwm.kext`](https://github.com/OpenIntelWireless/itlwm/releases), place in your `EFI/OC/Kexts` directory, and add to your OpenCore configuration. Reboot and you should be able to use both Bluetooth and Wi-Fi on your Hackintosh without any additional hardware.
+
+* `IntelBluetoothInjector.kext` seems necessary to turn Bluetooth on/off
+* `itlwm` shows up as an Ethernet adapter and requires use of the standalone app [HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases) to connect/disconnect from Wi-Fi networks. You can Option-click on the menu bar icon and select "Launch at Login" to have it automatically start.
