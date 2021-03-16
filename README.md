@@ -35,7 +35,8 @@ Follow the OpenCore Install Guide to [create the macOS installer](https://dortan
 
 Follow the OpenCore Install Guide to [setup the initial config.plist file](https://dortania.github.io/OpenCore-Install-Guide/config.plist/) and [configure for Intel Desktop Coffee Lake](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html).
 
-* To enable the iGPU (UHD 630) for headless compute tasks, set `AAPL,ig-platform-id=0300913E` and exclude the `framebuffer-patch-enable` and `framebuffer-stolenmem` properties under DeviceProperties.
+* To enable the iGPU (UHD 630) for headless compute tasks, set `AAPL,ig-platform-id=0300913E` and exclude the `framebuffer-patch-enable` and `framebuffer-stolenmem` properties under `DeviceProperties`.
+* If you already know the MAC address of your ethernet adapter, enter it under `PlatformInfo > Generic > ROM`. If you don't, this can be updated during post installation using System Preferences > Network > Ethernet > Advanced > Hardware > MAC Address to identify the correct value.
 
 A sanitized version of my USB drive config file can be found [here](EFI_install/OC/config.plist).
 
@@ -84,8 +85,7 @@ Select **Save and Exit** to save the new BIOS settings and reboot
     * Scheme: `GUID Partition Map`
 4. Launch Install macOS and select the `Macintosh SSD` drive as the destination
     * As the system restarts, keep selecting `macOS Installer` from the OpenCore Boot Menu
-5. Once the installation is complete, select `Macintosh SSD` from the OpenCore Boot Menu
-    * Proceed through the normal macOS setup but delay signing into iCloud until post installation is complete
+5. Once the installation is complete, select `Macintosh SSD` from the OpenCore Boot Menu and proceed through the normal macOS setup
 
 
 ## Post Installation
@@ -100,3 +100,20 @@ Based heavily on [Dortania's OpenCore Post-Install Guide](https://dortania.githu
 4. You should now have a bootable macOS installation!
 
 _Note: You can now remove the USB drive but keep it handy for debugging issues with your Hackintosh._
+
+
+### Enable FileVault
+
+[FileVault](https://support.apple.com/en-us/HT204837) is used to encrypt the startup disk on your Hackintosh. Enabling it is entirely optional, but probably a good idea for the security conscious. Before turning on the feature, you will need to make sure that OpenCore is properly configured to interact with the encrypted drive. Follow the OpenCore Post-Install Guide to [prepare your config.plist file for use with FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security/filevault.html).
+
+The following changes were necessary:
+
+* Misc
+  * Boot
+    * PollAppleHotKeys → **True**
+  * Security
+    * AuthRestart → **True**
+
+You can now enable FileVault under System Preferences > Security & Privacy > FileVault like on a real Mac. Once the encryption process is complete, your account password will be required to decrypt the startup disk every time your Hackintosh starts up.
+
+_Note: You should also make these changes to your USB drive OpenCore configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, then the OpenCore bootloader may not be able to properly handle the FileVault-encrypted drive._
