@@ -157,7 +157,7 @@ _Note: You should also make these changes to your USB drive OpenCore configurati
 
 ### Map USB Ports
 
-Follow the OpenCore Post-Install Guide to [map USB on your system](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). The complete USB port layout for the Gigabyte Z390 AORUS PRO WIFI motherboard is detailed in the image below with the ports I enabled indicated in red. If you have the same motherboard and want to use this _exact_ USB port mapping, you can download my [`USBMap.kext`](EFI/OC/Kexts/USBMap.kext).
+Follow the OpenCore Post-Install Guide to [map USB on your system](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). The complete USB port layout for the Gigabyte Z390 AORUS PRO WIFI motherboard is detailed in the image below with the ports I enabled indicated in red. If you have the same motherboard and want to use this _exact_ USB port mapping, you can download my [`USBMap.kext`](https://github.com/shiruken/hackintosh/files/6159668/USBMap.kext.zip).
 
 * No ACPI patches were necessary to rename mappings
 * Disabling the internal USB 2.0 headers can prevent sleep issues caused by the AIO
