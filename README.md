@@ -153,7 +153,7 @@ You can now enable FileVault under System Preferences > Security & Privacy > Fil
 _Note: You should also make these changes to your USB drive OpenCore configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, then the OpenCore bootloader may not be able to properly handle the FileVault-encrypted drive._
 
 
-## Map USB Ports
+### Map USB Ports
 
 Follow the OpenCore Post-Install Guide to [map USB on your system](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). The complete USB port layout for the Gigabyte Z390 AORUS PRO WIFI motherboard is detailed in the image below with the ports I enabled indicated in red. If you have the same motherboard and want to use this _exact_ USB port mapping, you can download my [`USBMap.kext`](EFI/OC/Kexts/USBMap.kext).
 
@@ -165,7 +165,7 @@ Follow the OpenCore Post-Install Guide to [map USB on your system](https://dorta
 ![Gigabyte Z390 AORUS PRO WIFI USB Port Map](https://user-images.githubusercontent.com/867617/111387000-719ec380-8683-11eb-8111-cb082c3cc5df.png)
 
 
-## Enable Bluetooth and Wi-Fi
+### Enable Bluetooth and Wi-Fi
 
 The Intel CNVi modules that provide integrated Bluetooth and Wi-Fi functionality on motherboards are not natively supported by macOS but can be enabled using [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) and [itlwm](https://github.com/OpenIntelWireless/itlwm) on supported devices. The Gigabyte Z390 AORUS PRO WIFI contains a compatible [Intel Wireless-AC 9560](https://www.intel.com/content/www/us/en/products/wireless/wireless-products/dual-band-wireless-ac-9560.html) CNVi (Vendor ID: `0x8087`, Device ID: `0x0AAA`). Hackintool can be used to determine the specific model on your motherboard (System > Peripherals > Bluetooth).
 
@@ -177,14 +177,14 @@ In order to use these kexts, you _must_ must enable the internal USB port used b
 ![BluetoothWiFi](https://user-images.githubusercontent.com/867617/111395470-491ec580-8693-11eb-9c03-c5d85888c4b4.png)
 
 
-# References
+## References
 
 * [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 * [OpenCore Post-Install Guide](https://dortania.github.io/OpenCore-Post-Install/)
 * [DarkWake on macOS Catalina | boot args darkwake=8 & darkwake=10 are obsolete](https://www.insanelymac.com/forum/topic/342002-darkwake-on-macos-catalina-boot-args-darkwake8-darkwake10-are-obsolete/)
 
 
-# Resources
+## Resources
 
 * [ProperTree](https://github.com/corpnewt/ProperTree)
 * [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
