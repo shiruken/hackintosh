@@ -18,6 +18,8 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
   * [Enable FileVault](#enable-filevault)
   * [Map USB Ports](#map-usb-ports)
   * [Enable Bluetooth and Wi-Fi](#enable-bluetooth-and-wi-fi)
+* [References](#references)
+* [Resources](#resources)
 
 
 ## The Build
@@ -104,7 +106,7 @@ Enter **Advanced Mode** and **Load Optimized Defaults** to reset the default BIO
   * Secure Boot
     * Secure Boot Enable → **Disabled**
 
-Select **Save and Exit** to save the new BIOS settings and reboot
+Select **Save and Exit** to save the new BIOS settings
 
 
 ### Install macOS
@@ -173,3 +175,19 @@ In order to use these kexts, you _must_ must enable the internal USB port used b
 * `itlwm` shows up as an Ethernet adapter and requires use of the standalone app [HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases) to connect/disconnect from Wi-Fi networks. You can Option-click on the menu bar icon and select "Launch at Login" to have it automatically start.
 
 ![BluetoothWiFi](https://user-images.githubusercontent.com/867617/111395470-491ec580-8693-11eb-9c03-c5d85888c4b4.png)
+
+
+# References
+
+* [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
+* [OpenCore Post-Install Guide](https://dortania.github.io/OpenCore-Post-Install/)
+* [DarkWake on macOS Catalina | boot args darkwake=8 & darkwake=10 are obsolete](https://www.insanelymac.com/forum/topic/342002-darkwake-on-macos-catalina-boot-args-darkwake8-darkwake10-are-obsolete/)
+
+
+# Resources
+
+* [ProperTree](https://github.com/corpnewt/ProperTree)
+* [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+* [USBMap](https://github.com/corpnewt/USBMap)
+* [gfxutil](https://github.com/acidanthera/gfxutil)
+* [Hackintool](https://github.com/headkaze/Hackintool)
