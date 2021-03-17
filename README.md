@@ -6,6 +6,38 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
 
+## Table of Contents
+
+* [The Build](#the-build)
+* [Installation](#installation)
+  * [USB Creation](#usb-creation)
+  * [OpenCore Configuration](#opencore-configuration)
+  * [BIOS Settings](#bios-settings-version-f12k)
+  * [Install macOS](#install-macos)
+* [Post Installation](#post-installation)
+  * [Enable FileVault](#enable-filevault)
+  * [Map USB Ports](#map-usb-ports)
+  * [Enable Bluetooth and Wi-Fi](#enable-bluetooth-and-wi-fi)
+
+
+## The Build
+
+* **CPU:** Intel Core i7-9700K
+* **CPU Cooler:** Corsair H100i PRO (Connected to `CPU_FAN` and `F_USB2`)
+* **Motherboard:** Gigabyte Z390 AORUS PRO WIFI
+* **Memory:** Corsair Vengeance RGB Pro 16 GB DDR4-3600
+* **Storage (macOS):** Samsung 970 Evo 1 TB M.2 NVME SSD (M2A slot)
+* **Storage (Windows):** Intel 660p Series 1 TB M.2 NVME SSD (M2M slot)
+* **Video Card:** Gigabyte Radeon RX 5700 XT 8 GB GAMING OC
+* **Power Supply:** Corsair RM650 80+ Gold
+* **Case:** NZXT H510
+* **Monitor:** Dell S2719DGF 27" LED QHD FreeSync Monitor
+* **Keyboard:** Keychron K8
+* **Mouse:** Logitech G603
+
+View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
+
+
 ## Installation
 
 ### USB Creation
