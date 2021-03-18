@@ -25,6 +25,8 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
 * [Dual-Boot Windows](#dual-boot-windows)
   * [Install Boot Camp Utilities](#install-boot-camp-utilities)
 * [Final BIOS Settings](#final-bios-settings)
+* [Final OpenCore Configuration](#final-opencore-configuration)
+* [Issues](#issues)
 * [References](#references)
 * [Resources](#resources)
 
@@ -286,6 +288,15 @@ Screenshots of my current BIOS settings on my working system
 </details>
 
 
+## Final OpenCore Configuration
+
+A sanitized version of my working config file can be found [here](EFI/OC/config.plist).
+
+## Issues
+
+[See the GitHub repository issues tracker](https://github.com/shiruken/hackintosh/issues)
+
+
 ## References
 
 * [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
@@ -295,6 +306,7 @@ Screenshots of my current BIOS settings on my working system
 
 ## Resources
 
+* [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
 * [ProperTree](https://github.com/corpnewt/ProperTree)
 * [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
 * [USBMap](https://github.com/corpnewt/USBMap)
