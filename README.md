@@ -79,6 +79,7 @@ Follow the OpenCore Install Guide to [create the macOS installer](https://dortan
 Follow the OpenCore Install Guide to [setup the initial config.plist file](https://dortania.github.io/OpenCore-Install-Guide/config.plist/) and [configure for Intel Desktop Coffee Lake](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html).
 
 * To enable the iGPU (UHD 630) for headless compute tasks, set `AAPL,ig-platform-id=0300913E` and exclude the `framebuffer-patch-enable` and `framebuffer-stolenmem` properties.
+* The Gigabyte Z390 AORUS PRO WIFI motherboard has supported disabling CFG-Lock since BIOS version F12j, which means you can disable the `AppleXcpmCfgLock` and `AppleXcpmCfgLock` quirks.
 * If you already know the MAC address of your ethernet adapter, enter it under `PlatformInfo > Generic > ROM`. If you don't, this can be updated during post installation using System Preferences > Network > Ethernet > Advanced > Hardware > MAC Address to identify the correct value.
 
 A sanitized version of my USB drive config file can be found [here](EFI_install/OC/config.plist).
