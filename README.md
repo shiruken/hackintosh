@@ -24,6 +24,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
   * [Disable verbosity and debugging](#disable-verbosity-and-debugging)
 * [Dual-Boot Windows](#dual-boot-windows)
   * [Install Boot Camp Utilities](#install-boot-camp-utilities)
+* [Final BIOS Settings](#final-bios-settings)
 * [References](#references)
 * [Resources](#resources)
 
@@ -243,6 +244,46 @@ In order to return to macOS from Windows without requiring user input during boo
 5. You can now use the Boot Camp Control Panel on the taskbar to restart directly into macOS without requiring further user input, just like on a real Mac running Boot Camp.
 
 ![Boot Camp Assistant and Control Panel](https://user-images.githubusercontent.com/867617/111683749-44c1ec00-87fc-11eb-8932-c747264443bc.png)
+
+
+## Final BIOS Settings
+
+Screenshots of my current BIOS settings on my working system
+
+<details><summary>Tweaker</summary>
+  <img src="https://user-images.githubusercontent.com/867617/111695882-f3b8f480-8809-11eb-9d3e-0c7eec4c5dc2.png">
+
+  Advanced CPU Settings
+  <img src="https://user-images.githubusercontent.com/867617/111695996-1c40ee80-880a-11eb-9275-208e580bb897.png">
+  
+</details>
+
+<details><summary>Settings</summary>
+
+  Platform Power
+  <img src="https://user-images.githubusercontent.com/867617/111696154-57432200-880a-11eb-90f9-28fd7be001e8.png">
+
+  IO Ports
+  <img src="https://user-images.githubusercontent.com/867617/111696210-6e820f80-880a-11eb-9443-f5274866cb9c.png">
+
+  USB Configuration
+  <img src="https://user-images.githubusercontent.com/867617/111696305-8ce80b00-880a-11eb-8d23-fa0d3067d0c3.png">
+
+  SATA and RST Configuration
+  <img src="https://user-images.githubusercontent.com/867617/111696420-ab4e0680-880a-11eb-8044-d4bbb67862aa.png">
+
+  Miscellaneous
+  <img src="https://user-images.githubusercontent.com/867617/111696524-c882d500-880a-11eb-9040-375805b380c5.png">
+
+</details>
+
+<details><summary>Boot</summary>
+  <img src="https://user-images.githubusercontent.com/867617/111696792-1992c900-880b-11eb-8d6f-e890584882da.png">
+</details>
+
+<details><summary>Smart Fan 5 Settings</summary>
+  <img src="https://user-images.githubusercontent.com/867617/111696688-fd8f2780-880a-11eb-9851-eda0642ca126.png">
+</details>
 
 
 ## References
