@@ -152,10 +152,9 @@ The following (optional) changes were made:
 
 You can now enable FileVault in Security & Privacy in System Preferences like on a real Mac. Once the encryption process is complete, your account password will be required to decrypt the startup disk every time your Hackintosh starts up.
 
-![FileVault Enabled](https://user-images.githubusercontent.com/867617/111683525-fb719c80-87fb-11eb-8cfd-ecef06eb7ff3.png)
-
-
 _Note: You should also make these changes to your USB drive OpenCore configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, then the OpenCore bootloader may not be able to properly handle the FileVault-encrypted drive._
+
+![FileVault Enabled](https://user-images.githubusercontent.com/867617/111683525-fb719c80-87fb-11eb-8cfd-ecef06eb7ff3.png)
 
 
 ### Map USB Ports
