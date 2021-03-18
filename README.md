@@ -152,7 +152,8 @@ The following (optional) changes were made:
 
 You can now enable FileVault in Security & Privacy in System Preferences like on a real Mac. Once the encryption process is complete, your account password will be required to decrypt the startup disk every time your Hackintosh starts up.
 
-![FileVault Enabled](https://user-images.githubusercontent.com/867617/111537197-85106400-8741-11eb-93cb-889c22339e0e.png)
+![FileVault Enabled](https://user-images.githubusercontent.com/867617/111683525-fb719c80-87fb-11eb-8cfd-ecef06eb7ff3.png)
+
 
 _Note: You should also make these changes to your USB drive OpenCore configuration so that it can properly boot your system if the `Macintosh SSD` EFI partition gets messed up. If you don't update the configuration, then the OpenCore bootloader may not be able to properly handle the FileVault-encrypted drive._
 
@@ -206,6 +207,8 @@ I used [an existing installation of Windows 10](https://github.com/shiruken/hack
 
 One of the benefits of OpenCore is that you can now use Startup Disk to reboot your system directly into Windows without further user input, just like on a real Mac.
 
+![Startup Disk](https://user-images.githubusercontent.com/867617/111683602-147a4d80-87fc-11eb-8782-6b6ca1809126.png)
+
 
 ### Install Boot Camp Utilities
 
@@ -223,6 +226,8 @@ In order to return to macOS from Windows without requiring user input during boo
 4. Run `BootCamp/Setup.exe` to install the Boot Camp software.
 
 5. You can now use the Boot Camp Control Panel on the taskbar to restart directly into macOS without requiring further user input, just like on a real Mac running Boot Camp.
+
+![Boot Camp Assistant and Control Panel](https://user-images.githubusercontent.com/867617/111683749-44c1ec00-87fc-11eb-8932-c747264443bc.png)
 
 
 ## References
