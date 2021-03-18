@@ -15,11 +15,14 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
   * [BIOS Settings](#bios-settings-version-f12k)
   * [Install macOS](#install-macos)
 * [Post Installation](#post-installation)
+  * [Make macOS Drive Bootable](#make-macos-drive-bootable)
   * [Enable FileVault](#enable-filevault)
   * [Map USB Ports](#map-usb-ports)
   * [Enable Bluetooth and Wi-Fi](#enable-bluetooth-and-wi-fi)
   * [Enable OpenCore GUI](#enable-opencore-gui)
   * [Enable LauncherOption](#enable-launcheroption)
+* [Dual-Boot Windows](#dual-boot-windows)
+  * [Install Boot Camp Utilities](#install-boot-camp-utilities)
 * [References](#references)
 * [Resources](#resources)
 
@@ -30,8 +33,8 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
 * **CPU Cooler:** Corsair H100i PRO (Connected to `CPU_FAN` and `F_USB2`)
 * **Motherboard:** Gigabyte Z390 AORUS PRO WIFI
 * **Memory:** Corsair Vengeance RGB Pro 16 GB DDR4-3600
-* **Storage (macOS):** Samsung 970 Evo 1 TB M.2 NVME SSD (M2A slot)
-* **Storage (Windows):** Intel 660p Series 1 TB M.2 NVME SSD (M2M slot)
+* **Storage (macOS):** Samsung 970 Evo 1 TB M.2 NVME SSD (`M2A` slot)
+* **Storage (Windows):** Intel 660p Series 1 TB M.2 NVME SSD (`M2M` slot)
 * **Video Card:** Gigabyte Radeon RX 5700 XT 8 GB GAMING OC
 * **Power Supply:** Corsair RM650 80+ Gold
 * **Case:** NZXT H510
@@ -142,15 +145,12 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
 
 [FileVault](https://support.apple.com/en-us/HT204837) is used to encrypt the startup disk on your Hackintosh. Enabling it is entirely optional, but probably a good idea for the security conscious. Before turning on the feature, you will need to make sure that OpenCore is properly configured to interact with the encrypted drive. Follow the OpenCore Post-Install Guide to [prepare your config.plist file for use with FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security/filevault.html).
 
-The following changes were made:
+The following (optional) changes were made:
 
-* Misc
-  * Boot
-    * PollAppleHotKeys → **True**
-  * Security
-    * AuthRestart → **True**
+* `PollAppleHotKeys` → `True`
+* `AuthRestart` → `True`
 
-You can now enable FileVault under System Preferences > Security & Privacy > FileVault like on a real Mac. Once the encryption process is complete, your account password will be required to decrypt the startup disk every time your Hackintosh starts up.
+You can now enable FileVault in Security & Privacy in System Preferences like on a real Mac. Once the encryption process is complete, your account password will be required to decrypt the startup disk every time your Hackintosh starts up.
 
 ![FileVault Enabled](https://user-images.githubusercontent.com/867617/111537197-85106400-8741-11eb-93cb-889c22339e0e.png)
 
@@ -162,7 +162,7 @@ _Note: You should also make these changes to your USB drive OpenCore configurati
 Follow the OpenCore Post-Install Guide to [map USB on your system](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). The complete USB port layout for the Gigabyte Z390 AORUS PRO WIFI motherboard is detailed in the image below with the ports I enabled indicated in red. If you have the same motherboard and want to use this _exact_ USB port mapping, you can download my [`USBMap.kext`](https://github.com/shiruken/hackintosh/files/6159668/USBMap.kext.zip).
 
 * No ACPI patches were necessary to rename mappings
-* Disabling the internal USB 2.0 headers can prevent sleep issues caused by the AIO
+* Disabling the internal USB 2.0 headers (`HS11`) can prevent sleep issues caused by the AIO controller
 * If you don't need Bluetooth/Wi-Fi, you can disable `HS14` and enable one of the disabled ports
 * You can disable the `XhciPortLimit` quirk in your OpenCore configuration once complete
 
@@ -183,7 +183,12 @@ In order to use these kexts, you _must_ must enable the internal USB port used b
 
 ### Enable OpenCore GUI
 
-Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui). I changed the background color from black to gray by setting `DefaultBackgroundColor=<BFBFBF00>`
+Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui). I also removed auxiliary entries (macOS Recovery and Reset NVRAM) from the picker and changed the background color from black to gray.
+
+* `HideAuxiliary` → `TRUE`
+* `DefaultBackgroundColor` → `BFBFBF00`
+
+_Note: The auxiliary entries can still be accessed from the GUI by pressing the spacebar key_.
 
 ![OpenCore Bootloader GUI](https://user-images.githubusercontent.com/867617/111563406-4ba21d80-876e-11eb-9dcf-58ce0e8d0d3d.png)
 
@@ -193,6 +198,31 @@ Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](ht
 Follow the OpenCore Post-Install Guide to [run OpenCore directly from firmware without requiring a launcher](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html). This will add OpenCore to the motherboard boot menu and prevent issues where Windows or Linux could overwrite `EFI/BOOT/BOOTx64.efi`. _This file can now be safely removed._ Be sure to select OpenCore as the default boot option in your BIOS.
 
 ![OpenCore Selected as Default BIOS Boot Option](https://user-images.githubusercontent.com/867617/111656480-f0f5d980-87e0-11eb-8229-43c4277a67ca.png)
+
+
+## Dual-Boot Windows
+
+I used [an existing installation of Windows 10](https://github.com/shiruken/hackintosh/tree/clover-final/#install-windows-10) on the Intel 660p Series NVMe drive. The steps taken during that installation process (removing macOS drive and placing Windows drive in `M2M` motherboard slot) should be unnecessary when [LauncherOption is enabled](#enable-launcheroption) since Windows will not be able to mess up the OpenCore EFI. For more information, check out the [Multiboot with OpenCore Guide](https://dortania.github.io/OpenCore-Multiboot/).
+
+One of the benefits of OpenCore is that you can now use Startup Disk to reboot your system directly into Windows without further user input, just like on a real Mac.
+
+
+### Install Boot Camp Utilities
+
+In order to return to macOS from Windows without requiring user input during boot, Apple's "Windows Support Software" must be installed. The OpenCore Post-Install Guide includes [instructions on using a third-party tool to download these drivers](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html). However, they can also be directly downloaded on macOS using Boot Camp Assistant.
+
+1. Launch Boot Camp Assistant and select the `Action > Download Windows Support Software` menu item
+
+2. Copy the downloaded files to a Windows-compatible USB drive and reboot to Windows
+
+3. Remove all unnecessary Boot Camp drivers:
+   * All folders in `$WinPEDriver$` (keep the parent folder)
+   * All folders  in `BootCamp/Drivers/` **except** `Apple/`
+   * All folders/files in `BootCamp/Drivers/Apple/` **except** `BootCamp.msi`
+
+4. Run `BootCamp/Setup.exe` to install the Boot Camp software.
+
+5. You can now use the Boot Camp Control Panel on the taskbar to restart directly into macOS without requiring further user input, just like on a real Mac running Boot Camp.
 
 
 ## References
