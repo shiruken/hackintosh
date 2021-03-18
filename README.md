@@ -21,6 +21,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
   * [Enable Bluetooth and Wi-Fi](#enable-bluetooth-and-wi-fi)
   * [Enable OpenCore GUI](#enable-opencore-gui)
   * [Enable LauncherOption](#enable-launcheroption)
+  * [Disable verbosity and debugging](#disable-verbosity-and-debugging)
 * [Dual-Boot Windows](#dual-boot-windows)
   * [Install Boot Camp Utilities](#install-boot-camp-utilities)
 * [References](#references)
@@ -74,7 +75,7 @@ Follow the OpenCore Install Guide to [create the macOS installer](https://dortan
 
 Follow the OpenCore Install Guide to [setup the initial config.plist file](https://dortania.github.io/OpenCore-Install-Guide/config.plist/) and [configure for Intel Desktop Coffee Lake](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html).
 
-* To enable the iGPU (UHD 630) for headless compute tasks, set `AAPL,ig-platform-id=0300913E` and exclude the `framebuffer-patch-enable` and `framebuffer-stolenmem` properties under `DeviceProperties`.
+* To enable the iGPU (UHD 630) for headless compute tasks, set `AAPL,ig-platform-id=0300913E` and exclude the `framebuffer-patch-enable` and `framebuffer-stolenmem` properties.
 * If you already know the MAC address of your ethernet adapter, enter it under `PlatformInfo > Generic > ROM`. If you don't, this can be updated during post installation using System Preferences > Network > Ethernet > Advanced > Hardware > MAC Address to identify the correct value.
 
 A sanitized version of my USB drive config file can be found [here](EFI_install/OC/config.plist).
@@ -147,8 +148,8 @@ _Note: You can now remove the USB drive but keep it handy for debugging issues w
 
 The following (optional) changes were made:
 
-* `PollAppleHotKeys` → `True`
-* `AuthRestart` → `True`
+* `Misc > Boot > PollAppleHotKeys` → `True`
+* `Misc > Security > AuthRestart` → `True`
 
 You can now enable FileVault in Security & Privacy in System Preferences like on a real Mac. Once the encryption process is complete, your account password will be required to decrypt the startup disk every time your Hackintosh starts up.
 
@@ -185,8 +186,8 @@ In order to use these kexts, you _must_ must enable the internal USB port used b
 
 Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui). I also removed auxiliary entries (macOS Recovery and Reset NVRAM) from the picker and changed the background color from black to gray.
 
-* `HideAuxiliary` → `TRUE`
-* `DefaultBackgroundColor` → `BFBFBF00`
+* `Misc > Boot > HideAuxiliary` → `TRUE`
+* `NVRAM > Add > 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14 > DefaultBackgroundColor` → `BFBFBF00`
 
 _Note: The auxiliary entries can still be accessed from the GUI by pressing the spacebar key_.
 
@@ -198,6 +199,17 @@ _Note: The auxiliary entries can still be accessed from the GUI by pressing the 
 Follow the OpenCore Post-Install Guide to [run OpenCore directly from firmware without requiring a launcher](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html). This will add OpenCore to the motherboard boot menu and prevent issues where Windows or Linux could overwrite `EFI/BOOT/BOOTx64.efi`. _This file can now be safely removed._ Be sure to select OpenCore as the default boot option in your BIOS.
 
 ![OpenCore Selected as Default BIOS Boot Option](https://user-images.githubusercontent.com/867617/111656480-f0f5d980-87e0-11eb-8229-43c4277a67ca.png)
+
+
+### Disable verbosity and debugging
+
+Once your installation is complete and/or stable, you can disable verbose output and debug logging during booting. Follow the OpenCore Post-Install Guide to [declutter macOS and OpenCore](https://dortania.github.io/OpenCore-Post-Install/cosmetic/verbose.html).
+
+* `Misc > Debug > AppleDebug` → `FALSE`
+* `Misc > Debug > Target` → `3`
+* Remove `-v` from `NVRAM > Add > 7C436110-AB2A-4BBB-A880-FE41995C9F82 > boot-args`
+
+If you installed using the DEBUG version of OpenCore, [replace all the drivers]((https://github.com/acidanthera/OpenCorePkg/releases)) with the RELEASE versions.
 
 
 ## Dual-Boot Windows
