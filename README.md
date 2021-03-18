@@ -18,6 +18,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
   * [Enable FileVault](#enable-filevault)
   * [Map USB Ports](#map-usb-ports)
   * [Enable Bluetooth and Wi-Fi](#enable-bluetooth-and-wi-fi)
+  * [Enable OpenCore GUI](#enable-opencore-gui)
 * [References](#references)
 * [Resources](#resources)
 
@@ -177,6 +178,11 @@ In order to use these kexts, you _must_ must enable the internal USB port used b
 * `itlwm` shows up as an Ethernet adapter and requires use of the standalone app [HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases) to connect/disconnect from Wi-Fi networks. You can Option-click on the menu bar icon and select "Launch at Login" to have it automatically start.
 
 ![BluetoothWiFi](https://user-images.githubusercontent.com/867617/111395470-491ec580-8693-11eb-9c03-c5d85888c4b4.png)
+
+
+### Enable OpenCore GUI
+
+Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui).
 
 
 ## References
