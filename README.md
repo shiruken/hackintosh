@@ -182,7 +182,9 @@ In order to use these kexts, you _must_ must enable the internal USB port used b
 
 ### Enable OpenCore GUI
 
-Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui).
+Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui). I changed the background color from black to gray by setting `DefaultBackgroundColor=<BFBFBF00>`
+
+![OpenCore Bootloader GUI](https://user-images.githubusercontent.com/867617/111563406-4ba21d80-876e-11eb-9dcf-58ce0e8d0d3d.png)
 
 
 ## References
