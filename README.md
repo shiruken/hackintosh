@@ -19,6 +19,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
   * [Map USB Ports](#map-usb-ports)
   * [Enable Bluetooth and Wi-Fi](#enable-bluetooth-and-wi-fi)
   * [Enable OpenCore GUI](#enable-opencore-gui)
+  * [Enable LauncherOption](#enable-launcheroption)
 * [References](#references)
 * [Resources](#resources)
 
@@ -185,6 +186,11 @@ In order to use these kexts, you _must_ must enable the internal USB port used b
 Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui). I changed the background color from black to gray by setting `DefaultBackgroundColor=<BFBFBF00>`
 
 ![OpenCore Bootloader GUI](https://user-images.githubusercontent.com/867617/111563406-4ba21d80-876e-11eb-9dcf-58ce0e8d0d3d.png)
+
+
+### Enable LauncherOption
+
+Follow the OpenCore Post-Install Guide to [run OpenCore directly from firmware without requiring a launcher](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html). This will add OpenCore to the motherboard boot menu and prevent issues where Windows or Linux could overwrite `EFI/BOOT/BOOTx64.efi`. _This file can now be safely removed._ Be sure to select OpenCore as the default boot option in your BIOS.
 
 
 ## References
