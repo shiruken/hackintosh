@@ -233,6 +233,10 @@ In order to return to macOS from Windows without requiring user input during boo
    * All folders in `$WinPEDriver$` (keep the parent folder)
    * All folders  in `BootCamp/Drivers/` **except** `Apple/`
    * All folders/files in `BootCamp/Drivers/Apple/` **except** `BootCamp.msi`
+   
+   <br/>
+   
+   ![Remaining Boot Camp Files](https://user-images.githubusercontent.com/867617/111693344-e3534a80-8806-11eb-8442-510c9500b299.png)
 
 4. Run `BootCamp/Setup.exe` to install the Boot Camp software.
 
