@@ -230,7 +230,7 @@ One of the benefits of OpenCore is that you can now use Startup Disk to reboot y
 
 ### Install Boot Camp Utilities
 
-In order to return to macOS from Windows without requiring user input during boot, Apple's "Windows Support Software" must be installed. The OpenCore Post-Install Guide includes [instructions on using a third-party tool to download these drivers](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html). However, they can also be directly downloaded on macOS using Boot Camp Assistant.
+In order to return to macOS from Windows without requiring user input during boot, Apple's [Windows Support Software](https://support.apple.com/en-us/HT204923) must be installed. The OpenCore Post-Install Guide includes [instructions on using a third-party tool to download these drivers](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html). However, they can also be directly downloaded on macOS using Boot Camp Assistant.
 
 1. Launch Boot Camp Assistant and select the `Action > Download Windows Support Software` menu item
 
@@ -323,6 +323,7 @@ _All values are the average of three runs_
 
 * [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 * [OpenCore Post-Install Guide](https://dortania.github.io/OpenCore-Post-Install/)
+* [WhateverGreen Intel® HD Graphics FAQs](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md)
 * [DarkWake on macOS Catalina | boot args darkwake=8 & darkwake=10 are obsolete](https://www.insanelymac.com/forum/topic/342002-darkwake-on-macos-catalina-boot-args-darkwake8-darkwake10-are-obsolete/)
 
 
