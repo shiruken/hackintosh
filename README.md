@@ -26,6 +26,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
   * [Install Boot Camp Utilities](#install-boot-camp-utilities)
 * [Final BIOS Settings](#final-bios-settings)
 * [Final OpenCore Configuration](#final-opencore-configuration)
+* [Benchmarks](#benchmarks)
 * [Issues](#issues)
 * [References](#references)
 * [Resources](#resources)
@@ -120,6 +121,8 @@ Select **Save and Exit** to save the new BIOS settings
 
 
 ### Install macOS
+
+_I performed the installation with the USB drive, keyboard, and mouse plugged into the USB 2.0 ports at the top of the motherboard. My display was connected to the graphics card via DisplayPort._
 
 1. Restart computer and set the USB drive as the default BIOS boot device
 2. Select the `Install macOS Big Sur (external)` option from the OpenCore Boot Menu
@@ -292,6 +295,24 @@ Screenshots of my current BIOS settings on my working system
 ## Final OpenCore Configuration
 
 A sanitized version of my working config file can be found [here](EFI/OC/config.plist).
+
+
+## Benchmarks
+
+_All values are the average of three runs_
+
+* [Geekbench 5.4](https://www.geekbench.com/)
+  * Single Core: 1253
+  * Multicore: 7598
+  * OpenCL: 66013
+  * Metal: 71480
+* [LuxMark v3 LuxBall HDR](http://luxmark.info/): 27444
+* [Cinebench R23 (Multi-core)](https://www.maxon.net/en/cinebench): 9205
+* [BruceX (Final Cut Pro 10.5.2)](https://blog.alex4d.com/2013/10/30/brucex-a-new-fcpx-benchmark/): 6.40 seconds
+* [Blackmagic Disk Speed Test](https://apps.apple.com/us/app/blackmagic-disk-speed-test/id425264550) (Samsung 970 Evo)
+  * Read: 2996 MB/s
+  * Write: 2547 MB/s
+
 
 ## Issues
 
