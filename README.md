@@ -5,6 +5,8 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
+![About This Mac](https://user-images.githubusercontent.com/867617/111886019-9a83c900-89a1-11eb-8744-c976adb67438.png)
+
 
 ## Table of Contents
 
