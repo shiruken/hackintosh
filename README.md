@@ -327,6 +327,7 @@ _All values are the average of three runs_
 * [OpenCore Post-Install Guide](https://dortania.github.io/OpenCore-Post-Install/)
 * [WhateverGreen Intel® HD Graphics FAQs](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md)
 * [DarkWake on macOS Catalina | boot args darkwake=8 & darkwake=10 are obsolete](https://www.insanelymac.com/forum/topic/342002-darkwake-on-macos-catalina-boot-args-darkwake8-darkwake10-are-obsolete/)
+* [How to recreate Windows 10 EFI partition](https://www.tenforums.com/installation-upgrade/52837-moving-recreating-efi-partition.html#post698505)
 
 
 ## Resources
