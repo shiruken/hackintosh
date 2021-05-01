@@ -324,7 +324,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2021-05-01: Updated to [macOS 11.3] (natively via Software Update)
+* 2021-05-01: Updated to macOS 11.3 (natively via Software Update)
 * 2021-04-24: Updated to [OpenCore 0.6.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.8), [Lilu 1.5.2](https://github.com/acidanthera/Lilu/releases/tag/1.5.2), [WhateverGreen 1.4.9](https://github.com/acidanthera/WhateverGreen/releases/tag/1.4.9), [VirtualSMC 1.2.2](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.2), [AppleALC 1.5.9](https://github.com/acidanthera/AppleALC/releases/tag/1.5.9), and [itlwm 1.3.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v1.3.0)
 
 ## References
