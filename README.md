@@ -5,7 +5,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://user-images.githubusercontent.com/867617/116793085-9d8ad280-aa92-11eb-9f95-d54621a47ed4.png)
+![About This Mac](https://user-images.githubusercontent.com/867617/118415202-0f5c4200-b677-11eb-8f8c-7b14b28c53f6.png)
 
 
 ## Table of Contents
@@ -324,7 +324,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2021-05-16: Updated to [OpenCore 0.6.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.9), [Lilu 1.5.3](https://github.com/acidanthera/Lilu/releases/tag/1.5.3), [VirtualSMC 1.2.3](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.3), [AppleALC 1.6.0](https://github.com/acidanthera/AppleALC/releases/tag/1.6.0), and [IntelMausi 1.0.6](https://github.com/acidanthera/IntelMausi/releases/tag/1.0.6)
+* 2021-05-16: Updated to macOS 11.3.1 (natively via Software Update), [OpenCore 0.6.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.9), [Lilu 1.5.3](https://github.com/acidanthera/Lilu/releases/tag/1.5.3), [VirtualSMC 1.2.3](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.3), [AppleALC 1.6.0](https://github.com/acidanthera/AppleALC/releases/tag/1.6.0), and [IntelMausi 1.0.6](https://github.com/acidanthera/IntelMausi/releases/tag/1.0.6)
 * 2021-05-01: Updated to macOS 11.3 (natively via Software Update)
 * 2021-04-24: Updated to [OpenCore 0.6.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.8), [Lilu 1.5.2](https://github.com/acidanthera/Lilu/releases/tag/1.5.2), [WhateverGreen 1.4.9](https://github.com/acidanthera/WhateverGreen/releases/tag/1.4.9), [VirtualSMC 1.2.2](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.2), [AppleALC 1.5.9](https://github.com/acidanthera/AppleALC/releases/tag/1.5.9), and [itlwm 1.3.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v1.3.0)
 
