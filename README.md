@@ -194,10 +194,9 @@ In order to use these kexts, you _must_ must enable the internal USB port used b
 
 ### Enable OpenCore GUI
 
-Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui). I also removed auxiliary entries (macOS Recovery and Reset NVRAM) from the picker and changed the background color from black to gray.
+Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui). I also removed auxiliary entries (macOS Recovery and Reset NVRAM) from the picker.
 
 * `Misc > Boot > HideAuxiliary` → `TRUE`
-* `NVRAM > Add > 4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14 > DefaultBackgroundColor` → `BFBFBF00`
 
 _Note: The auxiliary entries can still be accessed from the GUI by pressing the spacebar key_.
 
@@ -324,6 +323,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2021-06-26: Updated to [OpenCore 0.7.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.0), [WhateverGreen 1.5.0](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.0), [VirtualSMC 1.2.4](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.4), [AppleALC 1.6.1](https://github.com/acidanthera/AppleALC/releases/tag/1.6.1), and [IntelBluetoothFirmware 1.1.3](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/1.1.3)
 * 2021-05-16: Updated to macOS 11.3.1 (natively via Software Update), [OpenCore 0.6.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.9), [Lilu 1.5.3](https://github.com/acidanthera/Lilu/releases/tag/1.5.3), [VirtualSMC 1.2.3](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.3), [AppleALC 1.6.0](https://github.com/acidanthera/AppleALC/releases/tag/1.6.0), and [IntelMausi 1.0.6](https://github.com/acidanthera/IntelMausi/releases/tag/1.0.6)
 * 2021-05-01: Updated to macOS 11.3 (natively via Software Update)
 * 2021-04-24: Updated to [OpenCore 0.6.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.8), [Lilu 1.5.2](https://github.com/acidanthera/Lilu/releases/tag/1.5.2), [WhateverGreen 1.4.9](https://github.com/acidanthera/WhateverGreen/releases/tag/1.4.9), [VirtualSMC 1.2.2](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.2), [AppleALC 1.5.9](https://github.com/acidanthera/AppleALC/releases/tag/1.5.9), and [itlwm 1.3.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v1.3.0)
