@@ -5,7 +5,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Big Sur and Win
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://user-images.githubusercontent.com/867617/129093400-01e8b44c-b81a-453c-ab55-4e5791a4741f.png)
+![About This Mac](https://user-images.githubusercontent.com/867617/134715861-2f6f2250-63b1-4964-846a-625dd3f08f30.png)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
@@ -324,7 +324,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2021-09-24: Updated to [OpenCore 0.7.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.3), [Lilu 1.5.6](https://github.com/acidanthera/Lilu/releases/tag/1.5.6), [WhateverGreen 1.5.3](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.3), [VirtualSMC 1.2.7](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.7), [AppleALC 1.6.4](https://github.com/acidanthera/AppleALC/releases/tag/1.6.4), and [IntelBluetoothFirmware 2.0.1](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.0.1)
+* 2021-09-24: Updated to macOS 11.6 (natively via Software Update), [OpenCore 0.7.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.3), [Lilu 1.5.6](https://github.com/acidanthera/Lilu/releases/tag/1.5.6), [WhateverGreen 1.5.3](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.3), [VirtualSMC 1.2.7](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.7), [AppleALC 1.6.4](https://github.com/acidanthera/AppleALC/releases/tag/1.6.4), and [IntelBluetoothFirmware 2.0.1](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.0.1)
 * 2021-08-11: Updated to macOS 11.5.2 (natively via Software Update), [OpenCore 0.7.2](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.2), [Lilu 1.5.5](https://github.com/acidanthera/Lilu/releases/tag/1.5.5), [WhateverGreen 1.5.2](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.2), [VirtualSMC 1.2.6](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.6), [AppleALC 1.6.3](https://github.com/acidanthera/AppleALC/releases/tag/1.6.3), [IntelMausi 1.0.7](https://github.com/acidanthera/IntelMausi/releases/tag/1.0.7), [itlwm 2.0.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.0.0), and [IntelBluetoothFirmware 2.0.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.0.0)
 * 2021-06-26: Updated to macOS 11.4 (natively via Software Update), [OpenCore 0.7.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.0), [WhateverGreen 1.5.0](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.0), [VirtualSMC 1.2.4](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.4), [AppleALC 1.6.1](https://github.com/acidanthera/AppleALC/releases/tag/1.6.1), and [IntelBluetoothFirmware 1.1.3](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/1.1.3)
 * 2021-05-16: Updated to macOS 11.3.1 (natively via Software Update), [OpenCore 0.6.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.9), [Lilu 1.5.3](https://github.com/acidanthera/Lilu/releases/tag/1.5.3), [VirtualSMC 1.2.3](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.3), [AppleALC 1.6.0](https://github.com/acidanthera/AppleALC/releases/tag/1.6.0), and [IntelMausi 1.0.6](https://github.com/acidanthera/IntelMausi/releases/tag/1.0.6)
