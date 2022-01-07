@@ -5,7 +5,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Monterey and Wi
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://user-images.githubusercontent.com/867617/139514027-43dc4c87-dc24-4ddf-a45d-c0dcb5a3d112.png)
+![About This Mac](https://user-images.githubusercontent.com/867617/148567513-098280a7-b3e0-4fe9-8766-c25927dca59f.png)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
