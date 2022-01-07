@@ -324,6 +324,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2022-01-07: Updated to macOS 12.1 (natively via Software Update), [IntelBluetoothFirmware 2.1.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.1.0), and [itlwm 2.1.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.1.0)
 * 2021-12-10: Updated to [OpenCore 0.7.6](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.6), [Lilu 1.5.8](https://github.com/acidanthera/Lilu/releases/tag/1.5.8), [VirtualSMC 1.2.8](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.8), and [AppleALC 1.6.7](https://github.com/acidanthera/AppleALC/releases/tag/1.6.7)
 * 2021-12-02: Updated to [OpenCore 0.7.5](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.5), [Lilu 1.5.7](https://github.com/acidanthera/Lilu/releases/tag/1.5.7), [WhateverGreen 1.5.5](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.5), and [AppleALC 1.6.6](https://github.com/acidanthera/AppleALC/releases/tag/1.6.6)
 * 2021-11-02: Updated `BlueToolFixup.kext` from [BrcmPatchRAM v2.6.1](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.1)
