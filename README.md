@@ -7,8 +7,9 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Monterey and Wi
 
 ![About This Mac](https://user-images.githubusercontent.com/867617/148567513-098280a7-b3e0-4fe9-8766-c25927dca59f.png)
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE) [![Bitcoin](https://img.shields.io/static/v1?label=btc&message=3ELvsExgq8S24FdGtm4mupQvb3BwiHwWuB&color=blue&style=for-the-badge&logo=bitcoin)](bitcoin:3ELvsExgq8S24FdGtm4mupQvb3BwiHwWuB?label=hackintosh)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
+BTC: 3ELvsExgq8S24FdGtm4mupQvb3BwiHwWuB
 
 ## Table of Contents
 
