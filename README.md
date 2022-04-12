@@ -5,7 +5,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Monterey and Wi
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://user-images.githubusercontent.com/867617/157709183-927f6eea-9fe4-467b-a569-7770b15fba23.png)
+![About This Mac](https://user-images.githubusercontent.com/867617/163011599-9334306a-f281-4e02-933b-0cc538713a3f.png)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
@@ -326,6 +326,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2022-04-12: Updated to macOS 12.3.1
 * 2022-03-10: Updated to macOS 12.2.1, [OpenCore 0.7.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.9), [WhateverGreen 1.5.8](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.8), [VirtualSMC 1.2.9](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.9), and [AppleALC 1.7.0](https://github.com/acidanthera/AppleALC/releases/tag/1.7.0) 
 * 2022-02-15: Updated to [OpenCore 0.7.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.8), [Lilu 1.6.0](https://github.com/acidanthera/Lilu/releases/tag/1.6.0), [WhateverGreen 1.5.7](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.7), and [AppleALC 1.6.9](https://github.com/acidanthera/AppleALC/releases/tag/1.6.9)
 * 2022-01-13: Updated to [OpenCore 0.7.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.7), [Lilu 1.5.9](https://github.com/acidanthera/Lilu/releases/tag/1.5.9), [WhateverGreen 1.5.6](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.6), and [AppleALC 1.6.8](https://github.com/acidanthera/AppleALC/releases/tag/1.6.8)
