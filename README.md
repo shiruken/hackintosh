@@ -326,8 +326,9 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2022-05-03: Updated to [OpenCore 0.8.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.0) and [AppleALC 1.7.1](https://github.com/acidanthera/AppleALC/releases/tag/1.7.1)
 * 2022-04-12: Updated to macOS 12.3.1
-* 2022-03-10: Updated to macOS 12.2.1, [OpenCore 0.7.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.9), [WhateverGreen 1.5.8](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.8), [VirtualSMC 1.2.9](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.9), and [AppleALC 1.7.0](https://github.com/acidanthera/AppleALC/releases/tag/1.7.0) 
+* 2022-03-10: Updated to macOS 12.2.1, [OpenCore 0.7.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.9), [WhateverGreen 1.5.8](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.8), [VirtualSMC 1.2.9](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.9), and [AppleALC 1.7.0](https://github.com/acidanthera/AppleALC/releases/tag/1.7.0)
 * 2022-02-15: Updated to [OpenCore 0.7.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.8), [Lilu 1.6.0](https://github.com/acidanthera/Lilu/releases/tag/1.6.0), [WhateverGreen 1.5.7](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.7), and [AppleALC 1.6.9](https://github.com/acidanthera/AppleALC/releases/tag/1.6.9)
 * 2022-01-13: Updated to [OpenCore 0.7.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.7), [Lilu 1.5.9](https://github.com/acidanthera/Lilu/releases/tag/1.5.9), [WhateverGreen 1.5.6](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.6), and [AppleALC 1.6.8](https://github.com/acidanthera/AppleALC/releases/tag/1.6.8)
 * 2022-01-07: Updated to macOS 12.1, [IntelBluetoothFirmware 2.1.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.1.0), and [itlwm 2.1.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.1.0)
