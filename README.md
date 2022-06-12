@@ -11,13 +11,13 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Monterey and Wi
 
 BTC: 3ELvsExgq8S24FdGtm4mupQvb3BwiHwWuB
 
-## Table of Contents
+## Table of Contents <!-- omit in toc -->
 
 * [The Build](#the-build)
 * [Installation](#installation)
   * [USB Creation](#usb-creation)
   * [OpenCore Configuration](#opencore-configuration)
-  * [BIOS Settings](#bios-settings-version-f12k)
+  * [BIOS Settings (Version F12k)](#bios-settings-version-f12k)
   * [Install macOS](#install-macos)
 * [Post Installation](#post-installation)
   * [Make macOS Drive Bootable](#make-macos-drive-bootable)
@@ -326,6 +326,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2022-06-12: Updated to [OpenCore 0.8.1](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.1), [WhateverGreen 1.5.9](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.9), [AppleALC 1.7.2](https://github.com/acidanthera/AppleALC/releases/tag/1.7.2), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.2](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.2)
 * 2022-05-03: Updated to [OpenCore 0.8.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.0) and [AppleALC 1.7.1](https://github.com/acidanthera/AppleALC/releases/tag/1.7.1)
 * 2022-04-12: Updated to macOS 12.3.1
 * 2022-03-10: Updated to macOS 12.2.1, [OpenCore 0.7.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.9), [WhateverGreen 1.5.8](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.8), [VirtualSMC 1.2.9](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.9), and [AppleALC 1.7.0](https://github.com/acidanthera/AppleALC/releases/tag/1.7.0)
@@ -334,8 +335,8 @@ _All values are the average of three runs_
 * 2022-01-07: Updated to macOS 12.1, [IntelBluetoothFirmware 2.1.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.1.0), and [itlwm 2.1.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.1.0)
 * 2021-12-10: Updated to [OpenCore 0.7.6](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.6), [Lilu 1.5.8](https://github.com/acidanthera/Lilu/releases/tag/1.5.8), [VirtualSMC 1.2.8](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.8), and [AppleALC 1.6.7](https://github.com/acidanthera/AppleALC/releases/tag/1.6.7)
 * 2021-12-02: Updated to [OpenCore 0.7.5](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.5), [Lilu 1.5.7](https://github.com/acidanthera/Lilu/releases/tag/1.5.7), [WhateverGreen 1.5.5](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.5), and [AppleALC 1.6.6](https://github.com/acidanthera/AppleALC/releases/tag/1.6.6)
-* 2021-11-02: Updated `BlueToolFixup.kext` from [BrcmPatchRAM v2.6.1](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.1)
-* 2021-10-29: Updated to macOS 12.0.1, [OpenCore 0.7.4](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.4), [WhateverGreen 1.5.4](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.4), and [AppleALC 1.6.5](https://github.com/acidanthera/AppleALC/releases/tag/1.6.5). Removed `IntelBluetoothInjector.kext` and added `BlueToolFixup.kext` from [BrcmPatchRAM v2.6.0](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.0) to [resolve Bluetooth issues](https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#what-additional-steps-should-i-do-to-make-bluetooth-work-on-macos-monterey).
+* 2021-11-02: Updated `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.1](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.1)
+* 2021-10-29: Updated to macOS 12.0.1, [OpenCore 0.7.4](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.4), [WhateverGreen 1.5.4](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.4), and [AppleALC 1.6.5](https://github.com/acidanthera/AppleALC/releases/tag/1.6.5). Removed `IntelBluetoothInjector.kext` and added `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.0](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.0) to [resolve Bluetooth issues](https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#what-additional-steps-should-i-do-to-make-bluetooth-work-on-macos-monterey).
 * 2021-09-24: Updated to macOS 11.6, [OpenCore 0.7.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.3), [Lilu 1.5.6](https://github.com/acidanthera/Lilu/releases/tag/1.5.6), [WhateverGreen 1.5.3](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.3), [VirtualSMC 1.2.7](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.7), [AppleALC 1.6.4](https://github.com/acidanthera/AppleALC/releases/tag/1.6.4), and [IntelBluetoothFirmware 2.0.1](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.0.1)
 * 2021-08-11: Updated to macOS 11.5.2, [OpenCore 0.7.2](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.2), [Lilu 1.5.5](https://github.com/acidanthera/Lilu/releases/tag/1.5.5), [WhateverGreen 1.5.2](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.2), [VirtualSMC 1.2.6](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.6), [AppleALC 1.6.3](https://github.com/acidanthera/AppleALC/releases/tag/1.6.3), [IntelMausi 1.0.7](https://github.com/acidanthera/IntelMausi/releases/tag/1.0.7), [itlwm 2.0.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.0.0), and [IntelBluetoothFirmware 2.0.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.0.0)
 * 2021-06-26: Updated to macOS 11.4, [OpenCore 0.7.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.0), [WhateverGreen 1.5.0](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.0), [VirtualSMC 1.2.4](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.4), [AppleALC 1.6.1](https://github.com/acidanthera/AppleALC/releases/tag/1.6.1), and [IntelBluetoothFirmware 1.1.3](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/1.1.3)
