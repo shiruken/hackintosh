@@ -5,7 +5,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Monterey and Wi
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://user-images.githubusercontent.com/867617/163011599-9334306a-f281-4e02-933b-0cc538713a3f.png)
+![About This Mac](https://user-images.githubusercontent.com/867617/173244079-c149d543-e7d4-4f0d-8926-9a5e925e4ae9.png)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
@@ -326,7 +326,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2022-06-12: Updated to [OpenCore 0.8.1](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.1), [WhateverGreen 1.5.9](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.9), [AppleALC 1.7.2](https://github.com/acidanthera/AppleALC/releases/tag/1.7.2), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.2](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.2)
+* 2022-06-12: Updated to macOS 12.4, [OpenCore 0.8.1](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.1), [WhateverGreen 1.5.9](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.9), [AppleALC 1.7.2](https://github.com/acidanthera/AppleALC/releases/tag/1.7.2), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.2](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.2)
 * 2022-05-03: Updated to [OpenCore 0.8.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.0) and [AppleALC 1.7.1](https://github.com/acidanthera/AppleALC/releases/tag/1.7.1)
 * 2022-04-12: Updated to macOS 12.3.1
 * 2022-03-10: Updated to macOS 12.2.1, [OpenCore 0.7.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.9), [WhateverGreen 1.5.8](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.8), [VirtualSMC 1.2.9](https://github.com/acidanthera/VirtualSMC/releases/tag/1.2.9), and [AppleALC 1.7.0](https://github.com/acidanthera/AppleALC/releases/tag/1.7.0)
