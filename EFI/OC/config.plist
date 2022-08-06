@@ -941,8 +941,6 @@
 				<string>boot-args</string>
 			</array>
 		</dict>
-		<key>LegacyEnable</key>
-		<false/>
 		<key>LegacyOverwrite</key>
 		<false/>
 		<key>LegacySchema</key>
@@ -1094,6 +1092,8 @@
 				<string></string>
 				<key>Comment</key>
 				<string>HfsPlus.efi</string>
+				<key>LoadEarly</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Enabled</key>
@@ -1104,6 +1104,8 @@
 				<string></string>
 				<key>Comment</key>
 				<string>OpenCanopy.efi</string>
+				<key>LoadEarly</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Enabled</key>
@@ -1114,6 +1116,8 @@
 				<string></string>
 				<key>Comment</key>
 				<string>OpenRuntime.efi</string>
+				<key>LoadEarly</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -1124,6 +1128,8 @@
 				<true/>
 				<key>Path</key>
 				<string>ResetNvramEntry.efi</string>
+				<key>LoadEarly</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -1134,6 +1140,8 @@
 				<true/>
 				<key>Path</key>
 				<string>ToggleSipEntry.efi</string>
+				<key>LoadEarly</key>
+				<false/>
 			</dict>
 		</array>
 		<key>Input</key>
