@@ -37,7 +37,6 @@ BTC: 3ELvsExgq8S24FdGtm4mupQvb3BwiHwWuB
 * [References](#references)
 * [Resources](#resources)
 
-
 ## The Build
 
 * **CPU:** Intel Core i7-9700K
@@ -54,7 +53,6 @@ BTC: 3ELvsExgq8S24FdGtm4mupQvb3BwiHwWuB
 * **Mouse:** Logitech G603
 
 View the build on PCPartPicker: https://pcpartpicker.com/list/kBK7TC
-
 
 ## Installation
 
@@ -80,7 +78,6 @@ Follow the OpenCore Install Guide to [create the macOS installer](https://dortan
   * [SSDT-AWAC](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-AWAC.aml)
   * [SSDT-PMC](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PMC.aml)
 
-
 ### OpenCore Configuration
 
 Follow the OpenCore Install Guide to [setup the initial config.plist file](https://dortania.github.io/OpenCore-Install-Guide/config.plist/) and [configure for Intel Desktop Coffee Lake](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html).
@@ -90,7 +87,6 @@ Follow the OpenCore Install Guide to [setup the initial config.plist file](https
 * If you already know the MAC address of your ethernet adapter, enter it under `PlatformInfo > Generic > ROM`. If you don't, this can be updated during post installation using System Preferences > Network > Ethernet > Advanced > Hardware > MAC Address to identify the correct value.
 
 A sanitized version of my USB drive config file can be found [here](EFI_install/OC/config.plist).
-
 
 ### BIOS Settings (Version F12k)
 
@@ -125,7 +121,6 @@ Enter **Advanced Mode** and **Load Optimized Defaults** to reset the default BIO
 
 Select **Save and Exit** to save the new BIOS settings
 
-
 ### Install macOS
 
 _I performed the installation with the USB drive, keyboard, and mouse plugged into the USB 2.0 ports at the top of the motherboard. My display was connected to the graphics card via DisplayPort._
@@ -140,7 +135,6 @@ _I performed the installation with the USB drive, keyboard, and mouse plugged in
     * As the system restarts, keep selecting `macOS Installer` from the OpenCore Boot Menu
 5. Once the installation is complete, select `Macintosh SSD` from the OpenCore Boot Menu and proceed through the normal macOS setup
 
-
 ## Post Installation
 
 Based heavily on [Dortania's OpenCore Post-Install Guide](https://dortania.github.io/OpenCore-Post-Install/).
@@ -153,7 +147,6 @@ Based heavily on [Dortania's OpenCore Post-Install Guide](https://dortania.githu
 4. You should now have a bootable macOS installation!
 
 _Note: You can now remove the USB drive but keep it handy for debugging issues with your Hackintosh._
-
 
 ### Enable FileVault
 
@@ -170,7 +163,6 @@ _Note: You should also make these changes to your USB drive OpenCore configurati
 
 ![FileVault Enabled](https://user-images.githubusercontent.com/867617/111683525-fb719c80-87fb-11eb-8cfd-ecef06eb7ff3.png)
 
-
 ### Map USB Ports
 
 Follow the OpenCore Post-Install Guide to [map USB on your system](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). The complete USB port layout for the Gigabyte Z390 AORUS PRO WIFI motherboard is detailed in the image below with the ports I enabled indicated in red. If you have the same motherboard and want to use this _exact_ USB port mapping, you can download my [`USBMap.kext`](https://github.com/shiruken/hackintosh/files/6159668/USBMap.kext.zip).
@@ -181,7 +173,6 @@ Follow the OpenCore Post-Install Guide to [map USB on your system](https://dorta
 * You can disable the `XhciPortLimit` quirk in your OpenCore configuration once complete
 
 ![Gigabyte Z390 AORUS PRO WIFI USB Port Map](https://user-images.githubusercontent.com/867617/111387000-719ec380-8683-11eb-8111-cb082c3cc5df.png)
-
 
 ### Enable Bluetooth and Wi-Fi
 
@@ -194,7 +185,6 @@ In order to use these kexts, you _must_ must enable the internal USB port used b
 
 ![BluetoothWiFi](https://user-images.githubusercontent.com/867617/111395470-491ec580-8693-11eb-9c03-c5d85888c4b4.png)
 
-
 ### Enable OpenCore GUI
 
 Follow the OpenCore Post-Install Guide to [set up the GUI for the bootloader](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui). I also removed auxiliary entries (macOS Recovery and Reset NVRAM) from the picker.
@@ -205,13 +195,11 @@ _Note: The auxiliary entries can still be accessed from the GUI by pressing the 
 
 ![OpenCore Bootloader GUI](https://user-images.githubusercontent.com/867617/111563406-4ba21d80-876e-11eb-9dcf-58ce0e8d0d3d.png)
 
-
 ### Enable LauncherOption
 
 Follow the OpenCore Post-Install Guide to [run OpenCore directly from firmware without requiring a launcher](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html). This will add OpenCore to the motherboard boot menu and prevent issues where Windows or Linux could overwrite `EFI/BOOT/BOOTx64.efi`. _This file can now be safely removed._ Be sure to select OpenCore as the default boot option in your BIOS.
 
 ![OpenCore Selected as Default BIOS Boot Option](https://user-images.githubusercontent.com/867617/111656480-f0f5d980-87e0-11eb-8229-43c4277a67ca.png)
-
 
 ### Disable verbosity and debugging
 
@@ -223,7 +211,6 @@ Once your installation is complete and/or stable, you can disable verbose output
 
 If you installed using the DEBUG version of OpenCore, [replace all the drivers]((https://github.com/acidanthera/OpenCorePkg/releases)) with the RELEASE versions.
 
-
 ## Dual-Boot Windows
 
 I used [an existing installation of Windows 10](https://github.com/shiruken/hackintosh/tree/clover-final/#install-windows-10) on the Intel 660p Series NVMe drive. The steps taken during that installation process (removing macOS drive and placing Windows drive in `M2M` motherboard slot) should be unnecessary when [LauncherOption is enabled](#enable-launcheroption) since Windows will not be able to mess up the OpenCore EFI. For more information, check out the [Multiboot with OpenCore Guide](https://dortania.github.io/OpenCore-Multiboot/).
@@ -231,7 +218,6 @@ I used [an existing installation of Windows 10](https://github.com/shiruken/hack
 One of the benefits of OpenCore is that you can now use Startup Disk to reboot your system directly into Windows without further user input, just like on a real Mac.
 
 ![Startup Disk](https://user-images.githubusercontent.com/867617/111683602-147a4d80-87fc-11eb-8782-6b6ca1809126.png)
-
 
 ### Install Boot Camp Utilities
 
@@ -255,7 +241,6 @@ In order to return to macOS from Windows without requiring user input during boo
 5. You can now use the Boot Camp Control Panel on the taskbar to restart directly into macOS without requiring further user input, just like on a real Mac running Boot Camp.
 
 ![Boot Camp Assistant and Control Panel](https://user-images.githubusercontent.com/867617/111683749-44c1ec00-87fc-11eb-8932-c747264443bc.png)
-
 
 ## Final BIOS Settings
 
@@ -296,11 +281,9 @@ Screenshots of my current BIOS settings on my working system
   <img src="https://user-images.githubusercontent.com/867617/111696688-fd8f2780-880a-11eb-9851-eda0642ca126.png">
 </details>
 
-
 ## Final OpenCore Configuration
 
 A sanitized version of my working config file can be found [here](EFI/OC/config.plist).
-
 
 ## Benchmarks
 
@@ -318,14 +301,13 @@ _All values are the average of three runs_
   * Read: 2996 MB/s
   * Write: 2547 MB/s
 
-
 ## Issues
 
 [See the GitHub repository issues tracker](https://github.com/shiruken/hackintosh/issues)
 
-
 ## Upgrade Log
 
+* 2022-09-08: Updated to [OpenCore 0.8.4](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.4), [AppleALC 1.7.5](https://github.com/acidanthera/AppleALC/releases/tag/1.7.5), [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha), and [IntelBluetoothFirmware 2.2.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.2.0)
 * 2022-08-06: Updated to macOS 12.5, [OpenCore 0.8.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.3), [Lilu 1.6.2](https://github.com/acidanthera/Lilu/releases/tag/1.6.2), [WhateverGreen 1.6.1](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.1), and [AppleALC 1.7.4](https://github.com/acidanthera/AppleALC/releases/tag/1.7.4)
 * 2022-07-10: Updated to [OpenCore 0.8.2](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.2), [Lilu 1.6.1](https://github.com/acidanthera/Lilu/releases/tag/1.6.1), [WhateverGreen 1.6.0](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.0), [VirtualSMC 1.3.0](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.0), [AppleALC 1.7.3](https://github.com/acidanthera/AppleALC/releases/tag/1.7.3), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.3](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.3)
 * 2022-06-12: Updated to macOS 12.4, [OpenCore 0.8.1](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.1), [WhateverGreen 1.5.9](https://github.com/acidanthera/WhateverGreen/releases/tag/1.5.9), [AppleALC 1.7.2](https://github.com/acidanthera/AppleALC/releases/tag/1.7.2), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.2](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.2)
@@ -353,7 +335,6 @@ _All values are the average of three runs_
 * [WhateverGreen Intel® HD Graphics FAQs](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md)
 * [DarkWake on macOS Catalina | boot args darkwake=8 & darkwake=10 are obsolete](https://www.insanelymac.com/forum/topic/342002-darkwake-on-macos-catalina-boot-args-darkwake8-darkwake10-are-obsolete/)
 * [How to recreate Windows 10 EFI partition](https://www.tenforums.com/installation-upgrade/52837-moving-recreating-efi-partition.html#post698505)
-
 
 ## Resources
 
