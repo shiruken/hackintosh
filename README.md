@@ -5,7 +5,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Monterey and Wi
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://user-images.githubusercontent.com/867617/183256955-a9a4d9a6-a702-4109-8cbe-bcd3993c6b18.png)
+![About This Mac](https://user-images.githubusercontent.com/867617/199106823-55e314db-75c2-4694-b52d-c5dbbc4d402a.png)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
@@ -307,7 +307,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2022-10-15: Updated to [OpenCore 0.8.5](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.5), [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.4](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.4)
+* 2022-10-15: Updated to macOS 12.6, [OpenCore 0.8.5](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.5), [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.4](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.4)
 * 2022-09-08: Updated to [OpenCore 0.8.4](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.4), [AppleALC 1.7.5](https://github.com/acidanthera/AppleALC/releases/tag/1.7.5), [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha), and [IntelBluetoothFirmware 2.2.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.2.0)
 * 2022-08-06: Updated to macOS 12.5, [OpenCore 0.8.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.3), [Lilu 1.6.2](https://github.com/acidanthera/Lilu/releases/tag/1.6.2), [WhateverGreen 1.6.1](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.1), and [AppleALC 1.7.4](https://github.com/acidanthera/AppleALC/releases/tag/1.7.4)
 * 2022-07-10: Updated to [OpenCore 0.8.2](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.2), [Lilu 1.6.1](https://github.com/acidanthera/Lilu/releases/tag/1.6.1), [WhateverGreen 1.6.0](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.0), [VirtualSMC 1.3.0](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.0), [AppleALC 1.7.3](https://github.com/acidanthera/AppleALC/releases/tag/1.7.3), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.3](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.3)
