@@ -1,11 +1,11 @@
 # Hackintosh v3
 
-Installation guide for my Hackintosh v3 build dual-booting macOS Monterey and Windows 10. This build is based on [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). The previous version of this guide using the Clover bootloader can be found [here](https://github.com/shiruken/hackintosh/tree/clover-final). The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
+Installation guide for my Hackintosh v3 build dual-booting macOS Ventura and Windows 10. This build is based on [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). The previous version of this guide using the Clover bootloader can be found [here](https://github.com/shiruken/hackintosh/tree/clover-final). The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
 
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://user-images.githubusercontent.com/867617/201485928-fd488fdf-7153-4a68-8de6-981ab1779f9b.png)
+![About This Mac](https://user-images.githubusercontent.com/867617/201489762-e8c28b45-9b28-44b4-81fb-c09a9d12851a.png)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
@@ -126,7 +126,7 @@ Select **Save and Exit** to save the new BIOS settings
 _I performed the installation with the USB drive, keyboard, and mouse plugged into the USB 2.0 ports at the top of the motherboard. My display was connected to the graphics card via DisplayPort._
 
 1. Restart computer and set the USB drive as the default BIOS boot device
-2. Select the `Install macOS Monterey (external)` option from the OpenCore Boot Menu
+2. Select the `Install macOS (external)` option from the OpenCore Boot Menu
 3. Launch Disk Utility and format the destination drive (Samsung 970 Evo)
     * Name: `Macintosh SSD`
     * Format: `APFS`
@@ -307,7 +307,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2022-11-12: Updated to macOS 12.6.1, [OpenCore 0.8.6](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.6) and [AppleALC 1.7.6](https://github.com/acidanthera/AppleALC/releases/tag/1.7.6)
+* 2022-11-12: Updated to macOS 13.0.1, [OpenCore 0.8.6](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.6) and [AppleALC 1.7.6](https://github.com/acidanthera/AppleALC/releases/tag/1.7.6)
 * 2022-10-15: Updated to macOS 12.6, [OpenCore 0.8.5](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.5), [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.4](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.4)
 * 2022-09-08: Updated to [OpenCore 0.8.4](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.4), [AppleALC 1.7.5](https://github.com/acidanthera/AppleALC/releases/tag/1.7.5), [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha), and [IntelBluetoothFirmware 2.2.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.2.0)
 * 2022-08-06: Updated to macOS 12.5, [OpenCore 0.8.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.3), [Lilu 1.6.2](https://github.com/acidanthera/Lilu/releases/tag/1.6.2), [WhateverGreen 1.6.1](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.1), and [AppleALC 1.7.4](https://github.com/acidanthera/AppleALC/releases/tag/1.7.4)
