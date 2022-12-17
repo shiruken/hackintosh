@@ -5,7 +5,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Ventura and Win
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://user-images.githubusercontent.com/867617/201489762-e8c28b45-9b28-44b4-81fb-c09a9d12851a.png)
+![About This Mac](https://user-images.githubusercontent.com/867617/208252103-b217c122-b727-4205-8330-63d0f91a0ccd.png)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
@@ -307,7 +307,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2022-12-17: Updated to [OpenCore 0.8.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.7), [WhateverGreen 1.6.2](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.2), [AppleALC 1.7.7](https://github.com/acidanthera/AppleALC/releases/tag/1.7.7), and [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha)
+* 2022-12-17: Updated to macOS 13.1, [OpenCore 0.8.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.7), [WhateverGreen 1.6.2](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.2), [AppleALC 1.7.7](https://github.com/acidanthera/AppleALC/releases/tag/1.7.7), and [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha)
 * 2022-11-12: Updated to macOS 13.0.1, [OpenCore 0.8.6](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.6) and [AppleALC 1.7.6](https://github.com/acidanthera/AppleALC/releases/tag/1.7.6)
 * 2022-10-15: Updated to macOS 12.6, [OpenCore 0.8.5](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.5), [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.4](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.4)
 * 2022-09-08: Updated to [OpenCore 0.8.4](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.4), [AppleALC 1.7.5](https://github.com/acidanthera/AppleALC/releases/tag/1.7.5), [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha), and [IntelBluetoothFirmware 2.2.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.2.0)
