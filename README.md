@@ -307,6 +307,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2023-02-18: Updated to [OpenCore 0.8.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.9), [WhateverGreen 1.6.4](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.4), [AppleALC 1.7.9](https://github.com/acidanthera/AppleALC/releases/tag/1.7.9), and [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha)
 * 2023-01-04: Updated to [OpenCore 0.8.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.8), [Lilu 1.6.3](https://github.com/acidanthera/Lilu/releases/tag/1.6.3), [WhateverGreen 1.6.3](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.3), [AppleALC 1.7.8](https://github.com/acidanthera/AppleALC/releases/tag/1.7.8), and [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha)
 * 2022-12-17: Updated to macOS 13.1, [OpenCore 0.8.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.7), [WhateverGreen 1.6.2](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.2), [AppleALC 1.7.7](https://github.com/acidanthera/AppleALC/releases/tag/1.7.7), and [itlwm 2.2.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0-alpha)
 * 2022-11-12: Updated to macOS 13.0.1, [OpenCore 0.8.6](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.8.6) and [AppleALC 1.7.6](https://github.com/acidanthera/AppleALC/releases/tag/1.7.6)
