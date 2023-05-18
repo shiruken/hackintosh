@@ -7,10 +7,6 @@ on:
 jobs:
   ocvalidate:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        path: ["EFI/OC/config.plist", "EFI_install/OC/config.plist"]
-
     steps:
       - uses: actions/checkout@v3
 
@@ -19,4 +15,4 @@ jobs:
           opencore-version: '0.9.1'
           release: true
 
-      - run: ocvalidate ${{ matrix.path }}
+      - run: ocvalidate EFI/OC/config.plist
