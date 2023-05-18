@@ -1,0 +1,22 @@
+name: tests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+jobs:
+  ocvalidate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        path: ["EFI/OC/config.plist", "EFI_install/OC/config.plist"]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: brokeyourbike/ocvalidate-action@v0.3
+        with:
+          opencore-version: '0.9.1'
+          release: true
+
+      - run: ocvalidate ${{ matrix.path }}
