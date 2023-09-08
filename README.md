@@ -7,7 +7,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Ventura and Win
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://github.com/shiruken/hackintosh/assets/867617/efdd0f13-5b6b-43cd-ac57-8ea637cd1afa)
+![About This Mac](https://github.com/shiruken/hackintosh/assets/867617/4ad1ecf0-3b4b-4955-97fc-9c8c98a51e50)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
@@ -309,6 +309,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2023-09-08: Updated to macOS 13.5.2
 * 2023-09-05: Updated to macOS 13.5.1, [OpenCore 0.9.4](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.4), [Lilu 1.6.7](https://github.com/acidanthera/Lilu/releases/tag/1.6.7), [WhateverGreen 1.6.6](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.6), [AppleALC 1.8.4](https://github.com/acidanthera/AppleALC/releases/tag/1.8.4), [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha), [IntelBluetoothFirmware 2.3.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.3.0), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.8](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.8)
 * 2023-07-03: Updated to macOS 13.4.1, [OpenCore 0.9.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.3), [Lilu 1.6.6](https://github.com/acidanthera/Lilu/releases/tag/1.6.6), [WhateverGreen 1.6.5](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.5), [VirtualSMC 1.3.2](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.2), [AppleALC 1.8.3](https://github.com/acidanthera/AppleALC/releases/tag/1.8.3), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.7](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.7)
 * 2023-06-06: Updated to macOS 13.4 (required [this fix](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/435#issuecomment-1562560909) for Bluetooth issues) and [itlwm 2.2.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.2.0)
