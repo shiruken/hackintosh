@@ -1,13 +1,13 @@
 # Hackintosh v3
 
-[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.9.5-blue)](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.5) [![macOS Version](https://img.shields.io/badge/macOS-13.5.2-blue)](https://support.apple.com/en-us/HT213268) [![ocvalidate status](https://img.shields.io/github/actions/workflow/status/shiruken/hackintosh/ocvalidate.yml?branch=master&label=ocvalidate)](https://github.com/shiruken/hackintosh/actions/workflows/ocvalidate.yml)
+[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.9.5-blue)](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.5) [![macOS Version](https://img.shields.io/badge/macOS-13.6-blue)](https://support.apple.com/en-us/HT213268) [![ocvalidate status](https://img.shields.io/github/actions/workflow/status/shiruken/hackintosh/ocvalidate.yml?branch=master&label=ocvalidate)](https://github.com/shiruken/hackintosh/actions/workflows/ocvalidate.yml)
 
 Installation guide for my Hackintosh v3 build dual-booting macOS Ventura and Windows 10. This build is based on [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). The previous version of this guide using the Clover bootloader can be found [here](https://github.com/shiruken/hackintosh/tree/clover-final). The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
 
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://github.com/shiruken/hackintosh/assets/867617/4ad1ecf0-3b4b-4955-97fc-9c8c98a51e50)
+![About This Mac](https://github.com/shiruken/hackintosh/assets/867617/f3736bf0-d91d-4593-b706-0ccedb7db1f7)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
@@ -309,7 +309,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2023-10-02: Updated to [OpenCore 0.9.5](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.5), [AppleALC 1.8.5](https://github.com/acidanthera/AppleALC/releases/tag/1.8.5), and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
+* 2023-10-02: Updated to macOS 13.6, [OpenCore 0.9.5](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.5), [AppleALC 1.8.5](https://github.com/acidanthera/AppleALC/releases/tag/1.8.5), and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
 * 2023-09-08: Updated to macOS 13.5.2
 * 2023-09-05: Updated to macOS 13.5.1, [OpenCore 0.9.4](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.4), [Lilu 1.6.7](https://github.com/acidanthera/Lilu/releases/tag/1.6.7), [WhateverGreen 1.6.6](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.6), [AppleALC 1.8.4](https://github.com/acidanthera/AppleALC/releases/tag/1.8.4), [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha), [IntelBluetoothFirmware 2.3.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.3.0), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.8](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.8)
 * 2023-07-03: Updated to macOS 13.4.1, [OpenCore 0.9.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.3), [Lilu 1.6.6](https://github.com/acidanthera/Lilu/releases/tag/1.6.6), [WhateverGreen 1.6.5](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.5), [VirtualSMC 1.3.2](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.2), [AppleALC 1.8.3](https://github.com/acidanthera/AppleALC/releases/tag/1.8.3), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.6.7](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.6.7)
