@@ -309,6 +309,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2023-11-02: Updated to [AppleALC 1.8.6](https://github.com/acidanthera/AppleALC/releases/tag/1.8.6) and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
 * 2023-10-13: Updated to macOS 14.0
 * 2023-10-02: Updated to macOS 13.6, [OpenCore 0.9.5](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.5), [AppleALC 1.8.5](https://github.com/acidanthera/AppleALC/releases/tag/1.8.5), and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
 * 2023-09-08: Updated to macOS 13.5.2
