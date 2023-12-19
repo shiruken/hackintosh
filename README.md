@@ -1,6 +1,6 @@
 # Hackintosh v3
 
-[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.9.6-blue)](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.6) [![macOS Version](https://img.shields.io/badge/macOS-14.1.2-blue)](https://support.apple.com/en-us/HT213895) [![ocvalidate status](https://img.shields.io/github/actions/workflow/status/shiruken/hackintosh/ocvalidate.yml?branch=master&label=ocvalidate)](https://github.com/shiruken/hackintosh/actions/workflows/ocvalidate.yml)
+[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.9.7-blue)](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.7) [![macOS Version](https://img.shields.io/badge/macOS-14.1.2-blue)](https://support.apple.com/en-us/HT213895) [![ocvalidate status](https://img.shields.io/github/actions/workflow/status/shiruken/hackintosh/ocvalidate.yml?branch=master&label=ocvalidate)](https://github.com/shiruken/hackintosh/actions/workflows/ocvalidate.yml)
 
 Installation guide for my Hackintosh v3 build dual-booting macOS Sonoma and Windows 10. This build is based on [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). The previous version of this guide using the Clover bootloader can be found [here](https://github.com/shiruken/hackintosh/tree/clover-final). The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
 
@@ -309,6 +309,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2023-12-19: Updated to [OpenCore 0.9.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.7), and [AppleALC 1.8.8](https://github.com/acidanthera/AppleALC/releases/tag/1.8.8)
 * 2023-12-02: Updated to macOS 14.1.2
 * 2023-11-27: Updated to macOS 14.1.1, [OpenCore 0.9.6](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.6), and [AppleALC 1.8.7](https://github.com/acidanthera/AppleALC/releases/tag/1.8.7)
 * 2023-11-02: Updated to macOS 14.1, [AppleALC 1.8.6](https://github.com/acidanthera/AppleALC/releases/tag/1.8.6), and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
