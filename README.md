@@ -7,7 +7,7 @@ Installation guide for my Hackintosh v3 build dual-booting macOS Sonoma and Wind
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://github.com/shiruken/hackintosh/assets/867617/5bff215c-1b53-4b8c-907c-63f52746d59e)
+![About This Mac](https://github.com/shiruken/hackintosh/assets/867617/0ada685b-4ba2-4e71-acb0-9741e3f654b2)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
@@ -309,7 +309,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2023-02-16: Updated to [OpenCore 0.9.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.8), [AppleALC 1.8.9](https://github.com/acidanthera/AppleALC/releases/tag/1.8.9), and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
+* 2023-02-16: Updated to macOS 14.3.1, [OpenCore 0.9.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.8), [AppleALC 1.8.9](https://github.com/acidanthera/AppleALC/releases/tag/1.8.9), and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
 * 2023-02-01: Updated to macOS 14.3
 * 2023-01-31: Replaced thermal paste on GPU after increasingly encountering stability issues while gaming. Stress testing with [OCCT](https://www.ocbase.com/) revealed the card was immediately and continuously thermal throttling under load and eventually (hard) crashing the system. Used [Noctua NT-H2](https://noctua.at/en/nt-h2-3-5g) as the replacement thermal paste. Follow-up OCCT stress testing showed the GPU was no longer thermal throttling and performing as expected.
 * 2023-12-19: Updated to macOS 14.2.1, [OpenCore 0.9.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.7), and [AppleALC 1.8.8](https://github.com/acidanthera/AppleALC/releases/tag/1.8.8)
