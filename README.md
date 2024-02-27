@@ -309,6 +309,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2023-02-27: Updated to [itlwm 2.4.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha) and [IntelBluetoothFirmware 2.4.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.4.0)
 * 2023-02-16: Updated to macOS 14.3.1, [OpenCore 0.9.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.8), [AppleALC 1.8.9](https://github.com/acidanthera/AppleALC/releases/tag/1.8.9), and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
 * 2023-02-01: Updated to macOS 14.3
 * 2023-01-31: Replaced thermal paste on GPU after increasingly encountering stability issues while gaming. Stress testing with [OCCT](https://www.ocbase.com/) revealed the card was immediately and continuously thermal throttling under load and eventually (hard) crashing the system. Used [Noctua NT-H2](https://noctua.at/en/nt-h2-3-5g) as the replacement thermal paste. Follow-up OCCT stress testing showed the GPU was no longer thermal throttling and performing as expected.
