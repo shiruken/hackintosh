@@ -309,7 +309,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2024-06-03: Updated to macOS 14.5
+* 2024-06-03: Updated to macOS 14.5 and and [itlwm 2.3.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0)
 * 2024-05-15: Updated to [OpenCore 1.0.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.0), [AppleALC 1.9.0](https://github.com/acidanthera/AppleALC/releases/tag/1.9.0), and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
 * 2024-04-02: Updated to macOS 14.4.1, [OpenCore 0.9.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.9), and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
 * 2024-02-27: Updated to [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha) and [IntelBluetoothFirmware 2.4.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/tag/v2.4.0)
