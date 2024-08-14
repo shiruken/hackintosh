@@ -174,7 +174,9 @@ Follow the OpenCore Post-Install Guide to [map USB on your system](https://dorta
 * If you don't need Bluetooth/Wi-Fi, you can disable `HS14` and enable one of the disabled ports
 * You can disable the `XhciPortLimit` quirk in your OpenCore configuration once complete
 
-![Gigabyte Z390 AORUS PRO WIFI USB Port Map](https://user-images.githubusercontent.com/867617/111387000-719ec380-8683-11eb-8111-cb082c3cc5df.png)
+*Note: I [modified](https://github.com/shiruken/hackintosh/commit/c377e06a82345abf259e6632ad519ca6edc3a19e) the USB mapping on 2024-08-14 after the front panel Type-A port was damaged. I disabled HS10 and SS10 and enabled HS01 to allow for full functionality of the front panel Type-C port.*
+
+![Gigabyte Z390 AORUS PRO WIFI USB Port Map](https://github.com/user-attachments/assets/6b24c2d7-8eb1-4f3f-a17d-d879a3ae9ee3)
 
 ### Enable Bluetooth and Wi-Fi
 
