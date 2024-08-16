@@ -1,13 +1,13 @@
 # Hackintosh v3
 
-[![OpenCore Version](https://img.shields.io/badge/OpenCore-1.0.1-blue)](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.1) [![macOS Version](https://img.shields.io/badge/macOS-14.5-blue)](https://support.apple.com/en-us/HT213895) [![ocvalidate status](https://img.shields.io/github/actions/workflow/status/shiruken/hackintosh/ocvalidate.yml?branch=master&label=ocvalidate)](https://github.com/shiruken/hackintosh/actions/workflows/ocvalidate.yml)
+[![OpenCore Version](https://img.shields.io/badge/OpenCore-1.0.1-blue)](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.1) [![macOS Version](https://img.shields.io/badge/macOS-14.6.1-blue)](https://support.apple.com/en-us/HT213895) [![ocvalidate status](https://img.shields.io/github/actions/workflow/status/shiruken/hackintosh/ocvalidate.yml?branch=master&label=ocvalidate)](https://github.com/shiruken/hackintosh/actions/workflows/ocvalidate.yml)
 
 Installation guide for my Hackintosh v3 build dual-booting macOS Sonoma and Windows 10. This build is based on [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). The previous version of this guide using the Clover bootloader can be found [here](https://github.com/shiruken/hackintosh/tree/clover-final). The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
 
 * [EFI](EFI/): Copy of current EFI directory from macOS boot drive
 * [EFI_install](EFI_install/): Copy of EFI directory from the USB drive used during installation
 
-![About This Mac](https://github.com/shiruken/hackintosh/assets/867617/13c8ab99-b9fb-44bf-8628-922986de1e44)
+![About This Mac](https://github.com/user-attachments/assets/9c6a538d-aac5-4d3b-a5dc-086f9d487475)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T21SSLE)
 
@@ -311,7 +311,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
-* 2024-08-15: Updated to [OpenCore 1.0.1](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.1), [Lilu 1.6.8](https://github.com/acidanthera/Lilu/releases/tag/1.6.8), [WhateverGreen 1.6.7](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.7), [VirtualSMC 1.3.3](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.3), and [AppleALC 1.9.1](https://github.com/acidanthera/AppleALC/releases/tag/1.9.1)
+* 2024-08-15: Updated to macOS 14.6.1, [OpenCore 1.0.1](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.1), [Lilu 1.6.8](https://github.com/acidanthera/Lilu/releases/tag/1.6.8), [WhateverGreen 1.6.7](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.7), [VirtualSMC 1.3.3](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.3), and [AppleALC 1.9.1](https://github.com/acidanthera/AppleALC/releases/tag/1.9.1)
 * 2024-08-14: Modified the [USB mapping](#map-usb-ports) after the front panel Type-A port was damaged. HS10 and SS10 were disabled and HS01 was enabled to allow for full functionality of the front panel Type-C port.
 * 2024-06-03: Updated to macOS 14.5 and and [itlwm 2.3.0](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0)
 * 2024-05-15: Updated to [OpenCore 1.0.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.0), [AppleALC 1.9.0](https://github.com/acidanthera/AppleALC/releases/tag/1.9.0), and [itlwm 2.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases/tag/v2.3.0-alpha)
