@@ -376,3 +376,7 @@ _All values are the average of three runs_
 * [OCConfigCompare](https://github.com/corpnewt/OCConfigCompare)
 * [gfxutil](https://github.com/acidanthera/gfxutil)
 * [Hackintool](https://github.com/headkaze/Hackintool)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=shiruken/hackintosh&type=Date)](https://star-history.com/#shiruken/hackintosh&Date)
