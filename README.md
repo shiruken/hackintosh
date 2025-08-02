@@ -1,6 +1,6 @@
 # Hackintosh v3
 
-[![OpenCore Version](https://img.shields.io/badge/OpenCore-1.0.4-blue)](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.4) [![macOS Version](https://img.shields.io/badge/macOS-15.5-blue)](https://support.apple.com/en-us/120283) [![ocvalidate status](https://img.shields.io/github/actions/workflow/status/shiruken/hackintosh/ocvalidate.yml?branch=master&label=ocvalidate)](https://github.com/shiruken/hackintosh/actions/workflows/ocvalidate.yml)
+[![OpenCore Version](https://img.shields.io/badge/OpenCore-1.0.5-blue)](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.5) [![macOS Version](https://img.shields.io/badge/macOS-15.5-blue)](https://support.apple.com/en-us/120283) [![ocvalidate status](https://img.shields.io/github/actions/workflow/status/shiruken/hackintosh/ocvalidate.yml?branch=master&label=ocvalidate)](https://github.com/shiruken/hackintosh/actions/workflows/ocvalidate.yml)
 
 Installation guide for my Hackintosh v3 build dual-booting macOS Sequoia and Windows 10. This build is based on [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). The previous version of this guide using the Clover bootloader can be found [here](https://github.com/shiruken/hackintosh/tree/clover-final). The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
 
@@ -312,6 +312,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2025-08-02: Updated to [OpenCore 1.0.5](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.45), [Lilu 1.7.1](https://github.com/acidanthera/Lilu/releases/tag/1.7.1), [WhateverGreen 1.7.0](https://github.com/acidanthera/WhateverGreen/releases/tag/1.7.0), [AppleALC 1.9.5](https://github.com/acidanthera/AppleALC/releases/tag/1.9.5), [VirtualSMC 1.3.7](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.7), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.7.1](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.7.1)
 * 2025-06-01: Updated to macOS 15.5, [OpenCore 1.0.4](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.4), [AppleALC 1.9.4](https://github.com/acidanthera/AppleALC/releases/tag/1.9.4), [VirtualSMC 1.3.6](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.6), and `BlueToolFixup.kext` from [BrcmPatchRAM 2.7.0](https://github.com/acidanthera/BrcmPatchRAM/releases/tag/2.7.0)
 * 2025-02-22: Updated to macOS 15.3.1
 * 2025-01-12: Updated to [OpenCore 1.0.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.3), [Lilu 1.7.0](https://github.com/acidanthera/Lilu/releases/tag/1.7.0), [WhateverGreen 1.6.9](https://github.com/acidanthera/WhateverGreen/releases/tag/1.6.9), [AppleALC 1.9.3](https://github.com/acidanthera/AppleALC/releases/tag/1.9.3), and [IntelMausi 1.0.8](https://github.com/acidanthera/IntelMausi/releases/tag/1.0.8)
