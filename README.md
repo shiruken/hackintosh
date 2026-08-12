@@ -396,4 +396,12 @@ _All values are the average of three runs_
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=shiruken/hackintosh&type=Date)](https://star-history.com/#shiruken/hackintosh&Date)
+## Star History
+
+<a href="https://www.star-history.com/?repos=shiruken%2Fhackintosh&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=shiruken/hackintosh&type=date&theme=dark&legend=top-left&sealed_token=drVaxhWb-cEUWplxbcKcX7efNJOv2DYGkO7ckGooj3w7SgVHhpLXFZQIeN8SwfspFQJvMiRVN5xG490agtpf5nfbyOLCcJ2PEfyO7rIoJO4P1uOEdd0UCcDAuDSkaSRO6zTh0G168inLkCjljbuotXhLqzx4Mo7p3JWK4Z464PTKzs8S9qGeg9hanekB" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=shiruken/hackintosh&type=date&legend=top-left&sealed_token=drVaxhWb-cEUWplxbcKcX7efNJOv2DYGkO7ckGooj3w7SgVHhpLXFZQIeN8SwfspFQJvMiRVN5xG490agtpf5nfbyOLCcJ2PEfyO7rIoJO4P1uOEdd0UCcDAuDSkaSRO6zTh0G168inLkCjljbuotXhLqzx4Mo7p3JWK4Z464PTKzs8S9qGeg9hanekB" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=shiruken/hackintosh&type=date&legend=top-left&sealed_token=drVaxhWb-cEUWplxbcKcX7efNJOv2DYGkO7ckGooj3w7SgVHhpLXFZQIeN8SwfspFQJvMiRVN5xG490agtpf5nfbyOLCcJ2PEfyO7rIoJO4P1uOEdd0UCcDAuDSkaSRO6zTh0G168inLkCjljbuotXhLqzx4Mo7p3JWK4Z464PTKzs8S9qGeg9hanekB" />
+ </picture>
+</a>
