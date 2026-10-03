@@ -1,6 +1,6 @@
 # Hackintosh v3
 
-[![OpenCore Version](https://img.shields.io/badge/OpenCore-1.0.7-blue)](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.7) [![macOS Version](https://img.shields.io/badge/macOS-15.7.9-blue)](https://support.apple.com/en-us/120283) [![ocvalidate status](https://img.shields.io/github/actions/workflow/status/shiruken/hackintosh/ocvalidate.yml?branch=master&label=ocvalidate)](https://github.com/shiruken/hackintosh/actions/workflows/ocvalidate.yml)
+[![OpenCore Version](https://img.shields.io/badge/OpenCore-1.0.8-blue)](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.8) [![macOS Version](https://img.shields.io/badge/macOS-15.7.9-blue)](https://support.apple.com/en-us/120283) [![ocvalidate status](https://img.shields.io/github/actions/workflow/status/shiruken/hackintosh/ocvalidate.yml?branch=master&label=ocvalidate)](https://github.com/shiruken/hackintosh/actions/workflows/ocvalidate.yml)
 
 Installation guide for my Hackintosh v3 build dual-booting macOS Sequoia and Windows 10. This build is based on [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). The previous version of this guide using the Clover bootloader can be found [here](https://github.com/shiruken/hackintosh/tree/clover-final). The version numbers reported in this guide were the releases available at the time of installation and more than likely can be replaced with the latest iteration.
 
@@ -312,6 +312,7 @@ _All values are the average of three runs_
 
 ## Upgrade Log
 
+* 2026-10-03: Updated to [OpenCore 1.0.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/1.0.8), [WhateverGreen 1.7.1](https://github.com/acidanthera/WhateverGreen/releases/tag/1.7.1), [AppleALC 1.9.8](https://github.com/acidanthera/AppleALC/releases/tag/1.9.8), and [VirtualSMC 1.3.8](https://github.com/acidanthera/VirtualSMC/releases/tag/1.3.8)
 * 2026-08-08: Updated to macOS 15.7.9
 * 2026-08-02: Updated to macOS 15.7.8
 * 2026-06-02: Updated to macOS 15.7.7

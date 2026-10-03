@@ -1134,6 +1134,8 @@
 				<string>HfsPlus.efi</string>
 				<key>LoadEarly</key>
 				<false/>
+				<key>HideVerbose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Enabled</key>
@@ -1145,6 +1147,8 @@
 				<key>Comment</key>
 				<string>OpenCanopy.efi</string>
 				<key>LoadEarly</key>
+				<false/>
+				<key>HideVerbose</key>
 				<false/>
 			</dict>
 			<dict>
@@ -1158,6 +1162,8 @@
 				<string>OpenRuntime.efi</string>
 				<key>LoadEarly</key>
 				<false/>
+				<key>HideVerbose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -1170,6 +1176,8 @@
 				<string>ResetNvramEntry.efi</string>
 				<key>LoadEarly</key>
 				<false/>
+				<key>HideVerbose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -1181,6 +1189,8 @@
 				<key>Path</key>
 				<string>ToggleSipEntry.efi</string>
 				<key>LoadEarly</key>
+				<false/>
+				<key>HideVerbose</key>
 				<false/>
 			</dict>
 		</array>
